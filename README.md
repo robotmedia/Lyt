@@ -1,4 +1,4 @@
 Lyt
 ===
 
-UIView category to make autolayout readable
+A UIView category to make autolayout readable and less verbose.
