@@ -52,6 +52,11 @@
     return constraint;
 }
 
+- (NSLayoutConstraint*)lyt_alignRightToView:(UIView*)view
+{
+    [self lyt_alignRightToView:view margin:0];
+}
+
 - (NSLayoutConstraint*)lyt_alignRightToView:(UIView*)view margin:(CGFloat)margin
 {
     NSLayoutConstraint *constraint = [self lyt_constraintByAligningRightToView:view margin:margin];
@@ -66,6 +71,11 @@
     return constraint;
 }
 
+- (NSLayoutConstraint*)lyt_alignLeftToView:(UIView*)view
+{
+    return [self lyt_alignLeftToView:view margin:0];
+}
+
 - (NSLayoutConstraint*)lyt_alignLeftToView:(UIView*)view margin:(CGFloat)margin
 {
     NSLayoutConstraint *constraint = [self lyt_constraintByAligningLeftToView:view margin:margin];
@@ -76,6 +86,18 @@
 - (NSArray*)lyt_alignSidesToView:(UIView*)view margin:(CGFloat)margin
 {
     NSArray *constraints = [self lyt_constraintsByAligningSidesToView:view margin:margin];
+    [self lyt_addConstraints:constraints toAncestorSharedWithView:view];
+    return constraints;
+}
+
+- (NSArray*)lyt_alignCenterToView:(UIView*)view
+{
+    return [self lyt_alignCenterToView:view margin:0];
+}
+
+- (NSArray*)lyt_alignCenterToView:(UIView*)view margin:(CGFloat)margin
+{
+    NSArray *constraints = [self lyt_constraintsByAligningCenterToView:view margin:margin];
     [self lyt_addConstraints:constraints toAncestorSharedWithView:view];
     return constraints;
 }
@@ -144,13 +166,23 @@
 
 - (NSLayoutConstraint*)lyt_constraintByAligningCenterYToView:(UIView*)view
 {
-    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeCenterY multiplier:1 constant:0];
+    return [self lyt_constraintByAligningCenterYToView:view margin:0];
+}
+
+- (NSLayoutConstraint*)lyt_constraintByAligningCenterYToView:(UIView*)view margin:(CGFloat)margin
+{
+    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeCenterY multiplier:1 constant:margin];
 }
 
 - (NSArray*)lyt_constraintsByAligningCenterToView:(UIView*)view
 {
-    NSLayoutConstraint *centerXConstraint = [self lyt_constraintByAligningCenterXToView:view];
-    NSLayoutConstraint *centerYConstraint = [self lyt_constraintByAligningCenterYToView:view];
+    return [self lyt_constraintsByAligningCenterToView:view margin:0];
+}
+
+- (NSArray*)lyt_constraintsByAligningCenterToView:(UIView*)view margin:(CGFloat)margin
+{
+    NSLayoutConstraint *centerXConstraint = [self lyt_constraintByAligningCenterXToView:view margin:margin];
+    NSLayoutConstraint *centerYConstraint = [self lyt_constraintByAligningCenterYToView:view margin:margin];
     return @[centerXConstraint, centerYConstraint];
 }
 

@@ -14,9 +14,13 @@
 
 - (NSLayoutConstraint*)lyt_alignTopToView:(UIView*)view margin:(CGFloat)margin;
 
+- (NSLayoutConstraint*)lyt_alignRightToView:(UIView*)view;
+
 - (NSLayoutConstraint*)lyt_alignRightToView:(UIView*)view margin:(CGFloat)margin;
 
 - (NSLayoutConstraint*)lyt_alignBottomToView:(UIView*)view margin:(CGFloat)margin;
+
+- (NSLayoutConstraint*)lyt_alignLeftToView:(UIView*)view;
 
 - (NSLayoutConstraint*)lyt_alignLeftToView:(UIView*)view margin:(CGFloat)margin;
 
@@ -25,6 +29,10 @@
 - (NSLayoutConstraint*)lyt_alignCenterXToView:(UIView*)view margin:(CGFloat)margin;
 
 - (NSArray*)lyt_alignSidesToView:(UIView*)view margin:(CGFloat)margin;
+
+- (NSArray*)lyt_alignCenterToView:(UIView*)view;
+
+- (NSArray*)lyt_alignCenterToView:(UIView*)view margin:(CGFloat)margin;
 
 - (NSLayoutConstraint*)lyt_constraintByAligningTopToView:(UIView*)view;
 
@@ -48,7 +56,11 @@
 
 - (NSLayoutConstraint*)lyt_constraintByAligningCenterYToView:(UIView*)view;
 
+- (NSLayoutConstraint*)lyt_constraintByAligningCenterYToView:(UIView*)view margin:(CGFloat)margin;
+
 - (NSArray*)lyt_constraintsByAligningCenterToView:(UIView*)view;
+
+- (NSArray*)lyt_constraintsByAligningCenterToView:(UIView*)view margin:(CGFloat)margin;
 
 - (NSArray*)lyt_constraintsByAligningSidesToView:(UIView*)view margin:(CGFloat)margin;
 
