@@ -45,6 +45,11 @@
 
 #pragma mark Alignment
 
+- (NSLayoutConstraint*)lyt_alignTopToView:(UIView*)view
+{
+    return [self lyt_alignTopToView:view margin:0];
+}
+
 - (NSLayoutConstraint*)lyt_alignTopToView:(UIView*)view margin:(CGFloat)margin
 {
     NSLayoutConstraint *constraint = [self lyt_constraintByAligningTopToView:view margin:margin];
@@ -54,7 +59,7 @@
 
 - (NSLayoutConstraint*)lyt_alignRightToView:(UIView*)view
 {
-    [self lyt_alignRightToView:view margin:0];
+    return [self lyt_alignRightToView:view margin:0];
 }
 
 - (NSLayoutConstraint*)lyt_alignRightToView:(UIView*)view margin:(CGFloat)margin
@@ -62,6 +67,11 @@
     NSLayoutConstraint *constraint = [self lyt_constraintByAligningRightToView:view margin:margin];
     [self lyt_addConstraint:constraint toAncestorSharedWithView:view];
     return constraint;
+}
+
+- (NSLayoutConstraint*)lyt_alignBottomToView:(UIView*)view
+{
+    return [self lyt_alignBottomToView:view margin:0];
 }
 
 - (NSLayoutConstraint*)lyt_alignBottomToView:(UIView*)view margin:(CGFloat)margin
@@ -81,6 +91,11 @@
     NSLayoutConstraint *constraint = [self lyt_constraintByAligningLeftToView:view margin:margin];
     [self lyt_addConstraint:constraint toAncestorSharedWithView:view];
     return constraint;
+}
+
+- (NSArray*)lyt_alignSidesToView:(UIView*)view
+{
+    return [self lyt_alignSidesToView:view margin:0];
 }
 
 - (NSArray*)lyt_alignSidesToView:(UIView*)view margin:(CGFloat)margin
@@ -110,6 +125,18 @@
 - (NSLayoutConstraint*)lyt_alignCenterXToView:(UIView*)view margin:(CGFloat)margin
 {
     NSLayoutConstraint *constraint = [self lyt_constraintByAligningCenterXToView:view margin:margin];
+    [self lyt_addConstraint:constraint toAncestorSharedWithView:view];
+    return constraint;
+}
+
+- (NSLayoutConstraint*)lyt_alignCenterYToView:(UIView*)view
+{
+    return [self lyt_alignCenterYToView:view margin:0];
+}
+
+- (NSLayoutConstraint*)lyt_alignCenterYToView:(UIView*)view margin:(CGFloat)margin
+{
+    NSLayoutConstraint *constraint = [self lyt_constraintByAligningCenterYToView:view margin:margin];
     [self lyt_addConstraint:constraint toAncestorSharedWithView:view];
     return constraint;
 }
@@ -241,6 +268,41 @@
 }
 
 #pragma mark Sizing
+
+- (NSLayoutConstraint*)lyt_setWidth:(CGFloat)width
+{
+    NSLayoutConstraint *constraint = [self lyt_constraintWithWidth:width];
+    [self addConstraint:constraint];
+    return constraint;
+}
+
+- (NSLayoutConstraint*)lyt_setHeight:(CGFloat)height
+{
+    NSLayoutConstraint *constraint = [self lyt_constraintWithHeight:height];
+    [self addConstraint:constraint];
+    return constraint;
+}
+
+- (NSArray*)lyt_setSize:(CGSize)size
+{
+    NSArray *constraints = [self lyt_constraintsWithSize:size];
+    [self addConstraints:constraints];
+    return constraints;
+}
+
+- (NSLayoutConstraint*)lyt_matchWidthToView:(UIView*)view
+{
+    NSLayoutConstraint *constraint = [self lyt_constraintByMatchingWidthToView:view];
+    [self lyt_addConstraint:constraint toAncestorSharedWithView:view];
+    return constraint;
+}
+
+- (NSLayoutConstraint*)lyt_matchHeightToView:(UIView*)view
+{
+    NSLayoutConstraint *constraint = [self lyt_constraintByMatchingHeightToView:view];
+    [self lyt_addConstraint:constraint toAncestorSharedWithView:view];
+    return constraint;
+}
 
 - (NSLayoutConstraint*)lyt_constraintWithWidth:(CGFloat)width
 {
