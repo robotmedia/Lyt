@@ -105,42 +105,6 @@
     return constraints;
 }
 
-- (NSArray*)lyt_alignCenterToView:(UIView*)view
-{
-    return [self lyt_alignCenterToView:view margin:0];
-}
-
-- (NSArray*)lyt_alignCenterToView:(UIView*)view margin:(CGFloat)margin
-{
-    NSArray *constraints = [self lyt_constraintsByAligningCenterToView:view margin:margin];
-    [self lyt_addConstraints:constraints toAncestorSharedWithView:view];
-    return constraints;
-}
-
-- (NSLayoutConstraint*)lyt_alignCenterXToView:(UIView*)view
-{
-    return [self lyt_alignCenterXToView:view margin:0];
-}
-
-- (NSLayoutConstraint*)lyt_alignCenterXToView:(UIView*)view margin:(CGFloat)margin
-{
-    NSLayoutConstraint *constraint = [self lyt_constraintByAligningCenterXToView:view margin:margin];
-    [self lyt_addConstraint:constraint toAncestorSharedWithView:view];
-    return constraint;
-}
-
-- (NSLayoutConstraint*)lyt_alignCenterYToView:(UIView*)view
-{
-    return [self lyt_alignCenterYToView:view margin:0];
-}
-
-- (NSLayoutConstraint*)lyt_alignCenterYToView:(UIView*)view margin:(CGFloat)margin
-{
-    NSLayoutConstraint *constraint = [self lyt_constraintByAligningCenterYToView:view margin:margin];
-    [self lyt_addConstraint:constraint toAncestorSharedWithView:view];
-    return constraint;
-}
-
 - (NSLayoutConstraint*)lyt_constraintByAligningTopToView:(UIView*)view
 {
     return [self lyt_constraintByAligningTopToView:view margin:0];
@@ -181,38 +145,6 @@
     return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeRight multiplier:1 constant:margin];
 }
 
-- (NSLayoutConstraint*)lyt_constraintByAligningCenterXToView:(UIView*)view
-{
-    return [self lyt_constraintByAligningCenterXToView:view margin:0];
-}
-
-- (NSLayoutConstraint*)lyt_constraintByAligningCenterXToView:(UIView*)view margin:(CGFloat)margin
-{
-    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeCenterX multiplier:1 constant:margin];
-}
-
-- (NSLayoutConstraint*)lyt_constraintByAligningCenterYToView:(UIView*)view
-{
-    return [self lyt_constraintByAligningCenterYToView:view margin:0];
-}
-
-- (NSLayoutConstraint*)lyt_constraintByAligningCenterYToView:(UIView*)view margin:(CGFloat)margin
-{
-    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeCenterY multiplier:1 constant:margin];
-}
-
-- (NSArray*)lyt_constraintsByAligningCenterToView:(UIView*)view
-{
-    return [self lyt_constraintsByAligningCenterToView:view margin:0];
-}
-
-- (NSArray*)lyt_constraintsByAligningCenterToView:(UIView*)view margin:(CGFloat)margin
-{
-    NSLayoutConstraint *centerXConstraint = [self lyt_constraintByAligningCenterXToView:view margin:margin];
-    NSLayoutConstraint *centerYConstraint = [self lyt_constraintByAligningCenterYToView:view margin:margin];
-    return @[centerXConstraint, centerYConstraint];
-}
-
 - (NSArray*)lyt_constraintsByAligningSidesToView:(UIView*)view margin:(CGFloat)margin
 {
     NSLayoutConstraint *leftConstraint = [self lyt_constraintByAligningLeftToView:view margin:margin];
@@ -227,6 +159,76 @@
     NSLayoutConstraint *topConstraint = [self lyt_constraintByAligningTopToView:view margin:margin];
     NSLayoutConstraint *bottomConstraint = [self lyt_constraintByAligningBottomToView:view margin:-margin];
     return @[leftConstraint, rightConstraint, topConstraint, bottomConstraint];
+}
+
+#pragma mark Centering
+
+- (NSLayoutConstraint*)lyt_centerXWithView:(UIView*)view
+{
+    return [self lyt_centerXWithView:view margin:0];
+}
+
+- (NSLayoutConstraint*)lyt_centerXWithView:(UIView*)view margin:(CGFloat)margin
+{
+    NSLayoutConstraint *constraint = [self lyt_constraintByCenteringXWithView:view margin:margin];
+    [self lyt_addConstraint:constraint toAncestorSharedWithView:view];
+    return constraint;
+}
+
+- (NSLayoutConstraint*)lyt_centerYWithView:(UIView*)view
+{
+    return [self lyt_centerYWithView:view margin:0];
+}
+
+- (NSLayoutConstraint*)lyt_centerYWithView:(UIView*)view margin:(CGFloat)margin
+{
+    NSLayoutConstraint *constraint = [self lyt_constraintByCenteringYWithView:view margin:margin];
+    [self lyt_addConstraint:constraint toAncestorSharedWithView:view];
+    return constraint;
+}
+
+- (NSArray*)lyt_centerWithView:(UIView*)view
+{
+    return [self lyt_centerWithView:view margin:0];
+}
+
+- (NSArray*)lyt_centerWithView:(UIView*)view margin:(CGFloat)margin
+{
+    NSArray *constraints = [self lyt_constraintsByCenteringWithView:view margin:margin];
+    [self lyt_addConstraints:constraints toAncestorSharedWithView:view];
+    return constraints;
+}
+
+- (NSLayoutConstraint*)lyt_constraintByCenteringXWithView:(UIView*)view
+{
+    return [self lyt_constraintByCenteringXWithView:view margin:0];
+}
+
+- (NSLayoutConstraint*)lyt_constraintByCenteringXWithView:(UIView*)view margin:(CGFloat)margin
+{
+    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeCenterX multiplier:1 constant:margin];
+}
+
+- (NSLayoutConstraint*)lyt_constraintByCenteringYWithView:(UIView*)view
+{
+    return [self lyt_constraintByCenteringYWithView:view margin:0];
+}
+
+- (NSLayoutConstraint*)lyt_constraintByCenteringYWithView:(UIView*)view margin:(CGFloat)margin
+{
+    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeCenterY multiplier:1 constant:margin];
+}
+
+- (NSArray*)lyt_constraintsByCenteringWithView:(UIView*)view
+{
+    return [self lyt_constraintsByCenteringWithView:view margin:0];
+}
+
+- (NSArray*)lyt_constraintsByCenteringWithView:(UIView*)view margin:(CGFloat)margin
+{
+    NSLayoutConstraint *centerXConstraint = [self lyt_constraintByCenteringXWithView:view margin:margin];
+    NSLayoutConstraint *centerYConstraint = [self lyt_constraintByCenteringYWithView:view margin:margin];
+    return @[centerXConstraint, centerYConstraint];
 }
 
 #pragma mark Placement

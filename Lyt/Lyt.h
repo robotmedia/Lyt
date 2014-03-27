@@ -28,21 +28,9 @@
 
 - (NSLayoutConstraint*)lyt_alignLeftToView:(UIView*)view margin:(CGFloat)margin;
 
-- (NSLayoutConstraint*)lyt_alignCenterXToView:(UIView*)view;
-
-- (NSLayoutConstraint*)lyt_alignCenterXToView:(UIView*)view margin:(CGFloat)margin;
-
-- (NSLayoutConstraint*)lyt_alignCenterYToView:(UIView*)view;
-
-- (NSLayoutConstraint*)lyt_alignCenterYToView:(UIView*)view margin:(CGFloat)margin;
-
 - (NSArray*)lyt_alignSidesToView:(UIView*)view;
 
 - (NSArray*)lyt_alignSidesToView:(UIView*)view margin:(CGFloat)margin;
-
-- (NSArray*)lyt_alignCenterToView:(UIView*)view;
-
-- (NSArray*)lyt_alignCenterToView:(UIView*)view margin:(CGFloat)margin;
 
 - (NSLayoutConstraint*)lyt_constraintByAligningTopToView:(UIView*)view;
 
@@ -60,21 +48,35 @@
 
 - (NSLayoutConstraint*)lyt_constraintByAligningRightToView:(UIView*)view margin:(CGFloat)margin;
 
-- (NSLayoutConstraint*)lyt_constraintByAligningCenterXToView:(UIView*)view;
-
-- (NSLayoutConstraint*)lyt_constraintByAligningCenterXToView:(UIView*)view margin:(CGFloat)margin;
-
-- (NSLayoutConstraint*)lyt_constraintByAligningCenterYToView:(UIView*)view;
-
-- (NSLayoutConstraint*)lyt_constraintByAligningCenterYToView:(UIView*)view margin:(CGFloat)margin;
-
-- (NSArray*)lyt_constraintsByAligningCenterToView:(UIView*)view;
-
-- (NSArray*)lyt_constraintsByAligningCenterToView:(UIView*)view margin:(CGFloat)margin;
-
 - (NSArray*)lyt_constraintsByAligningSidesToView:(UIView*)view margin:(CGFloat)margin;
 
 - (NSArray*)lyt_constraintsByAligningToView:(UIView*)view margin:(CGFloat)margin;
+
+// Centering
+
+- (NSLayoutConstraint*)lyt_centerXWithView:(UIView*)view;
+
+- (NSLayoutConstraint*)lyt_centerXWithView:(UIView*)view margin:(CGFloat)margin;
+
+- (NSLayoutConstraint*)lyt_centerYWithView:(UIView*)view;
+
+- (NSLayoutConstraint*)lyt_centerYWithView:(UIView*)view margin:(CGFloat)margin;
+
+- (NSArray*)lyt_centerWithView:(UIView*)view;
+
+- (NSArray*)lyt_centerWithView:(UIView*)view margin:(CGFloat)margin;
+
+- (NSLayoutConstraint*)lyt_constraintByCenteringXWithView:(UIView*)view;
+
+- (NSLayoutConstraint*)lyt_constraintByCenteringXWithView:(UIView*)view margin:(CGFloat)margin;
+
+- (NSLayoutConstraint*)lyt_constraintByCenteringYWithView:(UIView*)view;
+
+- (NSLayoutConstraint*)lyt_constraintByCenteringYWithView:(UIView*)view margin:(CGFloat)margin;
+
+- (NSArray*)lyt_constraintsByCenteringWithView:(UIView*)view;
+
+- (NSArray*)lyt_constraintsByCenteringWithView:(UIView*)view margin:(CGFloat)margin;
 
 // Placement
 
