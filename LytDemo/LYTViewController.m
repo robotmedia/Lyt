@@ -29,7 +29,7 @@ static CGFloat const Separator = 8;
     [self.view addSubview:_titleLabel];
     
     _bodyLabel = [UILabel new];
-    _bodyLabel.text = NSLocalizedString(@"A UIView category to make autolayout readable.", @"");
+    _bodyLabel.text = NSLocalizedString(@"A UIView category to make autolayout (more) readable and less verbose.", @"");
     _bodyLabel.translatesAutoresizingMaskIntoConstraints = NO;
     _bodyLabel.backgroundColor = [UIColor yellowColor];
     _bodyLabel.numberOfLines = 0;
