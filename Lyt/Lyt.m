@@ -76,6 +76,18 @@
     return constraint;
 }
 
+- (NSLayoutConstraint*)lyt_alignRightToParent
+{
+    return [self lyt_alignRightToParentWithMargin:0];
+}
+
+- (NSLayoutConstraint*)lyt_alignRightToParentWithMargin:(CGFloat)margin
+{
+    NSLayoutConstraint *constraint = [self lyt_constraintByAligningRightToView:self.superview margin:margin];
+    [self.superview addConstraint:constraint];
+    return constraint;
+}
+
 - (NSLayoutConstraint*)lyt_alignRightToView:(UIView*)view
 {
     return [self lyt_alignRightToView:view margin:0];
@@ -97,6 +109,18 @@
 {
     NSLayoutConstraint *constraint = [self lyt_constraintByAligningBottomToView:view margin:margin];
     [self lyt_addConstraint:constraint toAncestorSharedWithView:view];
+    return constraint;
+}
+
+- (NSLayoutConstraint*)lyt_alignLeftToParent
+{
+    return [self lyt_alignLeftToParentWithMargin:0];
+}
+
+- (NSLayoutConstraint*)lyt_alignLeftToParentWithMargin:(CGFloat)margin
+{
+    NSLayoutConstraint *constraint = [self lyt_constraintByAligningLeftToView:self.superview margin:margin];
+    [self.superview addConstraint:constraint];
     return constraint;
 }
 
