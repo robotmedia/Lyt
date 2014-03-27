@@ -1,5 +1,6 @@
 Lyt
 ===
+[![Build Status](https://travis-ci.org/robotmedia/Lyt.png)](https://travis-ci.org/robotmedia/Lyt)
 
 A UIView category to make autolayout (more) readable and less verbose. Write this:
 
