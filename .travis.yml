@@ -1,0 +1,4 @@
+language: objective-c
+script: 
+  - xctool -project Lyt.xcodeproj -scheme 'Lyt' -configuration Release -sdk iphonesimulator test
+  - xctool -project Lyt.xcodeproj -scheme 'LytDemo' -configuration Release -sdk iphonesimulator
