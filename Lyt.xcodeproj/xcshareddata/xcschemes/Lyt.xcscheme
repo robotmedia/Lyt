@@ -38,16 +38,6 @@
                ReferencedContainer = "container:Lyt.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "87F601B618E33F1100169FD0"
-               BuildableName = "LytDemoTests.xctest"
-               BlueprintName = "ed"
-               ReferencedContainer = "container:Lyt.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
