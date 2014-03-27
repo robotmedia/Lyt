@@ -43,7 +43,7 @@ static CGFloat const Separator = 8;
 - (void)layoutWithLyt
 {
     [_titleLabel lyt_alignTopToView:self.view margin:TopMargin];
-    [_titleLabel lyt_centerXWithView:self.view];
+    [_titleLabel lyt_centerXInParent];
     
     [_bodyLabel lyt_alignSidesToView:self.view margin:SideMargin];
     [_bodyLabel lyt_placeBelowView:_titleLabel margin:Separator];
