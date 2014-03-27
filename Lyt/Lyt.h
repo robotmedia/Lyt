@@ -134,15 +134,23 @@
 
 - (NSLayoutConstraint*)lyt_placeAboveView:(UIView*)view margin:(CGFloat)margin;
 
+- (NSLayoutConstraint*)lyt_placeRightOfView:(UIView*)view margin:(CGFloat)margin;
+
 - (NSLayoutConstraint*)lyt_placeBelowView:(UIView*)view margin:(CGFloat)margin;
 
-- (NSLayoutConstraint*)lyt_placeLeftToView:(UIView*)view margin:(CGFloat)margin;
+- (NSLayoutConstraint*)lyt_placeLeftOfView:(UIView*)view;
+
+- (NSLayoutConstraint*)lyt_placeLeftOfView:(UIView*)view margin:(CGFloat)margin;
 
 - (NSLayoutConstraint*)lyt_constraintByPlacingAboveView:(UIView*)view margin:(CGFloat)margin;
 
+- (NSLayoutConstraint*)lyt_constraintByPlacingRightOfView:(UIView*)view margin:(CGFloat)margin;
+
 - (NSLayoutConstraint*)lyt_constraintByPlacingBelowView:(UIView*)view margin:(CGFloat)margin;
 
-- (NSLayoutConstraint*)lyt_constraintByPlacingLeftToView:(UIView*)view margin:(CGFloat)margin;
+- (NSLayoutConstraint*)lyt_constraintByPlacingLeftOfView:(UIView*)view;
+
+- (NSLayoutConstraint*)lyt_constraintByPlacingLeftOfView:(UIView*)view margin:(CGFloat)margin;
 
 // Sizing
 

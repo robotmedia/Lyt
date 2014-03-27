@@ -366,6 +366,13 @@
     return constraint;
 }
 
+- (NSLayoutConstraint*)lyt_placeRightOfView:(UIView*)view margin:(CGFloat)margin
+{
+    NSLayoutConstraint *constraint = [self lyt_constraintByPlacingRightOfView:view margin:margin];
+    [self lyt_addConstraint:constraint toAncestorSharedWithView:view];
+    return constraint;
+}
+
 - (NSLayoutConstraint*)lyt_placeBelowView:(UIView*)view margin:(CGFloat)margin
 {
     NSLayoutConstraint *constraint = [self lyt_constraintByPlacingBelowView:view margin:margin];
@@ -373,16 +380,16 @@
     return constraint;
 }
 
-- (NSLayoutConstraint*)lyt_placeLeftToView:(UIView*)view margin:(CGFloat)margin
+- (NSLayoutConstraint*)lyt_placeLeftOfView:(UIView*)view
 {
-    NSLayoutConstraint *constraint = [self lyt_constraintByPlacingLeftToView:view margin:margin];
-    [self lyt_addConstraint:constraint toAncestorSharedWithView:view];
-    return constraint;
+    return [self lyt_placeLeftOfView:view margin:0];
 }
 
-- (NSLayoutConstraint*)lyt_constraintByPlacingLeftToView:(UIView*)view margin:(CGFloat)margin
+- (NSLayoutConstraint*)lyt_placeLeftOfView:(UIView*)view margin:(CGFloat)margin
 {
-    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeRight multiplier:1 constant:margin];
+    NSLayoutConstraint *constraint = [self lyt_constraintByPlacingLeftOfView:view margin:margin];
+    [self lyt_addConstraint:constraint toAncestorSharedWithView:view];
+    return constraint;
 }
 
 - (NSLayoutConstraint*)lyt_constraintByPlacingAboveView:(UIView*)view margin:(CGFloat)margin
@@ -390,9 +397,24 @@
     return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeTop multiplier:1 constant:margin];
 }
 
+- (NSLayoutConstraint*)lyt_constraintByPlacingRightOfView:(UIView*)view margin:(CGFloat)margin
+{
+    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeRight multiplier:1 constant:margin];
+}
+
 - (NSLayoutConstraint*)lyt_constraintByPlacingBelowView:(UIView*)view margin:(CGFloat)margin
 {
     return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeBottom multiplier:1 constant:margin];
+}
+
+- (NSLayoutConstraint*)lyt_constraintByPlacingLeftOfView:(UIView*)view
+{
+    return [self lyt_constraintByPlacingLeftOfView:view margin:0];
+}
+
+- (NSLayoutConstraint*)lyt_constraintByPlacingLeftOfView:(UIView*)view margin:(CGFloat)margin
+{
+    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeLeft multiplier:1 constant:margin];
 }
 
 #pragma mark Sizing
