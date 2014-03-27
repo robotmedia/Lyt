@@ -155,6 +155,30 @@
     return constraints;
 }
 
+- (NSArray*)lyt_alignToParent
+{
+    return [self lyt_alignToParentWithMargin:0];
+}
+
+- (NSArray*)lyt_alignToParentWithMargin:(CGFloat)margin
+{
+    NSArray *constraints = [self lyt_constraintsByAligningToParentWithMargin:margin];
+    [self.superview addConstraints:constraints];
+    return constraints;
+}
+
+- (NSArray*)lyt_alignToView:(UIView*)view
+{
+    return [self lyt_alignToView:view margin:0];
+}
+
+- (NSArray*)lyt_alignToView:(UIView*)view margin:(CGFloat)margin
+{
+    NSArray *constraints = [self lyt_constraintsByAligningToView:self.superview margin:margin];
+    [self.superview addConstraints:constraints];
+    return constraints;
+}
+
 - (NSLayoutConstraint*)lyt_constraintByAligningTopToParentWithMargin:(CGFloat)margin
 {
     return [self lyt_constraintByAligningTopToView:self.superview margin:margin];
@@ -210,6 +234,16 @@
     NSLayoutConstraint *leftConstraint = [self lyt_constraintByAligningLeftToView:view margin:margin];
     NSLayoutConstraint *rightConstraint = [self lyt_constraintByAligningRightToView:view margin:-margin];
     return @[leftConstraint, rightConstraint];
+}
+
+- (NSArray*)lyt_constraintsByAligningToParent
+{
+    return [self lyt_constraintsByAligningToView:self.superview margin:0];
+}
+
+- (NSArray*)lyt_constraintsByAligningToParentWithMargin:(CGFloat)margin
+{
+    return [self lyt_constraintsByAligningToView:self.superview margin:margin];
 }
 
 - (NSArray*)lyt_constraintsByAligningToView:(UIView*)view margin:(CGFloat)margin
