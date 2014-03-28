@@ -41,7 +41,7 @@ NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-mar
 
 Type `lyt_` and then the layout action you want (e.g., `center`) to see what's available.
 
-![Build Status](Assets/autocomplete.png)
+![Code completion screenshot](Assets/autocomplete.png)
 
 ##License
 
