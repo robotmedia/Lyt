@@ -2,7 +2,11 @@ Lyt
 ===
 [![Build Status](https://travis-ci.org/robotmedia/Lyt.png)](https://travis-ci.org/robotmedia/Lyt)
 
-A UIView category to make autolayout (more) readable and less verbose. Write this:
+A UIView category to make autolayout (more) readable and less verbose. 
+
+##Better semantics with less code
+
+Lyt allows you to express the intent of your constraint. Write this:
 
 ```objective-c
 [view lyt_centerInParent];
@@ -32,6 +36,12 @@ NSDictionary *metrics = @{@"margin" : @(10)};
 NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-margin-[view]-margin-|" options:kNilOptions metrics:metrics views:views];
 [view.superview addConstraints:constraints];
 ```
+
+##Designed for code completion
+
+Type `lyt_` and then the layout action you want (e.g., `center`) to see what's available.
+
+![Build Status](Assets/autocomplete.png)
 
 ##License
 
