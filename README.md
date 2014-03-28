@@ -4,7 +4,7 @@ Lyt
 
 A UIView category to make autolayout (more) readable and less verbose. 
 
-##Better semantics with less code
+###Better semantics with less code
 
 Lyt allows you to express the intent of your constraint. Write this:
 
@@ -37,7 +37,7 @@ NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-mar
 [view.superview addConstraints:constraints];
 ```
 
-##Designed for code completion
+###Designed for code completion
 
 Type `lyt_` and then the layout action you want (e.g., `center`) to see what's available.
 
