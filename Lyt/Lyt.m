@@ -57,6 +57,11 @@
 
 #pragma mark Alignment
 
+- (NSLayoutConstraint*)lyt_alignTopToParent
+{
+    return [self lyt_alignTopToParentWithMargin:0];
+}
+
 - (NSLayoutConstraint*)lyt_alignTopToParentWithMargin:(CGFloat)margin
 {
     NSLayoutConstraint *constraint = [self lyt_constraintByAligningTopToParentWithMargin:margin];
@@ -97,6 +102,18 @@
 {
     NSLayoutConstraint *constraint = [self lyt_constraintByAligningRightToView:view margin:margin];
     [self lyt_addConstraint:constraint toAncestorSharedWithView:view];
+    return constraint;
+}
+
+- (NSLayoutConstraint*)lyt_alignBottomToParent
+{
+    return [self lyt_alignBottomToParentWithMargin:0];
+}
+
+- (NSLayoutConstraint*)lyt_alignBottomToParentWithMargin:(CGFloat)margin
+{
+    NSLayoutConstraint *constraint = [self lyt_constraintByAligningBottomToParentWithMargin:margin];
+    [self.superview addConstraint:constraint];
     return constraint;
 }
 
@@ -179,6 +196,11 @@
     return constraints;
 }
 
+- (NSLayoutConstraint*)lyt_constraintByAligningTopToParent
+{
+    return [self lyt_constraintByAligningTopToParentWithMargin:0];
+}
+
 - (NSLayoutConstraint*)lyt_constraintByAligningTopToParentWithMargin:(CGFloat)margin
 {
     return [self lyt_constraintByAligningTopToView:self.superview margin:margin];
@@ -192,6 +214,26 @@
 - (NSLayoutConstraint*)lyt_constraintByAligningTopToView:(UIView*)view margin:(CGFloat)margin
 {
     return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeTop multiplier:1 constant:margin];
+}
+
+- (NSLayoutConstraint*)lyt_constraintByAligningRightToView:(UIView*)view
+{
+    return [self lyt_constraintByAligningRightToView:view margin:0];
+}
+
+- (NSLayoutConstraint*)lyt_constraintByAligningRightToView:(UIView*)view margin:(CGFloat)margin
+{
+    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeRight multiplier:1 constant:margin];
+}
+
+- (NSLayoutConstraint*)lyt_constraintByAligningBottomToParent
+{
+    return [self lyt_constraintByAligningBottomToParentWithMargin:0];
+}
+
+- (NSLayoutConstraint*)lyt_constraintByAligningBottomToParentWithMargin:(CGFloat)margin
+{
+    return [self lyt_constraintByAligningBottomToView:self.superview margin:margin];
 }
 
 - (NSLayoutConstraint*)lyt_constraintByAligningBottomToView:(UIView*)view
@@ -212,16 +254,6 @@
 - (NSLayoutConstraint*)lyt_constraintByAligningLeftToView:(UIView*)view margin:(CGFloat)margin
 {
     return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeLeft multiplier:1 constant:margin];
-}
-
-- (NSLayoutConstraint*)lyt_constraintByAligningRightToView:(UIView*)view
-{
-    return [self lyt_constraintByAligningRightToView:view margin:0];
-}
-
-- (NSLayoutConstraint*)lyt_constraintByAligningRightToView:(UIView*)view margin:(CGFloat)margin
-{
-    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeRight multiplier:1 constant:margin];
 }
 
 - (NSArray*)lyt_constraintsByAligningSidesToParentWithMargin:(CGFloat)margin
