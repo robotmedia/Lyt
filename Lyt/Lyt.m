@@ -22,7 +22,12 @@
 
 @interface UIView (LytUtils)
 
-- (UIView*)lyt_ancestorSharedWithView:(UIView*)view;
+/** 
+ Returns the closest ancestor shared by the receiver and a given view.
+ @return The closest ancestor or nil if there’s no such object. Returns self if aView is identical to the receiver.
+ 
+ **/
+- (UIView*)lyt_ancestorSharedWithView:(UIView*)aView;
 
 - (void)lyt_addConstraint:(NSLayoutConstraint*)constraint toAncestorSharedWithView:(UIView*)view;
 
@@ -32,11 +37,14 @@
 
 @implementation UIView (LytUtils)
 
-- (UIView*)lyt_ancestorSharedWithView:(UIView*)view
-{
-    if (view == nil) return nil;
-    if (self.superview == view) return view;
-    return [self lyt_ancestorSharedWithView:view.superview];
+- (UIView*)lyt_ancestorSharedWithView:(UIView*)aView
+{ // TODO: Inneficient if view isn't a sibling or direct ancestor
+    if (aView == nil) return nil;
+    if (self == aView) return self;
+    if (self == aView.superview) return self;
+    UIView *ancestor = [self.superview lyt_ancestorSharedWithView:aView];
+    if (ancestor) return ancestor;
+    return [self lyt_ancestorSharedWithView:aView.superview];
 }
 
 - (void)lyt_addConstraint:(NSLayoutConstraint*)constraint toAncestorSharedWithView:(UIView*)view
