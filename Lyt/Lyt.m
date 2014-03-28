@@ -280,11 +280,11 @@
 
 - (NSArray*)lyt_constraintsByAligningToView:(UIView*)view margin:(CGFloat)margin
 {
-    NSLayoutConstraint *leftConstraint = [self lyt_constraintByAligningLeftToView:view margin:margin];
-    NSLayoutConstraint *rightConstraint = [self lyt_constraintByAligningRightToView:view margin:-margin];
     NSLayoutConstraint *topConstraint = [self lyt_constraintByAligningTopToView:view margin:margin];
+    NSLayoutConstraint *rightConstraint = [self lyt_constraintByAligningRightToView:view margin:-margin];
     NSLayoutConstraint *bottomConstraint = [self lyt_constraintByAligningBottomToView:view margin:-margin];
-    return @[leftConstraint, rightConstraint, topConstraint, bottomConstraint];
+    NSLayoutConstraint *leftConstraint = [self lyt_constraintByAligningLeftToView:view margin:margin];
+    return @[topConstraint, rightConstraint, bottomConstraint, leftConstraint];
 }
 
 #pragma mark Centering
