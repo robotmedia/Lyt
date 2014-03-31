@@ -61,7 +61,7 @@ NSLayoutConstraint *leftConstraint = [view lyt_alignLeftToParent];
 leftConstraint.constant = 10; 
 ```
 
-Additionally, each method has an equivalent that doesn't add the constraint to view hierarchy, which is particularly useful for dynamic autolayouts. For example:
+Additionally, each method has an equivalent that doesn't add the constraint to the view hierarchy, which is particularly useful for dynamic autolayouts. For example:
 
 ```objective-c
 _labelLeftConstraint = [_label lyt_constraintByAligningLeftToParent];
