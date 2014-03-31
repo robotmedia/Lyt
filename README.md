@@ -1,6 +1,6 @@
 Lyt
 ===
-[![Build Status](https://travis-ci.org/robotmedia/Lyt.png)](https://travis-ci.org/robotmedia/Lyt)
+[![Version](https://cocoapod-badges.herokuapp.com/v/Lyt/badge.png)](http://cocoadocs.org/docsets/Lyt) [![Platform](https://cocoapod-badges.herokuapp.com/p/Lyt/badge.png)](http://cocoadocs.org/docsets/Lyt) [![Build Status](https://travis-ci.org/robotmedia/Lyt.png)](https://travis-ci.org/robotmedia/Lyt)
 
 A UIView category to make autolayout (more) readable and less verbose. 
 
@@ -42,6 +42,43 @@ NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-mar
 Type `lyt_` and then the layout action you want (e.g., `center`) to see what's available.
 
 ![Code completion screenshot](Assets/autocomplete.png)
+
+Lyt offers dozens of methods. Current families are:
+
+* `lyt_align*`
+* `lyt_center*`
+* `lyt_place*`
+* `lyt_set*`
+* `lyt_match*`
+
+###Support for dynamic layouts
+
+Each Lyt method returns the corresponding constraint or constraints, which you can then modify or remove from the view hierarchy.
+
+```objective-c
+NSLayoutConstraint *leftConstraint = [view lyt_alignLeftToParent];
+// Later...
+leftConstraint.constant = 10; 
+```
+
+Additionally, each method has an equivalent that doesn't add the constraint to view hierarchy, which is particularly useful for dynamic autolayouts. For example:
+
+```objective-c
+_labelLeftConstraint = [_label lyt_constraintByAligningLeftToParent];
+// Later...
+[self.view addConstraint:_labelLeftConstraint]; 
+```
+
+##Installation
+
+Using [CocoaPods](http://cocoapods.org/):
+
+```ruby
+pod "Lyt", "~> 0.1"
+```
+
+Or add the files from the [Lyt](https://github.com/robotmedia/Lyt/tree/master/Lyt) directory if you're doing it manually.
+
 
 ##License
 
