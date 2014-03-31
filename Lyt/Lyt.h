@@ -204,9 +204,11 @@
 
 - (NSArray*)lyt_constraintBySettingOrigin:(CGPoint)origin;
 
-- (NSLayoutConstraint*)lyt_constraintWithWidth:(CGFloat)width;
+- (NSLayoutConstraint*)lyt_constraintBySettingWidth:(CGFloat)width;
 
-- (NSLayoutConstraint*)lyt_constraintWithHeight:(CGFloat)height;
+- (NSLayoutConstraint*)lyt_constraintBySettingHeight:(CGFloat)height;
+
+- (NSArray*)lyt_constraintsBySettingSize:(CGSize)size;
 
 - (NSArray*)lyt_constraintBySettingFrame:(CGRect)frame;
 
@@ -215,8 +217,6 @@
 - (NSLayoutConstraint*)lyt_constraintByMatchingHeightToView:(UIView*)view;
 
 - (NSArray*)lyt_constraintsByMatchingSizeToView:(UIView*)view;
-
-- (NSArray*)lyt_constraintsWithSize:(CGSize)size;
 
 @end
 

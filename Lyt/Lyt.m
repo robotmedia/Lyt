@@ -521,21 +521,21 @@
 
 - (NSLayoutConstraint*)lyt_setWidth:(CGFloat)width
 {
-    NSLayoutConstraint *constraint = [self lyt_constraintWithWidth:width];
+    NSLayoutConstraint *constraint = [self lyt_constraintBySettingWidth:width];
     [self addConstraint:constraint];
     return constraint;
 }
 
 - (NSLayoutConstraint*)lyt_setHeight:(CGFloat)height
 {
-    NSLayoutConstraint *constraint = [self lyt_constraintWithHeight:height];
+    NSLayoutConstraint *constraint = [self lyt_constraintBySettingHeight:height];
     [self addConstraint:constraint];
     return constraint;
 }
 
 - (NSArray*)lyt_setSize:(CGSize)size
 {
-    NSArray *constraints = [self lyt_constraintsWithSize:size];
+    NSArray *constraints = [self lyt_constraintsBySettingSize:size];
     [self addConstraints:constraints];
     return constraints;
 }
@@ -544,7 +544,7 @@
 {
     NSArray *originConstraints = [self lyt_constraintsBySettingOrigin:frame.origin];
     [self.superview addConstraints:originConstraints];
-    NSArray *widthConstraints = [self lyt_constraintsWithSize:frame.size];
+    NSArray *widthConstraints = [self lyt_constraintsBySettingSize:frame.size];
     [self addConstraints:widthConstraints];
     return [originConstraints arrayByAddingObjectsFromArray:widthConstraints];
 }
@@ -580,22 +580,29 @@
     return @[xConstraint, yConstraint];
 }
 
-- (NSLayoutConstraint*)lyt_constraintWithWidth:(CGFloat)width
+- (NSLayoutConstraint*)lyt_constraintBySettingWidth:(CGFloat)width
 {
     return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:width];
 }
 
-- (NSLayoutConstraint*)lyt_constraintWithHeight:(CGFloat)height
+- (NSLayoutConstraint*)lyt_constraintBySettingHeight:(CGFloat)height
 {
     return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:height];
+}
+
+- (NSArray*)lyt_constraintsBySettingSize:(CGSize)size
+{
+    NSLayoutConstraint *widthConstraint = [self lyt_constraintBySettingWidth:size.width];
+    NSLayoutConstraint *heightConstraint = [self lyt_constraintBySettingHeight:size.height];
+    return @[widthConstraint, heightConstraint];
 }
 
 - (NSArray*)lyt_constraintsBySettingFrame:(CGRect)frame
 {
     NSLayoutConstraint *xConstraint = [self lyt_constraintBySettingX:frame.origin.x];
     NSLayoutConstraint *yConstraint = [self lyt_constraintBySettingY:frame.origin.y];
-    NSLayoutConstraint *widthConstraint = [self lyt_constraintWithWidth:frame.size.width];
-    NSLayoutConstraint *heightConstraint = [self lyt_constraintWithHeight:frame.size.height];
+    NSLayoutConstraint *widthConstraint = [self lyt_constraintBySettingWidth:frame.size.width];
+    NSLayoutConstraint *heightConstraint = [self lyt_constraintBySettingHeight:frame.size.height];
     return @[xConstraint, yConstraint, widthConstraint, heightConstraint];
 }
 
@@ -613,13 +620,6 @@
 {
     NSLayoutConstraint *widthConstraint = [self lyt_constraintByMatchingWidthToView:view];
     NSLayoutConstraint *heightConstraint = [self lyt_constraintByMatchingHeightToView:view];
-    return @[widthConstraint, heightConstraint];
-}
-
-- (NSArray*)lyt_constraintsWithSize:(CGSize)size
-{
-    NSLayoutConstraint *widthConstraint = [self lyt_constraintWithWidth:size.width];
-    NSLayoutConstraint *heightConstraint = [self lyt_constraintWithHeight:size.height];
     return @[widthConstraint, heightConstraint];
 }
 
