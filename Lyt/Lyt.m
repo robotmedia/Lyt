@@ -438,6 +438,11 @@
 
 #pragma mark Placement
 
+- (NSLayoutConstraint*)lyt_placeAboveView:(UIView*)view
+{
+    return [self lyt_placeAboveView:view margin:0];
+}
+
 - (NSLayoutConstraint*)lyt_placeAboveView:(UIView*)view margin:(CGFloat)margin
 {
     NSLayoutConstraint *constraint = [self lyt_constraintByPlacingAboveView:view margin:margin];
@@ -445,11 +450,21 @@
     return constraint;
 }
 
+- (NSLayoutConstraint*)lyt_placeRightOfView:(UIView*)view
+{
+    return [self lyt_placeRightOfView:view margin:0];
+}
+
 - (NSLayoutConstraint*)lyt_placeRightOfView:(UIView*)view margin:(CGFloat)margin
 {
     NSLayoutConstraint *constraint = [self lyt_constraintByPlacingRightOfView:view margin:margin];
     [self lyt_addConstraint:constraint toAncestorSharedWithView:view];
     return constraint;
+}
+
+- (NSLayoutConstraint*)lyt_placeBelowView:(UIView*)view
+{
+    return [self lyt_placeBelowView:view margin:0];
 }
 
 - (NSLayoutConstraint*)lyt_placeBelowView:(UIView*)view margin:(CGFloat)margin
@@ -471,14 +486,29 @@
     return constraint;
 }
 
+- (NSLayoutConstraint*)lyt_constraintByPlacingAboveView:(UIView*)view
+{
+    return [self lyt_constraintByPlacingAboveView:view margin:0];
+}
+
 - (NSLayoutConstraint*)lyt_constraintByPlacingAboveView:(UIView*)view margin:(CGFloat)margin
 {
     return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeTop multiplier:1 constant:margin];
 }
 
+- (NSLayoutConstraint*)lyt_constraintByPlacingRightOfView:(UIView*)view
+{
+    return [self lyt_constraintByPlacingRightOfView:view margin:0];
+}
+
 - (NSLayoutConstraint*)lyt_constraintByPlacingRightOfView:(UIView*)view margin:(CGFloat)margin
 {
     return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeRight multiplier:1 constant:margin];
+}
+
+- (NSLayoutConstraint*)lyt_constraintByPlacingBelowView:(UIView*)view
+{
+    return [self lyt_constraintByPlacingBelowView:view margin:0];
 }
 
 - (NSLayoutConstraint*)lyt_constraintByPlacingBelowView:(UIView*)view margin:(CGFloat)margin
