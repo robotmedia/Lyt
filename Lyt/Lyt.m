@@ -161,6 +161,11 @@
     return constraint;
 }
 
+- (NSArray*)lyt_alignSidesToParent
+{
+    return [self lyt_alignSidesToParentWithMargin:0];
+}
+
 - (NSArray*)lyt_alignSidesToParentWithMargin:(CGFloat)margin
 {
     NSArray *constraints = [self lyt_constraintsByAligningSidesToParentWithMargin:margin];

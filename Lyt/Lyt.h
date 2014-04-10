@@ -56,6 +56,8 @@
 
 - (NSLayoutConstraint*)lyt_alignLeftToView:(UIView*)view margin:(CGFloat)margin;
 
+- (NSArray*)lyt_alignSidesToParent;
+
 - (NSArray*)lyt_alignSidesToParentWithMargin:(CGFloat)margin;
 
 - (NSArray*)lyt_alignSidesToView:(UIView*)view;
