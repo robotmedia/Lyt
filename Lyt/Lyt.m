@@ -309,135 +309,135 @@
 
 - (NSLayoutConstraint*)lyt_centerXInParent
 {
-    return [self lyt_centerXInParentWithMargin:0];
+    return [self lyt_centerXInParentWithOffset:0];
 }
 
-- (NSLayoutConstraint*)lyt_centerXInParentWithMargin:(CGFloat)margin
+- (NSLayoutConstraint*)lyt_centerXInParentWithOffset:(CGFloat)offset
 {
-    NSLayoutConstraint *constraint = [self lyt_constraintByCenteringXInParentWithMargin:margin];
+    NSLayoutConstraint *constraint = [self lyt_constraintByCenteringXInParentWithOffset:offset];
     [self.superview addConstraint:constraint];
     return constraint;
 }
 
 - (NSLayoutConstraint*)lyt_centerXWithView:(UIView*)view
 {
-    return [self lyt_centerXWithView:view margin:0];
+    return [self lyt_centerXWithView:view offset:0];
 }
 
-- (NSLayoutConstraint*)lyt_centerXWithView:(UIView*)view margin:(CGFloat)margin
+- (NSLayoutConstraint*)lyt_centerXWithView:(UIView*)view offset:(CGFloat)offset
 {
-    NSLayoutConstraint *constraint = [self lyt_constraintByCenteringXWithView:view margin:margin];
+    NSLayoutConstraint *constraint = [self lyt_constraintByCenteringXWithView:view offset:offset];
     [self lyt_addConstraint:constraint toAncestorSharedWithView:view];
     return constraint;
 }
 
 - (NSLayoutConstraint*)lyt_centerYInParent
 {
-    return [self lyt_centerYInParentWithMargin:0];
+    return [self lyt_centerYInParentWithOffset:0];
 }
 
-- (NSLayoutConstraint*)lyt_centerYInParentWithMargin:(CGFloat)margin
+- (NSLayoutConstraint*)lyt_centerYInParentWithOffset:(CGFloat)offset
 {
-    NSLayoutConstraint *constraint = [self lyt_constraintByCenteringYInParentWithMargin:margin];
+    NSLayoutConstraint *constraint = [self lyt_constraintByCenteringYInParentWithOffset:offset];
     [self.superview addConstraint:constraint];
     return constraint;
 }
 
 - (NSLayoutConstraint*)lyt_centerYWithView:(UIView*)view
 {
-    return [self lyt_centerYWithView:view margin:0];
+    return [self lyt_centerYWithView:view offset:0];
 }
 
-- (NSLayoutConstraint*)lyt_centerYWithView:(UIView*)view margin:(CGFloat)margin
+- (NSLayoutConstraint*)lyt_centerYWithView:(UIView*)view offset:(CGFloat)offset
 {
-    NSLayoutConstraint *constraint = [self lyt_constraintByCenteringYWithView:view margin:margin];
+    NSLayoutConstraint *constraint = [self lyt_constraintByCenteringYWithView:view offset:offset];
     [self lyt_addConstraint:constraint toAncestorSharedWithView:view];
     return constraint;
 }
 
 - (NSArray*)lyt_centerInParent
 {
-    return [self lyt_centerInParentWithMargin:0];
+    return [self lyt_centerInParentWithOffset:0];
 }
 
-- (NSArray*)lyt_centerInParentWithMargin:(CGFloat)margin
+- (NSArray*)lyt_centerInParentWithOffset:(CGFloat)offset
 {
-    NSArray *constraints = [self lyt_constraintsByCenteringInParentWithMargin:margin];
+    NSArray *constraints = [self lyt_constraintsByCenteringInParentWithOffset:offset];
     [self.superview addConstraints:constraints];
     return constraints;
 }
 
 - (NSArray*)lyt_centerWithView:(UIView*)view
 {
-    return [self lyt_centerWithView:view margin:0];
+    return [self lyt_centerWithView:view offset:0];
 }
 
-- (NSArray*)lyt_centerWithView:(UIView*)view margin:(CGFloat)margin
+- (NSArray*)lyt_centerWithView:(UIView*)view offset:(CGFloat)offset
 {
-    NSArray *constraints = [self lyt_constraintsByCenteringWithView:view margin:margin];
+    NSArray *constraints = [self lyt_constraintsByCenteringWithView:view offset:offset];
     [self lyt_addConstraints:constraints toAncestorSharedWithView:view];
     return constraints;
 }
 
 - (NSLayoutConstraint*)lyt_constraintByCenteringXInParent
 {
-    return [self lyt_constraintByCenteringXInParentWithMargin:0];
+    return [self lyt_constraintByCenteringXInParentWithOffset:0];
 }
 
-- (NSLayoutConstraint*)lyt_constraintByCenteringXInParentWithMargin:(CGFloat)margin
+- (NSLayoutConstraint*)lyt_constraintByCenteringXInParentWithOffset:(CGFloat)offset
 {
-    return [self lyt_constraintByCenteringXWithView:self.superview margin:margin];
+    return [self lyt_constraintByCenteringXWithView:self.superview offset:offset];
 }
 
 - (NSLayoutConstraint*)lyt_constraintByCenteringXWithView:(UIView*)view
 {
-    return [self lyt_constraintByCenteringXWithView:view margin:0];
+    return [self lyt_constraintByCenteringXWithView:view offset:0];
 }
 
-- (NSLayoutConstraint*)lyt_constraintByCenteringXWithView:(UIView*)view margin:(CGFloat)margin
+- (NSLayoutConstraint*)lyt_constraintByCenteringXWithView:(UIView*)view offset:(CGFloat)offset
 {
-    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeCenterX multiplier:1 constant:margin];
+    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeCenterX multiplier:1 constant:offset];
 }
 
 - (NSLayoutConstraint*)lyt_constraintByCenteringYInParent
 {
-    return [self lyt_constraintByCenteringYInParentWithMargin:0];
+    return [self lyt_constraintByCenteringYInParentWithOffset:0];
 }
 
-- (NSLayoutConstraint*)lyt_constraintByCenteringYInParentWithMargin:(CGFloat)margin
+- (NSLayoutConstraint*)lyt_constraintByCenteringYInParentWithOffset:(CGFloat)offset
 {
-    return [self lyt_constraintByCenteringYWithView:self.superview margin:margin];
+    return [self lyt_constraintByCenteringYWithView:self.superview offset:offset];
 }
 
 - (NSLayoutConstraint*)lyt_constraintByCenteringYWithView:(UIView*)view
 {
-    return [self lyt_constraintByCenteringYWithView:view margin:0];
+    return [self lyt_constraintByCenteringYWithView:view offset:0];
 }
 
-- (NSLayoutConstraint*)lyt_constraintByCenteringYWithView:(UIView*)view margin:(CGFloat)margin
+- (NSLayoutConstraint*)lyt_constraintByCenteringYWithView:(UIView*)view offset:(CGFloat)offset
 {
-    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeCenterY multiplier:1 constant:margin];
+    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeCenterY multiplier:1 constant:offset];
 }
 
 - (NSArray*)lyt_constraintsByCenteringInParent
 {
-    return [self lyt_constraintsByCenteringInParentWithMargin:0];
+    return [self lyt_constraintsByCenteringInParentWithOffset:0];
 }
 
-- (NSArray*)lyt_constraintsByCenteringInParentWithMargin:(CGFloat)margin
+- (NSArray*)lyt_constraintsByCenteringInParentWithOffset:(CGFloat)offset
 {
-    return [self lyt_constraintsByCenteringWithView:self.superview margin:margin];
+    return [self lyt_constraintsByCenteringWithView:self.superview offset:offset];
 }
 
 - (NSArray*)lyt_constraintsByCenteringWithView:(UIView*)view
 {
-    return [self lyt_constraintsByCenteringWithView:view margin:0];
+    return [self lyt_constraintsByCenteringWithView:view offset:0];
 }
 
-- (NSArray*)lyt_constraintsByCenteringWithView:(UIView*)view margin:(CGFloat)margin
+- (NSArray*)lyt_constraintsByCenteringWithView:(UIView*)view offset:(CGFloat)offset
 {
-    NSLayoutConstraint *centerXConstraint = [self lyt_constraintByCenteringXWithView:view margin:margin];
-    NSLayoutConstraint *centerYConstraint = [self lyt_constraintByCenteringYWithView:view margin:margin];
+    NSLayoutConstraint *centerXConstraint = [self lyt_constraintByCenteringXWithView:view offset:offset];
+    NSLayoutConstraint *centerYConstraint = [self lyt_constraintByCenteringYWithView:view offset:offset];
     return @[centerXConstraint, centerYConstraint];
 }
 
