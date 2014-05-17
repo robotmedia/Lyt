@@ -88,7 +88,6 @@
 		87850FFA1927739500208859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		87850FFC1927739500208859 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8785101B19279A6800208859 /* libLytiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLytiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8785101F19279A6800208859 /* LytiOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LytiOS-Prefix.pch"; sourceTree = "<group>"; };
 		8785102819279A6800208859 /* LytiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LytiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8785103119279A6900208859 /* LytiOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LytiOSTests-Info.plist"; sourceTree = "<group>"; };
 		8785103319279A6900208859 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -209,22 +208,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8785101D19279A6800208859 /* LytiOS */ = {
-			isa = PBXGroup;
-			children = (
-				8785101E19279A6800208859 /* Supporting Files */,
-			);
-			path = LytiOS;
-			sourceTree = "<group>";
-		};
-		8785101E19279A6800208859 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8785101F19279A6800208859 /* LytiOS-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		8785102F19279A6900208859 /* LytiOSTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,7 +228,6 @@
 		8785104219279D1F00208859 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				8785101D19279A6800208859 /* LytiOS */,
 				87F601A518E33F1100169FD0 /* LytiOSDemo */,
 				8785102F19279A6900208859 /* LytiOSTests */,
 			);
@@ -743,7 +725,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/LytiOS.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iOS/LytiOS/LytiOS-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -759,7 +741,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/LytiOS.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iOS/LytiOS/LytiOS-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -775,7 +757,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iOS/LytiOS/LytiOS-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -795,7 +777,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iOS/LytiOS/LytiOS-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "iOS/LytiOSTests/LytiOSTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
