@@ -18,6 +18,7 @@
 //  limitations under the License.
 //
 
+#import "TargetConditionals.h" // See: http://stackoverflow.com/questions/3742525/target-os-iphone-and-applicationtests
 #if TARGET_OS_IPHONE
 @import UIKit;
 #define LYTView UIView

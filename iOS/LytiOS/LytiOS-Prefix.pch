@@ -6,5 +6,4 @@
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
-    #import "TargetConditionals.h" // See: http://stackoverflow.com/questions/3742525/target-os-iphone-and-applicationtests
 #endif
