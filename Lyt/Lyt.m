@@ -23,13 +23,18 @@
 @implementation LYTView (LytUtils)
 
 - (LYTView*)lyt_ancestorSharedWithView:(LYTView*)aView
-{ // TODO: Inneficient if view isn't a sibling or direct ancestor
+{
+#if TARGET_OS_IPHONE
+    // TODO: Inneficient if view isn't a sibling or direct ancestor
     if (aView == nil) return nil;
     if (self == aView) return self;
     if (self == aView.superview) return self;
     LYTView *ancestor = [self.superview lyt_ancestorSharedWithView:aView];
     if (ancestor) return ancestor;
     return [self lyt_ancestorSharedWithView:aView.superview];
+#else
+    return [self ancestorSharedWithView:aView];
+#endif
 }
 
 - (void)lyt_addConstraint:(NSLayoutConstraint*)constraint toAncestorSharedWithView:(LYTView*)view
