@@ -25,7 +25,6 @@
 		8785103F19279AA400208859 /* LytTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F6019018E33EA600169FD0 /* LytTests.m */; };
 		8785104119279CB000208859 /* Lyt.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F6019A18E33ED700169FD0 /* Lyt.m */; };
 		8785104819279D5400208859 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87850FE41927739500208859 /* Cocoa.framework */; };
-		8785104E19279D5400208859 /* LytOSX.m in Sources */ = {isa = PBXBuildFile; fileRef = 8785104D19279D5400208859 /* LytOSX.m */; };
 		8785105419279D5500208859 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F6018218E33EA600169FD0 /* XCTest.framework */; };
 		8785105519279D5500208859 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87850FE41927739500208859 /* Cocoa.framework */; };
 		8785105819279D5500208859 /* libLytOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8785104719279D5400208859 /* libLytOSX.a */; };
@@ -95,8 +94,6 @@
 		8785103319279A6900208859 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8785104719279D5400208859 /* libLytOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLytOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8785104B19279D5400208859 /* LytOSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LytOSX-Prefix.pch"; sourceTree = "<group>"; };
-		8785104C19279D5400208859 /* LytOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LytOSX.h; sourceTree = "<group>"; };
-		8785104D19279D5400208859 /* LytOSX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LytOSX.m; sourceTree = "<group>"; };
 		8785105319279D5400208859 /* LytOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LytOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8785105B19279D5500208859 /* LytOSXTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LytOSXTests-Info.plist"; sourceTree = "<group>"; };
 		8785105D19279D5500208859 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -258,8 +255,6 @@
 		8785104919279D5400208859 /* LytOSX */ = {
 			isa = PBXGroup;
 			children = (
-				8785104C19279D5400208859 /* LytOSX.h */,
-				8785104D19279D5400208859 /* LytOSX.m */,
 				8785104A19279D5400208859 /* Supporting Files */,
 			);
 			path = LytOSX;
@@ -607,7 +602,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8785104E19279D5400208859 /* LytOSX.m in Sources */,
 				8785106819279DFF00208859 /* Lyt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
