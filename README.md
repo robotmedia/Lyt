@@ -2,7 +2,7 @@ Lyt
 ===
 [![Version](https://cocoapod-badges.herokuapp.com/v/Lyt/badge.png)](http://cocoadocs.org/docsets/Lyt) [![Platform](https://cocoapod-badges.herokuapp.com/p/Lyt/badge.png)](http://cocoadocs.org/docsets/Lyt) [![Build Status](https://travis-ci.org/robotmedia/Lyt.png)](https://travis-ci.org/robotmedia/Lyt)
 
-A UIView category to make autolayout (more) readable and less verbose. 
+A UIView and NSView category to make autolayout (more) readable and less verbose. For iOS and OS X.
 
 ###Better semantics with less code
 
@@ -74,15 +74,14 @@ _labelLeftConstraint = [_label lyt_constraintByAligningLeftToParent];
 Using [CocoaPods](http://cocoapods.org/):
 
 ```ruby
-pod "Lyt", "~> 0.1"
+pod 'Lyt', '~> 0.3'
 ```
 
 Or add the files from the [Lyt](https://github.com/robotmedia/Lyt/tree/master/Lyt) directory if you're doing it manually.
 
-
 ##License
 
- Copyright 2013 [Robot Media SL](http://www.robotmedia.net)
+ Copyright 2014 [Robot Media SL](http://www.robotmedia.net)
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
