@@ -92,7 +92,6 @@
 		8785103119279A6900208859 /* LytiOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LytiOSTests-Info.plist"; sourceTree = "<group>"; };
 		8785103319279A6900208859 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8785104719279D5400208859 /* libLytOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLytOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8785104B19279D5400208859 /* LytOSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LytOSX-Prefix.pch"; sourceTree = "<group>"; };
 		8785105319279D5400208859 /* LytOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LytOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8785105B19279D5500208859 /* LytOSXTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LytOSXTests-Info.plist"; sourceTree = "<group>"; };
 		8785105D19279D5500208859 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -234,22 +233,6 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
-		8785104919279D5400208859 /* LytOSX */ = {
-			isa = PBXGroup;
-			children = (
-				8785104A19279D5400208859 /* Supporting Files */,
-			);
-			path = LytOSX;
-			sourceTree = "<group>";
-		};
-		8785104A19279D5400208859 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8785104B19279D5400208859 /* LytOSX-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		8785105919279D5500208859 /* LytOSXTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,7 +253,6 @@
 		8785106719279D7600208859 /* OS X */ = {
 			isa = PBXGroup;
 			children = (
-				8785104919279D5400208859 /* LytOSX */,
 				87850FEA1927739500208859 /* LytOSXDemo */,
 				8785105919279D5500208859 /* LytOSXTests */,
 			);
@@ -793,7 +775,7 @@
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OS X/LytOSX/LytOSX-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -814,7 +796,7 @@
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OS X/LytOSX/LytOSX-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -831,7 +813,7 @@
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OS X/LytOSX/LytOSX-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -855,7 +837,7 @@
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OS X/LytOSX/LytOSX-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "OS X/LytOSXTests/LytOSXTests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
