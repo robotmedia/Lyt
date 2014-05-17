@@ -1,6 +1,6 @@
 //
-//  LYTAppDelegate.m
-//  LytDemo
+//  LYTIOSDemoAppDelegate.m
+//  LytiOSDemo
 //
 //  Created by Hermés Piqué on 26/03/14.
 //  Copyright (c) 2014 Robot Media. All rights reserved.
@@ -18,10 +18,10 @@
 //  limitations under the License.
 //
 
-#import "LYTAppDelegate.h"
+#import "LYTIOSDemoAppDelegate.h"
 #import "LYTViewController.h"
 
-@implementation LYTAppDelegate
+@implementation LYTIOSDemoAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

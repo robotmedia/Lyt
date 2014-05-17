@@ -7,90 +7,161 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		87F6017518E33EA600169FD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F6017418E33EA600169FD0 /* Foundation.framework */; };
-		87F6017A18E33EA600169FD0 /* Lyt.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 87F6017918E33EA600169FD0 /* Lyt.h */; };
-		87F6018318E33EA600169FD0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F6018218E33EA600169FD0 /* XCTest.framework */; };
-		87F6018418E33EA600169FD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F6017418E33EA600169FD0 /* Foundation.framework */; };
-		87F6018618E33EA600169FD0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F6018518E33EA600169FD0 /* UIKit.framework */; };
-		87F6018918E33EA600169FD0 /* libLyt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F6017118E33EA600169FD0 /* libLyt.a */; };
-		87F6018F18E33EA600169FD0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87F6018D18E33EA600169FD0 /* InfoPlist.strings */; };
-		87F6019118E33EA600169FD0 /* LytTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F6019018E33EA600169FD0 /* LytTests.m */; };
-		87F6019B18E33EE700169FD0 /* Lyt.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F6019A18E33ED700169FD0 /* Lyt.m */; };
+		87850FE51927739500208859 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87850FE41927739500208859 /* Cocoa.framework */; };
+		87850FEF1927739500208859 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87850FED1927739500208859 /* InfoPlist.strings */; };
+		87850FF11927739500208859 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87850FF01927739500208859 /* main.m */; };
+		87850FF51927739500208859 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 87850FF31927739500208859 /* Credits.rtf */; };
+		87850FF81927739500208859 /* LYTOSXDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87850FF71927739500208859 /* LYTOSXDemoAppDelegate.m */; };
+		87850FFB1927739500208859 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87850FF91927739500208859 /* MainMenu.xib */; };
+		87850FFD1927739500208859 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87850FFC1927739500208859 /* Images.xcassets */; };
+		878510161927777500208859 /* Lyt.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F6019A18E33ED700169FD0 /* Lyt.m */; };
+		8785101C19279A6800208859 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F6017418E33EA600169FD0 /* Foundation.framework */; };
+		8785102919279A6800208859 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F6018218E33EA600169FD0 /* XCTest.framework */; };
+		8785102A19279A6900208859 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F6017418E33EA600169FD0 /* Foundation.framework */; };
+		8785102B19279A6900208859 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F6018518E33EA600169FD0 /* UIKit.framework */; };
+		8785102E19279A6900208859 /* libLytiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8785101B19279A6800208859 /* libLytiOS.a */; };
+		8785103419279A6900208859 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8785103219279A6900208859 /* InfoPlist.strings */; };
+		8785103D19279A8A00208859 /* Lyt.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F6019A18E33ED700169FD0 /* Lyt.m */; };
+		8785103F19279AA400208859 /* LytTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F6019018E33EA600169FD0 /* LytTests.m */; };
+		8785104119279CB000208859 /* Lyt.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F6019A18E33ED700169FD0 /* Lyt.m */; };
+		8785104819279D5400208859 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87850FE41927739500208859 /* Cocoa.framework */; };
+		8785104E19279D5400208859 /* LytOSX.m in Sources */ = {isa = PBXBuildFile; fileRef = 8785104D19279D5400208859 /* LytOSX.m */; };
+		8785105419279D5500208859 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F6018218E33EA600169FD0 /* XCTest.framework */; };
+		8785105519279D5500208859 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87850FE41927739500208859 /* Cocoa.framework */; };
+		8785105819279D5500208859 /* libLytOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8785104719279D5400208859 /* libLytOSX.a */; };
+		8785105E19279D5500208859 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8785105C19279D5500208859 /* InfoPlist.strings */; };
+		8785106819279DFF00208859 /* Lyt.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F6019A18E33ED700169FD0 /* Lyt.m */; };
+		8785106919279E0000208859 /* Lyt.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F6019A18E33ED700169FD0 /* Lyt.m */; };
+		8785106A19279E0600208859 /* LytTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F6019018E33EA600169FD0 /* LytTests.m */; };
 		87F601A118E33F1000169FD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F6017418E33EA600169FD0 /* Foundation.framework */; };
 		87F601A318E33F1000169FD0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F601A218E33F1000169FD0 /* CoreGraphics.framework */; };
 		87F601A418E33F1000169FD0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F6018518E33EA600169FD0 /* UIKit.framework */; };
 		87F601AA18E33F1100169FD0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87F601A818E33F1100169FD0 /* InfoPlist.strings */; };
 		87F601AC18E33F1100169FD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F601AB18E33F1100169FD0 /* main.m */; };
-		87F601B018E33F1100169FD0 /* LYTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F601AF18E33F1100169FD0 /* LYTAppDelegate.m */; };
+		87F601B018E33F1100169FD0 /* LYTIOSDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F601AF18E33F1100169FD0 /* LYTIOSDemoAppDelegate.m */; };
 		87F601B218E33F1100169FD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87F601B118E33F1100169FD0 /* Images.xcassets */; };
 		87F601CE18E3420000169FD0 /* LYTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F601CD18E3420000169FD0 /* LYTViewController.m */; };
 		87F601CF18E343BE00169FD0 /* Lyt.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F6019A18E33ED700169FD0 /* Lyt.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		87F6018718E33EA600169FD0 /* PBXContainerItemProxy */ = {
+		8785102C19279A6900208859 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 87F6016918E33EA600169FD0 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 87F6017018E33EA600169FD0;
-			remoteInfo = Lyt;
+			remoteGlobalIDString = 8785101A19279A6800208859;
+			remoteInfo = LytiOS;
+		};
+		8785105619279D5500208859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87F6016918E33EA600169FD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8785104619279D5400208859;
+			remoteInfo = LytOSX;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		87F6016F18E33EA600169FD0 /* CopyFiles */ = {
+		8785101919279A6800208859 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				87F6017A18E33EA600169FD0 /* Lyt.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		87F6017118E33EA600169FD0 /* libLyt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLyt.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		87850FE31927739500208859 /* LytOSXDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LytOSXDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87850FE41927739500208859 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		87850FE71927739500208859 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		87850FE81927739500208859 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		87850FE91927739500208859 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		87850FEC1927739500208859 /* LytOSXDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LytOSXDemo-Info.plist"; sourceTree = "<group>"; };
+		87850FEE1927739500208859 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		87850FF01927739500208859 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		87850FF21927739500208859 /* LytOSXDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LytOSXDemo-Prefix.pch"; sourceTree = "<group>"; };
+		87850FF41927739500208859 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		87850FF61927739500208859 /* LYTOSXDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYTOSXDemoAppDelegate.h; sourceTree = "<group>"; };
+		87850FF71927739500208859 /* LYTOSXDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYTOSXDemoAppDelegate.m; sourceTree = "<group>"; };
+		87850FFA1927739500208859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		87850FFC1927739500208859 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8785101B19279A6800208859 /* libLytiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLytiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8785101F19279A6800208859 /* LytiOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LytiOS-Prefix.pch"; sourceTree = "<group>"; };
+		8785102819279A6800208859 /* LytiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LytiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8785103119279A6900208859 /* LytiOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LytiOSTests-Info.plist"; sourceTree = "<group>"; };
+		8785103319279A6900208859 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8785104719279D5400208859 /* libLytOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLytOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8785104B19279D5400208859 /* LytOSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LytOSX-Prefix.pch"; sourceTree = "<group>"; };
+		8785104C19279D5400208859 /* LytOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LytOSX.h; sourceTree = "<group>"; };
+		8785104D19279D5400208859 /* LytOSX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LytOSX.m; sourceTree = "<group>"; };
+		8785105319279D5400208859 /* LytOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LytOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8785105B19279D5500208859 /* LytOSXTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LytOSXTests-Info.plist"; sourceTree = "<group>"; };
+		8785105D19279D5500208859 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		87F6017418E33EA600169FD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		87F6017918E33EA600169FD0 /* Lyt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lyt.h; sourceTree = "<group>"; };
-		87F6018118E33EA600169FD0 /* LytTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LytTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87F6018218E33EA600169FD0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		87F6018518E33EA600169FD0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		87F6018C18E33EA600169FD0 /* LytTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LytTests-Info.plist"; sourceTree = "<group>"; };
-		87F6018E18E33EA600169FD0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		87F6019018E33EA600169FD0 /* LytTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LytTests.m; sourceTree = "<group>"; };
 		87F6019A18E33ED700169FD0 /* Lyt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lyt.m; sourceTree = "<group>"; };
-		87F601A018E33F1000169FD0 /* LytDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LytDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87F601A018E33F1000169FD0 /* LytiOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LytiOSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87F601A218E33F1000169FD0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		87F601A718E33F1100169FD0 /* LytDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LytDemo-Info.plist"; sourceTree = "<group>"; };
+		87F601A718E33F1100169FD0 /* LytiOSDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LytiOSDemo-Info.plist"; sourceTree = "<group>"; };
 		87F601A918E33F1100169FD0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		87F601AB18E33F1100169FD0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		87F601AD18E33F1100169FD0 /* LytDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LytDemo-Prefix.pch"; sourceTree = "<group>"; };
-		87F601AE18E33F1100169FD0 /* LYTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYTAppDelegate.h; sourceTree = "<group>"; };
-		87F601AF18E33F1100169FD0 /* LYTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYTAppDelegate.m; sourceTree = "<group>"; };
+		87F601AD18E33F1100169FD0 /* LytiOSDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LytiOSDemo-Prefix.pch"; sourceTree = "<group>"; };
+		87F601AE18E33F1100169FD0 /* LYTIOSDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYTIOSDemoAppDelegate.h; sourceTree = "<group>"; };
+		87F601AF18E33F1100169FD0 /* LYTIOSDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYTIOSDemoAppDelegate.m; sourceTree = "<group>"; };
 		87F601B118E33F1100169FD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		87F601CC18E3420000169FD0 /* LYTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTViewController.h; sourceTree = "<group>"; };
 		87F601CD18E3420000169FD0 /* LYTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		87F6016E18E33EA600169FD0 /* Frameworks */ = {
+		87850FE01927739500208859 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87F6017518E33EA600169FD0 /* Foundation.framework in Frameworks */,
+				87850FE51927739500208859 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87F6017E18E33EA600169FD0 /* Frameworks */ = {
+		8785101819279A6800208859 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87F6018318E33EA600169FD0 /* XCTest.framework in Frameworks */,
-				87F6018618E33EA600169FD0 /* UIKit.framework in Frameworks */,
-				87F6018418E33EA600169FD0 /* Foundation.framework in Frameworks */,
-				87F6018918E33EA600169FD0 /* libLyt.a in Frameworks */,
+				8785101C19279A6800208859 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8785102519279A6800208859 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8785102919279A6800208859 /* XCTest.framework in Frameworks */,
+				8785102E19279A6900208859 /* libLytiOS.a in Frameworks */,
+				8785102B19279A6900208859 /* UIKit.framework in Frameworks */,
+				8785102A19279A6900208859 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8785104419279D5400208859 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8785104819279D5400208859 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8785105019279D5400208859 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8785105519279D5500208859 /* Cocoa.framework in Frameworks */,
+				8785105419279D5500208859 /* XCTest.framework in Frameworks */,
+				8785105819279D5500208859 /* libLytOSX.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,12 +178,135 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		87850FE61927739500208859 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87850FE71927739500208859 /* AppKit.framework */,
+				87850FE81927739500208859 /* CoreData.framework */,
+				87850FE91927739500208859 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		87850FEA1927739500208859 /* LytOSXDemo */ = {
+			isa = PBXGroup;
+			children = (
+				87850FF61927739500208859 /* LYTOSXDemoAppDelegate.h */,
+				87850FF71927739500208859 /* LYTOSXDemoAppDelegate.m */,
+				87850FF91927739500208859 /* MainMenu.xib */,
+				87850FFC1927739500208859 /* Images.xcassets */,
+				87850FEB1927739500208859 /* Supporting Files */,
+			);
+			path = LytOSXDemo;
+			sourceTree = "<group>";
+		};
+		87850FEB1927739500208859 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				87850FEC1927739500208859 /* LytOSXDemo-Info.plist */,
+				87850FED1927739500208859 /* InfoPlist.strings */,
+				87850FF01927739500208859 /* main.m */,
+				87850FF21927739500208859 /* LytOSXDemo-Prefix.pch */,
+				87850FF31927739500208859 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8785101D19279A6800208859 /* LytiOS */ = {
+			isa = PBXGroup;
+			children = (
+				8785101E19279A6800208859 /* Supporting Files */,
+			);
+			path = LytiOS;
+			sourceTree = "<group>";
+		};
+		8785101E19279A6800208859 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8785101F19279A6800208859 /* LytiOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8785102F19279A6900208859 /* LytiOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				8785103019279A6900208859 /* Supporting Files */,
+			);
+			path = LytiOSTests;
+			sourceTree = "<group>";
+		};
+		8785103019279A6900208859 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8785103119279A6900208859 /* LytiOSTests-Info.plist */,
+				8785103219279A6900208859 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8785104219279D1F00208859 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8785101D19279A6800208859 /* LytiOS */,
+				87F601A518E33F1100169FD0 /* LytiOSDemo */,
+				8785102F19279A6900208859 /* LytiOSTests */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		8785104919279D5400208859 /* LytOSX */ = {
+			isa = PBXGroup;
+			children = (
+				8785104C19279D5400208859 /* LytOSX.h */,
+				8785104D19279D5400208859 /* LytOSX.m */,
+				8785104A19279D5400208859 /* Supporting Files */,
+			);
+			path = LytOSX;
+			sourceTree = "<group>";
+		};
+		8785104A19279D5400208859 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8785104B19279D5400208859 /* LytOSX-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8785105919279D5500208859 /* LytOSXTests */ = {
+			isa = PBXGroup;
+			children = (
+				8785105A19279D5500208859 /* Supporting Files */,
+			);
+			path = LytOSXTests;
+			sourceTree = "<group>";
+		};
+		8785105A19279D5500208859 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8785105B19279D5500208859 /* LytOSXTests-Info.plist */,
+				8785105C19279D5500208859 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8785106719279D7600208859 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				8785104919279D5400208859 /* LytOSX */,
+				87850FEA1927739500208859 /* LytOSXDemo */,
+				8785105919279D5500208859 /* LytOSXTests */,
+			);
+			path = "OS X";
+			sourceTree = "<group>";
+		};
 		87F6016818E33EA600169FD0 = {
 			isa = PBXGroup;
 			children = (
 				87F6017618E33EA600169FD0 /* Lyt */,
 				87F6018A18E33EA600169FD0 /* LytTests */,
-				87F601A518E33F1100169FD0 /* LytDemo */,
+				8785104219279D1F00208859 /* iOS */,
+				8785106719279D7600208859 /* OS X */,
 				87F6017318E33EA600169FD0 /* Frameworks */,
 				87F6017218E33EA600169FD0 /* Products */,
 			);
@@ -121,9 +315,12 @@
 		87F6017218E33EA600169FD0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				87F6017118E33EA600169FD0 /* libLyt.a */,
-				87F6018118E33EA600169FD0 /* LytTests.xctest */,
-				87F601A018E33F1000169FD0 /* LytDemo.app */,
+				87F601A018E33F1000169FD0 /* LytiOSDemo.app */,
+				87850FE31927739500208859 /* LytOSXDemo.app */,
+				8785101B19279A6800208859 /* libLytiOS.a */,
+				8785102819279A6800208859 /* LytiOSTests.xctest */,
+				8785104719279D5400208859 /* libLytOSX.a */,
+				8785105319279D5400208859 /* LytOSXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,6 +332,8 @@
 				87F6018218E33EA600169FD0 /* XCTest.framework */,
 				87F6018518E33EA600169FD0 /* UIKit.framework */,
 				87F601A218E33F1000169FD0 /* CoreGraphics.framework */,
+				87850FE41927739500208859 /* Cocoa.framework */,
+				87850FE61927739500208859 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,85 +351,137 @@
 			isa = PBXGroup;
 			children = (
 				87F6019018E33EA600169FD0 /* LytTests.m */,
-				87F6018B18E33EA600169FD0 /* Supporting Files */,
 			);
 			path = LytTests;
 			sourceTree = "<group>";
 		};
-		87F6018B18E33EA600169FD0 /* Supporting Files */ = {
+		87F601A518E33F1100169FD0 /* LytiOSDemo */ = {
 			isa = PBXGroup;
 			children = (
-				87F6018C18E33EA600169FD0 /* LytTests-Info.plist */,
-				87F6018D18E33EA600169FD0 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		87F601A518E33F1100169FD0 /* LytDemo */ = {
-			isa = PBXGroup;
-			children = (
-				87F601AE18E33F1100169FD0 /* LYTAppDelegate.h */,
-				87F601AF18E33F1100169FD0 /* LYTAppDelegate.m */,
+				87F601AE18E33F1100169FD0 /* LYTIOSDemoAppDelegate.h */,
+				87F601AF18E33F1100169FD0 /* LYTIOSDemoAppDelegate.m */,
 				87F601B118E33F1100169FD0 /* Images.xcassets */,
 				87F601A618E33F1100169FD0 /* Supporting Files */,
 				87F601CC18E3420000169FD0 /* LYTViewController.h */,
 				87F601CD18E3420000169FD0 /* LYTViewController.m */,
 			);
-			path = LytDemo;
+			path = LytiOSDemo;
 			sourceTree = "<group>";
 		};
 		87F601A618E33F1100169FD0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				87F601A718E33F1100169FD0 /* LytDemo-Info.plist */,
+				87F601A718E33F1100169FD0 /* LytiOSDemo-Info.plist */,
 				87F601A818E33F1100169FD0 /* InfoPlist.strings */,
 				87F601AB18E33F1100169FD0 /* main.m */,
-				87F601AD18E33F1100169FD0 /* LytDemo-Prefix.pch */,
+				87F601AD18E33F1100169FD0 /* LytiOSDemo-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		8785104519279D5400208859 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		87F6017018E33EA600169FD0 /* Lyt */ = {
+		87850FE21927739500208859 /* LytOSXDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87F6019418E33EA600169FD0 /* Build configuration list for PBXNativeTarget "Lyt" */;
+			buildConfigurationList = 878510131927739600208859 /* Build configuration list for PBXNativeTarget "LytOSXDemo" */;
 			buildPhases = (
-				87F6016D18E33EA600169FD0 /* Sources */,
-				87F6016E18E33EA600169FD0 /* Frameworks */,
-				87F6016F18E33EA600169FD0 /* CopyFiles */,
+				87850FDF1927739500208859 /* Sources */,
+				87850FE01927739500208859 /* Frameworks */,
+				87850FE11927739500208859 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Lyt;
-			productName = Lyt;
-			productReference = 87F6017118E33EA600169FD0 /* libLyt.a */;
+			name = LytOSXDemo;
+			productName = LytOSXDemo;
+			productReference = 87850FE31927739500208859 /* LytOSXDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8785101A19279A6800208859 /* LytiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8785103719279A6900208859 /* Build configuration list for PBXNativeTarget "LytiOS" */;
+			buildPhases = (
+				8785101719279A6800208859 /* Sources */,
+				8785101819279A6800208859 /* Frameworks */,
+				8785101919279A6800208859 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LytiOS;
+			productName = LytiOS;
+			productReference = 8785101B19279A6800208859 /* libLytiOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		87F6018018E33EA600169FD0 /* LytTests */ = {
+		8785102719279A6800208859 /* LytiOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87F6019718E33EA600169FD0 /* Build configuration list for PBXNativeTarget "LytTests" */;
+			buildConfigurationList = 8785103A19279A6900208859 /* Build configuration list for PBXNativeTarget "LytiOSTests" */;
 			buildPhases = (
-				87F6017D18E33EA600169FD0 /* Sources */,
-				87F6017E18E33EA600169FD0 /* Frameworks */,
-				87F6017F18E33EA600169FD0 /* Resources */,
+				8785102419279A6800208859 /* Sources */,
+				8785102519279A6800208859 /* Frameworks */,
+				8785102619279A6800208859 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				87F6018818E33EA600169FD0 /* PBXTargetDependency */,
+				8785102D19279A6900208859 /* PBXTargetDependency */,
 			);
-			name = LytTests;
-			productName = LytTests;
-			productReference = 87F6018118E33EA600169FD0 /* LytTests.xctest */;
+			name = LytiOSTests;
+			productName = LytiOSTests;
+			productReference = 8785102819279A6800208859 /* LytiOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		87F6019F18E33F1000169FD0 /* LytDemo */ = {
+		8785104619279D5400208859 /* LytOSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87F601C518E33F1100169FD0 /* Build configuration list for PBXNativeTarget "LytDemo" */;
+			buildConfigurationList = 8785106119279D5500208859 /* Build configuration list for PBXNativeTarget "LytOSX" */;
+			buildPhases = (
+				8785104319279D5400208859 /* Sources */,
+				8785104419279D5400208859 /* Frameworks */,
+				8785104519279D5400208859 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LytOSX;
+			productName = LytOSX;
+			productReference = 8785104719279D5400208859 /* libLytOSX.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8785105219279D5400208859 /* LytOSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8785106419279D5500208859 /* Build configuration list for PBXNativeTarget "LytOSXTests" */;
+			buildPhases = (
+				8785104F19279D5400208859 /* Sources */,
+				8785105019279D5400208859 /* Frameworks */,
+				8785105119279D5400208859 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8785105719279D5500208859 /* PBXTargetDependency */,
+			);
+			name = LytOSXTests;
+			productName = LytOSXTests;
+			productReference = 8785105319279D5400208859 /* LytOSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		87F6019F18E33F1000169FD0 /* LytiOSDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87F601C518E33F1100169FD0 /* Build configuration list for PBXNativeTarget "LytiOSDemo" */;
 			buildPhases = (
 				87F6019C18E33F1000169FD0 /* Sources */,
 				87F6019D18E33F1000169FD0 /* Frameworks */,
@@ -240,9 +491,9 @@
 			);
 			dependencies = (
 			);
-			name = LytDemo;
+			name = LytiOSDemo;
 			productName = LytDemo;
-			productReference = 87F601A018E33F1000169FD0 /* LytDemo.app */;
+			productReference = 87F601A018E33F1000169FD0 /* LytiOSDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -254,8 +505,11 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Robot Media";
 				TargetAttributes = {
-					87F6018018E33EA600169FD0 = {
-						TestTargetID = 87F6019F18E33F1000169FD0;
+					8785102719279A6800208859 = {
+						TestTargetID = 8785101A19279A6800208859;
+					};
+					8785105219279D5400208859 = {
+						TestTargetID = 8785104619279D5400208859;
 					};
 				};
 			};
@@ -265,25 +519,48 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 87F6016818E33EA600169FD0;
 			productRefGroup = 87F6017218E33EA600169FD0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				87F6017018E33EA600169FD0 /* Lyt */,
-				87F6018018E33EA600169FD0 /* LytTests */,
-				87F6019F18E33F1000169FD0 /* LytDemo */,
+				8785101A19279A6800208859 /* LytiOS */,
+				8785102719279A6800208859 /* LytiOSTests */,
+				87F6019F18E33F1000169FD0 /* LytiOSDemo */,
+				8785104619279D5400208859 /* LytOSX */,
+				8785105219279D5400208859 /* LytOSXTests */,
+				87850FE21927739500208859 /* LytOSXDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		87F6017F18E33EA600169FD0 /* Resources */ = {
+		87850FE11927739500208859 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87F6018F18E33EA600169FD0 /* InfoPlist.strings in Resources */,
+				87850FEF1927739500208859 /* InfoPlist.strings in Resources */,
+				87850FFD1927739500208859 /* Images.xcassets in Resources */,
+				87850FF51927739500208859 /* Credits.rtf in Resources */,
+				87850FFB1927739500208859 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8785102619279A6800208859 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8785103419279A6900208859 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8785105119279D5400208859 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8785105E19279D5500208859 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,19 +576,48 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		87F6016D18E33EA600169FD0 /* Sources */ = {
+		87850FDF1927739500208859 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87F6019B18E33EE700169FD0 /* Lyt.m in Sources */,
+				878510161927777500208859 /* Lyt.m in Sources */,
+				87850FF81927739500208859 /* LYTOSXDemoAppDelegate.m in Sources */,
+				87850FF11927739500208859 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87F6017D18E33EA600169FD0 /* Sources */ = {
+		8785101719279A6800208859 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87F6019118E33EA600169FD0 /* LytTests.m in Sources */,
+				8785103D19279A8A00208859 /* Lyt.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8785102419279A6800208859 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8785103F19279AA400208859 /* LytTests.m in Sources */,
+				8785104119279CB000208859 /* Lyt.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8785104319279D5400208859 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8785104E19279D5400208859 /* LytOSX.m in Sources */,
+				8785106819279DFF00208859 /* Lyt.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8785104F19279D5400208859 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8785106A19279E0600208859 /* LytTests.m in Sources */,
+				8785106919279E0000208859 /* Lyt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +625,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87F601B018E33F1100169FD0 /* LYTAppDelegate.m in Sources */,
+				87F601B018E33F1100169FD0 /* LYTIOSDemoAppDelegate.m in Sources */,
 				87F601CF18E343BE00169FD0 /* Lyt.m in Sources */,
 				87F601CE18E3420000169FD0 /* LYTViewController.m in Sources */,
 				87F601AC18E33F1100169FD0 /* main.m in Sources */,
@@ -329,18 +635,55 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		87F6018818E33EA600169FD0 /* PBXTargetDependency */ = {
+		8785102D19279A6900208859 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 87F6017018E33EA600169FD0 /* Lyt */;
-			targetProxy = 87F6018718E33EA600169FD0 /* PBXContainerItemProxy */;
+			target = 8785101A19279A6800208859 /* LytiOS */;
+			targetProxy = 8785102C19279A6900208859 /* PBXContainerItemProxy */;
+		};
+		8785105719279D5500208859 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8785104619279D5400208859 /* LytOSX */;
+			targetProxy = 8785105619279D5500208859 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		87F6018D18E33EA600169FD0 /* InfoPlist.strings */ = {
+		87850FED1927739500208859 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				87F6018E18E33EA600169FD0 /* en */,
+				87850FEE1927739500208859 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		87850FF31927739500208859 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87850FF41927739500208859 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		87850FF91927739500208859 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87850FFA1927739500208859 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		8785103219279A6900208859 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8785103319279A6900208859 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8785105C19279D5500208859 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8785105D19279D5500208859 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -356,6 +699,195 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8785100F1927739600208859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OS X/LytOSXDemo/LytOSXDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "OS X/LytOSXDemo/LytOSXDemo-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		878510101927739600208859 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OS X/LytOSXDemo/LytOSXDemo-Prefix.pch";
+				INFOPLIST_FILE = "OS X/LytOSXDemo/LytOSXDemo-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8785103819279A6900208859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/LytiOS.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOS/LytiOS/LytiOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8785103919279A6900208859 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/LytiOS.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOS/LytiOS/LytiOS-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8785103B19279A6900208859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOS/LytiOS/LytiOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iOS/LytiOSTests/LytiOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8785103C19279A6900208859 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOS/LytiOS/LytiOS-Prefix.pch";
+				INFOPLIST_FILE = "iOS/LytiOSTests/LytiOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		8785106219279D5500208859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OS X/LytOSX/LytOSX-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8785106319279D5500208859 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OS X/LytOSX/LytOSX-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8785106519279D5500208859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OS X/LytOSX/LytOSX-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "OS X/LytOSXTests/LytOSXTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8785106619279D5500208859 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OS X/LytOSX/LytOSX-Prefix.pch";
+				INFOPLIST_FILE = "OS X/LytOSXTests/LytOSXTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		87F6019218E33EA600169FD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -424,76 +956,6 @@
 			};
 			name = Release;
 		};
-		87F6019518E33EA600169FD0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DSTROOT = /tmp/Lyt.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		87F6019618E33EA600169FD0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DSTROOT = /tmp/Lyt.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		87F6019818E33EA600169FD0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "LytTests/LytTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					XCTest,
-					"-ObjC",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		87F6019918E33EA600169FD0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				INFOPLIST_FILE = "LytTests/LytTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					XCTest,
-					"-ObjC",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 		87F601C618E33F1100169FD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -505,12 +967,12 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LytDemo/LytDemo-Prefix.pch";
+				GCC_PREFIX_HEADER = "iOS/LytiOSDemo/LytiOSDemo-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "LytDemo/LytDemo-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/iOS/LytiOSDemo/LytiOSDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -528,8 +990,8 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LytDemo/LytDemo-Prefix.pch";
-				INFOPLIST_FILE = "LytDemo/LytDemo-Info.plist";
+				GCC_PREFIX_HEADER = "iOS/LytiOSDemo/LytiOSDemo-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/iOS/LytiOSDemo/LytiOSDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -539,6 +1001,46 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		878510131927739600208859 /* Build configuration list for PBXNativeTarget "LytOSXDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8785100F1927739600208859 /* Debug */,
+				878510101927739600208859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8785103719279A6900208859 /* Build configuration list for PBXNativeTarget "LytiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8785103819279A6900208859 /* Debug */,
+				8785103919279A6900208859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8785103A19279A6900208859 /* Build configuration list for PBXNativeTarget "LytiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8785103B19279A6900208859 /* Debug */,
+				8785103C19279A6900208859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8785106119279D5500208859 /* Build configuration list for PBXNativeTarget "LytOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8785106219279D5500208859 /* Debug */,
+				8785106319279D5500208859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8785106419279D5500208859 /* Build configuration list for PBXNativeTarget "LytOSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8785106519279D5500208859 /* Debug */,
+				8785106619279D5500208859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		87F6016C18E33EA600169FD0 /* Build configuration list for PBXProject "Lyt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -548,25 +1050,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		87F6019418E33EA600169FD0 /* Build configuration list for PBXNativeTarget "Lyt" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				87F6019518E33EA600169FD0 /* Debug */,
-				87F6019618E33EA600169FD0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		87F6019718E33EA600169FD0 /* Build configuration list for PBXNativeTarget "LytTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				87F6019818E33EA600169FD0 /* Debug */,
-				87F6019918E33EA600169FD0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		87F601C518E33F1100169FD0 /* Build configuration list for PBXNativeTarget "LytDemo" */ = {
+		87F601C518E33F1100169FD0 /* Build configuration list for PBXNativeTarget "LytiOSDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				87F601C618E33F1100169FD0 /* Debug */,

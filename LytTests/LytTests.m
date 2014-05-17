@@ -21,9 +21,9 @@
 #import <XCTest/XCTest.h>
 #import "Lyt.h"
 
-@interface UIView (LytUtils)
+@interface LYTView (LytUtils)
 
-- (UIView*)lyt_ancestorSharedWithView:(UIView*)view;
+- (LYTView*)lyt_ancestorSharedWithView:(LYTView*)view;
 
 @end
 
@@ -32,127 +32,127 @@
 @end
 
 @implementation LytTests {
-    UIView *_view;
+    LYTView *_view;
 }
 
 
 - (void)setUp
 {
-    _view = [UIView new];
+    _view = [LYTView new];
 }
 
 - (void)testAncestorSharedWithView_Nil
 {
-    UIView *otherView = [UIView new];
+    LYTView *otherView = [LYTView new];
     
-    UIView *result = [_view lyt_ancestorSharedWithView:otherView];
+    LYTView *result = [_view lyt_ancestorSharedWithView:otherView];
     
     XCTAssertNil(result);
 }
 
 - (void)testAncestorSharedWithView_Self
 {
-    UIView *result = [_view lyt_ancestorSharedWithView:_view];
+    LYTView *result = [_view lyt_ancestorSharedWithView:_view];
 
     XCTAssertEqualObjects(result, _view, @"");
 }
 
 - (void)testAncestorSharedWithView_Child
 {
-    UIView *child = [UIView new];
+    LYTView *child = [LYTView new];
     [_view addSubview:child];
     
-    UIView *result = [_view lyt_ancestorSharedWithView:child];
+    LYTView *result = [_view lyt_ancestorSharedWithView:child];
     
     XCTAssertEqualObjects(result, _view, @"");
 }
 
 - (void)testAncestorSharedWithView_Parent
 {
-    UIView *parent = [UIView new];
+    LYTView *parent = [LYTView new];
     [parent addSubview:_view];
     
-    UIView *result = [_view lyt_ancestorSharedWithView:parent];
+    LYTView *result = [_view lyt_ancestorSharedWithView:parent];
     
     XCTAssertEqualObjects(result, parent, @"");
 }
 
 - (void)testAncestorSharedWithView_Sibling
 {
-    UIView *parent = [UIView new];
+    LYTView *parent = [LYTView new];
     [parent addSubview:_view];
-    UIView *sibling = [UIView new];
+    LYTView *sibling = [LYTView new];
     [parent addSubview:sibling];
     
-    UIView *result = [_view lyt_ancestorSharedWithView:sibling];
+    LYTView *result = [_view lyt_ancestorSharedWithView:sibling];
     
     XCTAssertEqualObjects(result, parent, @"");
 }
 
 - (void)testAncestorSharedWithView_Grandparent
 {
-    UIView *parent = [UIView new];
+    LYTView *parent = [LYTView new];
     [parent addSubview:_view];
-    UIView *grandparent = [UIView new];
+    LYTView *grandparent = [LYTView new];
     [grandparent addSubview:parent];
     
-    UIView *result = [_view lyt_ancestorSharedWithView:grandparent];
+    LYTView *result = [_view lyt_ancestorSharedWithView:grandparent];
     
     XCTAssertEqualObjects(result, grandparent, @"");
 }
 
 - (void)testAncestorSharedWithView_Grandchild
 {
-    UIView *child = [UIView new];
+    LYTView *child = [LYTView new];
     [_view addSubview:child];
-    UIView *grandchild = [UIView new];
+    LYTView *grandchild = [LYTView new];
     [child addSubview:grandchild];
     
-    UIView *result = [_view lyt_ancestorSharedWithView:grandchild];
+    LYTView *result = [_view lyt_ancestorSharedWithView:grandchild];
     
     XCTAssertEqualObjects(result, _view, @"");
 }
 
 - (void)testAncestorSharedWithView_Uncle
 {
-    UIView *grandparent = [UIView new];
-    UIView *parent = [UIView new];
+    LYTView *grandparent = [LYTView new];
+    LYTView *parent = [LYTView new];
     [grandparent addSubview:parent];
-    UIView *uncle = [UIView new];
+    LYTView *uncle = [LYTView new];
     [grandparent addSubview:uncle];
     [parent addSubview:_view];
     
-    UIView *result = [_view lyt_ancestorSharedWithView:uncle];
+    LYTView *result = [_view lyt_ancestorSharedWithView:uncle];
     
     XCTAssertEqualObjects(result, grandparent, @"");
 }
 
 - (void)testAncestorSharedWithView_Nephew
 {
-    UIView *parent = [UIView new];
+    LYTView *parent = [LYTView new];
     [parent addSubview:_view];
-    UIView *sibling = [UIView new];
+    LYTView *sibling = [LYTView new];
     [parent addSubview:sibling];
-    UIView *nephew = [UIView new];
+    LYTView *nephew = [LYTView new];
     [sibling addSubview:nephew];
     
-    UIView *result = [_view lyt_ancestorSharedWithView:nephew];
+    LYTView *result = [_view lyt_ancestorSharedWithView:nephew];
     
     XCTAssertEqualObjects(result, parent, @"");
 }
 
 - (void)testAncestorSharedWithView_Cousin
 {
-    UIView *grandparent = [UIView new];
-    UIView *parent = [UIView new];
+    LYTView *grandparent = [LYTView new];
+    LYTView *parent = [LYTView new];
     [grandparent addSubview:parent];
-    UIView *uncle = [UIView new];
+    LYTView *uncle = [LYTView new];
     [grandparent addSubview:uncle];
     [parent addSubview:_view];
-    UIView *cousin = [UIView new];
+    LYTView *cousin = [LYTView new];
     [uncle addSubview:cousin];
     
-    UIView *result = [_view lyt_ancestorSharedWithView:cousin];
+    LYTView *result = [_view lyt_ancestorSharedWithView:cousin];
     
     XCTAssertEqualObjects(result, grandparent, @"");
 }

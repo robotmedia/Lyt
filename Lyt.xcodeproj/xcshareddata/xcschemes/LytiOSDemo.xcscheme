@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "87F6019F18E33F1000169FD0"
-               BuildableName = "LytDemo.app"
-               BlueprintName = "LytDemo"
+               BuildableName = "LytiOSDemo.app"
+               BlueprintName = "LytiOSDemo"
                ReferencedContainer = "container:Lyt.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,13 +28,43 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "878510011927739500208859"
+               BuildableName = "LytOSXDemoTests.xctest"
+               BlueprintName = "LytOSXDemoTests"
+               ReferencedContainer = "container:Lyt.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8785102719279A6800208859"
+               BuildableName = "LytiOSTests.xctest"
+               BlueprintName = "LytiOSTests"
+               ReferencedContainer = "container:Lyt.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8785105219279D5400208859"
+               BuildableName = "LytOSXTests.xctest"
+               BlueprintName = "LytOSXTests"
+               ReferencedContainer = "container:Lyt.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "87F6019F18E33F1000169FD0"
-            BuildableName = "LytDemo.app"
-            BlueprintName = "LytDemo"
+            BuildableName = "LytiOSDemo.app"
+            BlueprintName = "LytiOSDemo"
             ReferencedContainer = "container:Lyt.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -52,8 +82,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "87F6019F18E33F1000169FD0"
-            BuildableName = "LytDemo.app"
-            BlueprintName = "LytDemo"
+            BuildableName = "LytiOSDemo.app"
+            BlueprintName = "LytiOSDemo"
             ReferencedContainer = "container:Lyt.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -70,8 +100,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "87F6019F18E33F1000169FD0"
-            BuildableName = "LytDemo.app"
-            BlueprintName = "LytDemo"
+            BuildableName = "LytiOSDemo.app"
+            BlueprintName = "LytiOSDemo"
             ReferencedContainer = "container:Lyt.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

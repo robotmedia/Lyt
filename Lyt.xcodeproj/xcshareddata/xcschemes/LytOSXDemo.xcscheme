@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "87F6017018E33EA600169FD0"
-               BuildableName = "libLyt.a"
-               BlueprintName = "Lyt"
+               BlueprintIdentifier = "87850FE21927739500208859"
+               BuildableName = "LytOSXDemo.app"
+               BlueprintName = "LytOSXDemo"
                ReferencedContainer = "container:Lyt.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,17 +28,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "87F6018018E33EA600169FD0"
-               BuildableName = "LytTests.xctest"
-               BlueprintName = "LytTests"
-               ReferencedContainer = "container:Lyt.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "87850FE21927739500208859"
+            BuildableName = "LytOSXDemo.app"
+            BlueprintName = "LytOSXDemo"
+            ReferencedContainer = "container:Lyt.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -49,6 +48,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "87850FE21927739500208859"
+            BuildableName = "LytOSXDemo.app"
+            BlueprintName = "LytOSXDemo"
+            ReferencedContainer = "container:Lyt.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -58,6 +66,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "87850FE21927739500208859"
+            BuildableName = "LytOSXDemo.app"
+            BlueprintName = "LytOSXDemo"
+            ReferencedContainer = "container:Lyt.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
