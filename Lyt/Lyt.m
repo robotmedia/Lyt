@@ -229,6 +229,16 @@
     return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeTop multiplier:1 constant:margin];
 }
 
+- (NSLayoutConstraint*)lyt_constraintByAligningRightToParent
+{
+    return [self lyt_constraintByAligningRightToParentWithMargin:0];
+}
+
+- (NSLayoutConstraint*)lyt_constraintByAligningRightToParentWithMargin:(CGFloat)margin
+{
+    return [self lyt_constraintByAligningRightToView:self.superview margin:margin];
+}
+
 - (NSLayoutConstraint*)lyt_constraintByAligningRightToView:(UIView*)view
 {
     return [self lyt_constraintByAligningRightToView:view margin:0];
@@ -257,6 +267,11 @@
 - (NSLayoutConstraint*)lyt_constraintByAligningBottomToView:(UIView*)view margin:(CGFloat)margin
 {
     return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeBottom multiplier:1 constant:-margin];
+}
+
+- (NSLayoutConstraint*)lyt_constraintByAligningLeftToParent
+{
+    return [self lyt_constraintByAligningLeftToParentWithMargin:0];
 }
 
 - (NSLayoutConstraint*)lyt_constraintByAligningLeftToParentWithMargin:(CGFloat)margin
