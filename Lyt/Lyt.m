@@ -603,6 +603,20 @@
     return constraint;
 }
 
+- (NSLayoutConstraint*)lyt_matchWidthToView:(LYTView*)view multiplier:(CGFloat)multiplier
+{
+    NSLayoutConstraint *constraint = [self lyt_constraintByMatchingWidthToView:view multiplier:multiplier];
+    [self lyt_addConstraint:constraint toAncestorSharedWithView:view];
+    return constraint;
+}
+
+- (NSLayoutConstraint*)lyt_matchHeightToView:(LYTView*)view multiplier:(CGFloat)multiplier
+{
+    NSLayoutConstraint *constraint = [self lyt_constraintByMatchingHeightToView:view multiplier:multiplier];
+    [self lyt_addConstraint:constraint toAncestorSharedWithView:view];
+    return constraint;
+}
+
 - (NSLayoutConstraint*)lyt_constraintBySettingX:(CGFloat)x
 {
     return [self lyt_constraintByAligningLeftToParentWithMargin:x];
@@ -654,6 +668,16 @@
 - (NSLayoutConstraint*)lyt_constraintByMatchingHeightToView:(LYTView*)view
 {
     return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeHeight multiplier:1 constant:0];
+}
+
+- (NSLayoutConstraint*)lyt_constraintByMatchingWidthToView:(LYTView*)view multiplier:(CGFloat)multiplier
+{
+    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeWidth multiplier:multiplier constant:0];
+}
+
+- (NSLayoutConstraint*)lyt_constraintByMatchingHeightToView:(LYTView*)view multiplier:(CGFloat)multiplier
+{
+    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeHeight multiplier:multiplier constant:0];
 }
 
 - (NSArray*)lyt_constraintsByMatchingSizeToView:(LYTView*)view

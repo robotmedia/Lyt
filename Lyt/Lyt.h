@@ -225,6 +225,10 @@
 
 - (NSLayoutConstraint*)lyt_matchHeightToView:(LYTView*)view;
 
+- (NSLayoutConstraint*)lyt_matchWidthToView:(LYTView*)view multiplier:(CGFloat)multiplier;;
+
+- (NSLayoutConstraint*)lyt_matchHeightToView:(LYTView*)view multiplier:(CGFloat)multiplier;
+
 - (NSLayoutConstraint*)lyt_constraintBySettingX:(CGFloat)x;
 
 - (NSLayoutConstraint*)lyt_constraintBySettingY:(CGFloat)y;
@@ -242,6 +246,10 @@
 - (NSLayoutConstraint*)lyt_constraintByMatchingWidthToView:(LYTView*)view;
 
 - (NSLayoutConstraint*)lyt_constraintByMatchingHeightToView:(LYTView*)view;
+
+- (NSLayoutConstraint*)lyt_constraintByMatchingWidthToView:(LYTView*)view multiplier:(CGFloat)multiplier;
+
+- (NSLayoutConstraint*)lyt_constraintByMatchingHeightToView:(LYTView*)view multiplier:(CGFloat)multiplier;
 
 - (NSArray*)lyt_constraintsByMatchingSizeToView:(LYTView*)view;
 
