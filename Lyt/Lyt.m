@@ -742,8 +742,14 @@
     [self enumerateObjectsUsingBlock:^(LYTView *view, NSUInteger idx, BOOL *stop) {
         NSAssert([view isKindOfClass:LYTView.class], @"Array must contain only views");
         id value = block(view) ?: [NSNull null];
-        NSArray *values = [@[value] valueForKeyPath:@"@unionOfArrays.self"];
-        [result addObjectsFromArray:values];
+        if ([value isKindOfClass:NSArray.class])
+        {
+            [result addObjectsFromArray:value];
+        }
+        else
+        {
+            [result addObject:value];
+        }
     }];
     return result;
 }

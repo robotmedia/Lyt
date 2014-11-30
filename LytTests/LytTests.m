@@ -27,6 +27,12 @@
 
 @end
 
+@interface NSArray (LytUtils)
+
+- (NSArray *)lyt_map:(id (^)(LYTView *view))block;
+
+@end
+
 @interface LytTests : XCTestCase
 
 @end
@@ -40,6 +46,8 @@
 {
     _view = [LYTView new];
 }
+
+#pragma mark ancestorSharedWithView
 
 - (void)testAncestorSharedWithView_Nil
 {
@@ -155,6 +163,35 @@
     LYTView *result = [_view lyt_ancestorSharedWithView:cousin];
     
     XCTAssertEqualObjects(result, grandparent, @"");
+}
+
+#pragma mark map
+
+- (void)testMap_Empty
+{
+    NSArray *result = [@[] lyt_map:^id(LYTView *view) { return nil; }];
+    
+    XCTAssertEqualObjects(result, @[], @"");
+}
+
+- (void)testMap_AssertNotAView
+{
+    XCTAssertThrows([@[@YES] lyt_map:^id(LYTView *view) { return nil; }], @"");
+}
+
+- (void)testMap_Value
+{
+    NSArray *result = [@[[LYTView new], [LYTView new]] lyt_map:^id(LYTView *view) { return @YES; }];
+    NSArray *expectedResut =  @[@YES, @YES];
+
+    XCTAssertEqualObjects(result, expectedResut, @"");
+}
+
+- (void)testMap_Array
+{
+    NSArray *result = [@[[LYTView new], [LYTView new]] lyt_map:^id(LYTView *view) { return @[@YES, @NO]; }];
+    NSArray *expectedResut =  @[@YES, @NO, @YES, @NO];
+    XCTAssertEqualObjects(result, expectedResut, @"");
 }
 
 @end
