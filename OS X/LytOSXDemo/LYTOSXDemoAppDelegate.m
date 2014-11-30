@@ -34,8 +34,8 @@ static CGFloat const Separator = 8;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     _titleLabel = [self addLabelWithText:NSLocalizedString(@"Introducing Lyt", @"")];
-    _subtitleLabel = [self addLabelWithText:NSLocalizedString(@"A UIView category to make autolayout (more) readable and less verbose.", @"")];
-    _bodyLabel = [self addLabelWithText:NSLocalizedString(@"Lyt offers dozens of methods. Current families are:\nlyt_align*\nlyt_center*\nlyt_place*\nlyt_set*\nlyt_match*\nlyt_distribute*", @"")];
+    _subtitleLabel = [self addLabelWithText:NSLocalizedString(@"A NSView and NSArray category to make autolayout (more) readable and less verbose.", @"")];
+    _bodyLabel = [self addLabelWithText:NSLocalizedString(@"Lyt offers hundreds of methods. Current families are:\nlyt_align*\nlyt_center*\nlyt_distribute*\nlyt_match*\nlyt_place*\nlyt_set*", @"")];
 
     [self layoutWithLyt];
     
@@ -90,5 +90,3 @@ static CGFloat const Separator = 8;
 }
 
 @end
-
-

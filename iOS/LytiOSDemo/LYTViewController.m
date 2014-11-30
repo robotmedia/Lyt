@@ -36,8 +36,8 @@ static CGFloat const Separator = 8;
     [super viewDidLoad];
     
     _titleLabel = [self addLabelWithText:NSLocalizedString(@"Introducing Lyt", @"") color:[UIColor redColor]];
-    _subtitleLabel = [self addLabelWithText:NSLocalizedString(@"A UIView category to make autolayout (more) readable and less verbose.", @"") color:[UIColor yellowColor]];
-    _bodyLabel = [self addLabelWithText:NSLocalizedString(@"Lyt offers dozens of methods. Current families are:\nlyt_align*\nlyt_center*\nlyt_place*\nlyt_set*\nlyt_match*\nlyt_distribute*", @"") color:[UIColor greenColor]];
+    _subtitleLabel = [self addLabelWithText:NSLocalizedString(@"A UIView and NSArray category to make autolayout (more) readable and less verbose.", @"") color:[UIColor yellowColor]];
+    _bodyLabel = [self addLabelWithText:NSLocalizedString(@"Lyt offers hundreds of methods. Current families are:\nlyt_align*\nlyt_center*\nlyt_distribute*\nlyt_match*\nlyt_place*\nlyt_set*", @"") color:[UIColor greenColor]];
     
     [self layoutWithLyt];
 
