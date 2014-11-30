@@ -39,7 +39,7 @@ static CGFloat const Separator = 8;
 
     [self layoutWithLyt];
     
-    [self layoutWithVisualFormat];
+    // [self layoutWithVisualFormat];
 }
 
 - (void)layoutWithLyt
