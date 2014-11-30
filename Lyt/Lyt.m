@@ -1404,5 +1404,4 @@
     return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintsByMatchingSizeToView:view]; }];
 }
 
-
 @end
