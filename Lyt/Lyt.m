@@ -688,3 +688,157 @@
 }
 
 @end
+
+@implementation NSArray (LytUtils)
+
+- (void)lyt_addConstraints:(NSArray*)constraints
+{
+    LYTView *sharedAncestor = [self lyt_sharedAncestor];
+    [sharedAncestor addConstraints:constraints];
+}
+
+- (LYTView*)lyt_sharedAncestor
+{
+    const NSInteger count = self.count;
+    if (count == 0) return nil;
+    LYTView *bestAncestor = [self firstObject];
+    NSAssert([bestAncestor isKindOfClass:LYTView.class], @"Array must contain only views");
+    for (NSInteger i = 1; i < count; i++)
+    {
+        LYTView *currentView = self[i];
+        NSAssert([currentView isKindOfClass:LYTView.class], @"Array must contain only views");
+        bestAncestor = [bestAncestor lyt_ancestorSharedWithView:currentView];
+    }
+    return bestAncestor;
+}
+
+- (NSArray*)lyt_constraintsByMatchingAttribute:(NSLayoutAttribute)currentAttribute
+                                   toAttribute:(NSLayoutAttribute)previousAttribute
+                                  withDistance:(CGFloat)distance
+{
+    const NSInteger count = self.count;
+    if (count < 2) return @[];
+    
+    NSMutableArray *constraints = [NSMutableArray array];
+    
+    LYTView *previousView = [self firstObject];
+    NSAssert([previousView isKindOfClass:LYTView.class], @"Array must contain only views");
+    for (NSInteger i = 1; i < count; i++)
+    {
+        LYTView *currentView = self[i];
+        NSAssert([currentView isKindOfClass:LYTView.class], @"Array must contain only views");
+        NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:previousView attribute:previousAttribute relatedBy:NSLayoutRelationEqual toItem:currentView attribute:currentAttribute multiplier:1 constant:distance];
+        [constraints addObject:constraint];
+        previousView = currentView;
+    }
+    
+    return constraints;
+}
+
+@end
+
+@implementation NSArray (Lyt)
+
+#pragma mark Distribute Spacing
+
+- (NSArray*)lyt_distributeXWithSpacing:(CGFloat)spacing
+{
+    NSArray *constraints = [self lyt_constraintsByDistributingXWithSpacing:spacing];
+    [self lyt_addConstraints:constraints];
+    return constraints;
+}
+
+- (NSArray*)lyt_distributeYWithSpacing:(CGFloat)spacing
+{
+    NSArray *constraints = [self lyt_constraintsByDistributingYWithSpacing:spacing];
+    [self lyt_addConstraints:constraints];
+    return constraints;
+}
+
+- (NSArray*)lyt_constraintsByDistributingXWithSpacing:(CGFloat)spacing
+{
+    return [self lyt_constraintsByMatchingAttribute:NSLayoutAttributeLeft toAttribute:NSLayoutAttributeRight withDistance:spacing];
+}
+
+- (NSArray*)lyt_constraintsByDistributingYWithSpacing:(CGFloat)spacing
+{
+    return [self lyt_constraintsByMatchingAttribute:NSLayoutAttributeTop toAttribute:NSLayoutAttributeBottom withDistance:spacing];
+}
+
+#pragma mark Distribute X
+
+- (NSArray*)lyt_distributeLeftWithDistance:(CGFloat)distance
+{
+    NSArray *constraints = [self lyt_constraintsByDistributingLeftWithDistance:distance];
+    [self lyt_addConstraints:constraints];
+    return constraints;
+}
+
+- (NSArray*)lyt_distributeCenterXWithDistance:(CGFloat)distance
+{
+    NSArray *constraints = [self lyt_constraintsByDistributingCenterXWithDistance:distance];
+    [self lyt_addConstraints:constraints];
+    return constraints;
+}
+
+- (NSArray*)lyt_distributeRightWithDistance:(CGFloat)distance
+{
+    NSArray *constraints = [self lyt_constraintsByDistributingRightWithDistance:distance];
+    [self lyt_addConstraints:constraints];
+    return constraints;
+}
+
+- (NSArray*)lyt_constraintsByDistributingLeftWithDistance:(CGFloat)distance
+{
+    return [self lyt_constraintsByMatchingAttribute:NSLayoutAttributeLeft toAttribute:NSLayoutAttributeLeft withDistance:distance];
+}
+
+- (NSArray*)lyt_constraintsByDistributingCenterXWithDistance:(CGFloat)distance
+{
+    return [self lyt_constraintsByMatchingAttribute:NSLayoutAttributeCenterX toAttribute:NSLayoutAttributeCenterX withDistance:distance];
+}
+
+- (NSArray*)lyt_constraintsByDistributingRightWithDistance:(CGFloat)distance
+{
+    return [self lyt_constraintsByMatchingAttribute:NSLayoutAttributeRight toAttribute:NSLayoutAttributeRight withDistance:distance];
+}
+
+#pragma mark Distribute Y
+
+- (NSArray*)lyt_distributeTopWithDistance:(CGFloat)distance
+{
+    NSArray *constraints = [self lyt_constraintsByDistributingTopWithDistance:distance];
+    [self lyt_addConstraints:constraints];
+    return constraints;
+}
+
+- (NSArray*)lyt_distributeCenterYWithDistance:(CGFloat)distance
+{
+    NSArray *constraints = [self lyt_constraintsByDistributingCenterYWithDistance:distance];
+    [self lyt_addConstraints:constraints];
+    return constraints;
+}
+
+- (NSArray*)lyt_distributeBottomWithDistance:(CGFloat)distance
+{
+    NSArray *constraints = [self lyt_constraintsByDistributingBottomWithDistance:distance];
+    [self lyt_addConstraints:constraints];
+    return constraints;
+}
+
+- (NSArray*)lyt_constraintsByDistributingTopWithDistance:(CGFloat)distance
+{
+    return [self lyt_constraintsByMatchingAttribute:NSLayoutAttributeTop toAttribute:NSLayoutAttributeTop withDistance:distance];
+}
+
+- (NSArray*)lyt_constraintsByDistributingCenterYWithDistance:(CGFloat)distance
+{
+    return [self lyt_constraintsByMatchingAttribute:NSLayoutAttributeCenterY toAttribute:NSLayoutAttributeCenterY withDistance:distance];
+}
+
+- (NSArray*)lyt_constraintsByDistributingBottomWithDistance:(CGFloat)distance
+{
+    return [self lyt_constraintsByMatchingAttribute:NSLayoutAttributeBottom toAttribute:NSLayoutAttributeBottom withDistance:distance];
+}
+
+@end

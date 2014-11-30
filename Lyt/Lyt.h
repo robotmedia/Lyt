@@ -255,3 +255,45 @@
 
 @end
 
+@interface NSArray (Lyt)
+
+#pragma mark Distribute Spacing
+
+- (NSArray*)lyt_distributeXWithSpacing:(CGFloat)spacing;
+
+- (NSArray*)lyt_distributeYWithSpacing:(CGFloat)spacing;
+
+- (NSArray*)lyt_constraintsByDistributingXWithSpacing:(CGFloat)spacing;
+
+- (NSArray*)lyt_constraintsByDistributingYWithSpacing:(CGFloat)spacing;
+
+#pragma mark Distribute X
+
+- (NSArray*)lyt_distributeLeftWithDistance:(CGFloat)distance;
+
+- (NSArray*)lyt_distributeCenterXWithDistance:(CGFloat)distance;
+
+- (NSArray*)lyt_distributeRightWithDistance:(CGFloat)distance;
+
+- (NSArray*)lyt_constraintsByDistributingLeftWithDistance:(CGFloat)distance;
+
+- (NSArray*)lyt_constraintsByDistributingCenterXWithDistance:(CGFloat)distance;
+
+- (NSArray*)lyt_constraintsByDistributingRightWithDistance:(CGFloat)distance;
+
+#pragma mark Distribute Y
+
+- (NSArray*)lyt_distributeTopWithDistance:(CGFloat)distance;
+
+- (NSArray*)lyt_distributeCenterYWithDistance:(CGFloat)distance;
+
+- (NSArray*)lyt_distributeBottomWithDistance:(CGFloat)distance;
+
+- (NSArray*)lyt_constraintsByDistributingTopWithDistance:(CGFloat)distance;
+
+- (NSArray*)lyt_constraintsByDistributingCenterYWithDistance:(CGFloat)distance;
+
+- (NSArray*)lyt_constraintsByDistributingBottomWithDistance:(CGFloat)distance;
+
+@end
+
