@@ -461,7 +461,7 @@
 		87F6016918E33EA600169FD0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Robot Media";
 				TargetAttributes = {
 					8785102719279A6800208859 = {
@@ -769,6 +769,7 @@
 		8785106219279D5500208859 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -789,6 +790,7 @@
 		8785106319279D5500208859 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -966,6 +968,7 @@
 				878510101927739600208859 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8785103719279A6900208859 /* Build configuration list for PBXNativeTarget "LytiOS" */ = {
 			isa = XCConfigurationList;
@@ -974,6 +977,7 @@
 				8785103919279A6900208859 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8785103A19279A6900208859 /* Build configuration list for PBXNativeTarget "LytiOSTests" */ = {
 			isa = XCConfigurationList;
@@ -982,6 +986,7 @@
 				8785103C19279A6900208859 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8785106119279D5500208859 /* Build configuration list for PBXNativeTarget "LytOSX" */ = {
 			isa = XCConfigurationList;
@@ -990,6 +995,7 @@
 				8785106319279D5500208859 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8785106419279D5500208859 /* Build configuration list for PBXNativeTarget "LytOSXTests" */ = {
 			isa = XCConfigurationList;
@@ -998,6 +1004,7 @@
 				8785106619279D5500208859 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87F6016C18E33EA600169FD0 /* Build configuration list for PBXProject "Lyt" */ = {
 			isa = XCConfigurationList;
