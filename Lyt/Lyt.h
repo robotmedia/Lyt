@@ -20,10 +20,10 @@
 
 #import "TargetConditionals.h" // See: http://stackoverflow.com/questions/3742525/target-os-iphone-and-applicationtests
 #if TARGET_OS_IPHONE
-@import UIKit;
+#import <UIKit/UIKit.h>
 #define LYTView UIView
 #else
-@import AppKit;
+#import <AppKit/AppKit.h>
 #define LYTView NSView
 #endif
 
