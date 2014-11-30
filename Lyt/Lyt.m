@@ -536,7 +536,7 @@
     return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeLeft multiplier:1 constant:-margin];
 }
 
-#pragma mark Sizing
+#pragma mark Position and Sizing
 
 - (NSLayoutConstraint*)lyt_setX:(CGFloat)x
 {
@@ -758,7 +758,7 @@
 
 @implementation NSArray (Lyt)
 
-#pragma mark Distribute Spacing
+#pragma mark Distribution
 
 - (NSArray*)lyt_distributeXWithSpacing:(CGFloat)spacing
 {
@@ -1287,7 +1287,7 @@
     return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintByPlacingLeftOfView:view margin:margin]; }];
 }
 
-#pragma mark Sizing
+#pragma mark Position and Sizing
 
 - (NSArray*)lyt_setX:(CGFloat)x
 {

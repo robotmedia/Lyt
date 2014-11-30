@@ -467,7 +467,7 @@
 
 - (NSArray*)lyt_constraintByPlacingLeftOfView:(LYTView*)view margin:(CGFloat)margin;
 
-#pragma mark Position and sizing
+#pragma mark Position and Sizing
 
 - (NSArray*)lyt_setX:(CGFloat)x;
 
