@@ -3,7 +3,7 @@ before_script:
   - brew update
   - brew upgrade xctool || true
 script: 
-  - xctool -project Lyt.xcodeproj -scheme 'LytiOS' -configuration Release -sdk iphonesimulator test
+  - xctool -project Lyt.xcodeproj -scheme 'LytiOS' -configuration Debug -sdk iphonesimulator test
   - xctool -project Lyt.xcodeproj -scheme 'LytiOSDemo' -configuration Release -sdk iphonesimulator
-  - xctool -project Lyt.xcodeproj -scheme 'LytOSX' -configuration Release test
+  - xctool -project Lyt.xcodeproj -scheme 'LytOSX' -configuration Debug test
   - xctool -project Lyt.xcodeproj -scheme 'LytOSXDemo' -configuration Release
