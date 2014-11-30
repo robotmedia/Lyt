@@ -727,7 +727,7 @@
     {
         LYTView *currentView = self[i];
         NSAssert([currentView isKindOfClass:LYTView.class], @"Array must contain only views");
-        NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:previousView attribute:previousAttribute relatedBy:NSLayoutRelationEqual toItem:currentView attribute:currentAttribute multiplier:1 constant:distance];
+        NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:currentView attribute:currentAttribute relatedBy:NSLayoutRelationEqual toItem:previousView attribute:previousAttribute multiplier:1 constant:distance];
         [constraints addObject:constraint];
         previousView = currentView;
     }
