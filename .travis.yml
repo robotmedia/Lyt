@@ -1,7 +1,7 @@
 language: objective-c
 before_script:
   - brew update
-  - brew upgrade xctool
+  - brew upgrade xctool || true
 script: 
   - xctool -project Lyt.xcodeproj -scheme 'LytiOS' -configuration Release -sdk iphonesimulator test
   - xctool -project Lyt.xcodeproj -scheme 'LytiOSDemo' -configuration Release -sdk iphonesimulator
