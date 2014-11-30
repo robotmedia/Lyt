@@ -755,17 +755,26 @@
     return constraints;
 }
 
-- (NSArray*)lyt_constraintsByDistributingXWithSpacing:(CGFloat)spacing
+- (NSArray*)lyt_distributeTopWithDistance:(CGFloat)distance
 {
-    return [self lyt_constraintsByMatchingAttribute:NSLayoutAttributeLeft toAttribute:NSLayoutAttributeRight withDistance:spacing];
+    NSArray *constraints = [self lyt_constraintsByDistributingTopWithDistance:distance];
+    [self lyt_addConstraints:constraints];
+    return constraints;
 }
 
-- (NSArray*)lyt_constraintsByDistributingYWithSpacing:(CGFloat)spacing
+- (NSArray*)lyt_distributeCenterYWithDistance:(CGFloat)distance
 {
-    return [self lyt_constraintsByMatchingAttribute:NSLayoutAttributeTop toAttribute:NSLayoutAttributeBottom withDistance:spacing];
+    NSArray *constraints = [self lyt_constraintsByDistributingCenterYWithDistance:distance];
+    [self lyt_addConstraints:constraints];
+    return constraints;
 }
 
-#pragma mark Distribute X
+- (NSArray*)lyt_distributeBottomWithDistance:(CGFloat)distance
+{
+    NSArray *constraints = [self lyt_constraintsByDistributingBottomWithDistance:distance];
+    [self lyt_addConstraints:constraints];
+    return constraints;
+}
 
 - (NSArray*)lyt_distributeLeftWithDistance:(CGFloat)distance
 {
@@ -788,42 +797,14 @@
     return constraints;
 }
 
-- (NSArray*)lyt_constraintsByDistributingLeftWithDistance:(CGFloat)distance
+- (NSArray*)lyt_constraintsByDistributingXWithSpacing:(CGFloat)spacing
 {
-    return [self lyt_constraintsByMatchingAttribute:NSLayoutAttributeLeft toAttribute:NSLayoutAttributeLeft withDistance:distance];
+    return [self lyt_constraintsByMatchingAttribute:NSLayoutAttributeLeft toAttribute:NSLayoutAttributeRight withDistance:spacing];
 }
 
-- (NSArray*)lyt_constraintsByDistributingCenterXWithDistance:(CGFloat)distance
+- (NSArray*)lyt_constraintsByDistributingYWithSpacing:(CGFloat)spacing
 {
-    return [self lyt_constraintsByMatchingAttribute:NSLayoutAttributeCenterX toAttribute:NSLayoutAttributeCenterX withDistance:distance];
-}
-
-- (NSArray*)lyt_constraintsByDistributingRightWithDistance:(CGFloat)distance
-{
-    return [self lyt_constraintsByMatchingAttribute:NSLayoutAttributeRight toAttribute:NSLayoutAttributeRight withDistance:distance];
-}
-
-#pragma mark Distribute Y
-
-- (NSArray*)lyt_distributeTopWithDistance:(CGFloat)distance
-{
-    NSArray *constraints = [self lyt_constraintsByDistributingTopWithDistance:distance];
-    [self lyt_addConstraints:constraints];
-    return constraints;
-}
-
-- (NSArray*)lyt_distributeCenterYWithDistance:(CGFloat)distance
-{
-    NSArray *constraints = [self lyt_constraintsByDistributingCenterYWithDistance:distance];
-    [self lyt_addConstraints:constraints];
-    return constraints;
-}
-
-- (NSArray*)lyt_distributeBottomWithDistance:(CGFloat)distance
-{
-    NSArray *constraints = [self lyt_constraintsByDistributingBottomWithDistance:distance];
-    [self lyt_addConstraints:constraints];
-    return constraints;
+    return [self lyt_constraintsByMatchingAttribute:NSLayoutAttributeTop toAttribute:NSLayoutAttributeBottom withDistance:spacing];
 }
 
 - (NSArray*)lyt_constraintsByDistributingTopWithDistance:(CGFloat)distance
@@ -839,6 +820,21 @@
 - (NSArray*)lyt_constraintsByDistributingBottomWithDistance:(CGFloat)distance
 {
     return [self lyt_constraintsByMatchingAttribute:NSLayoutAttributeBottom toAttribute:NSLayoutAttributeBottom withDistance:distance];
+}
+
+- (NSArray*)lyt_constraintsByDistributingLeftWithDistance:(CGFloat)distance
+{
+    return [self lyt_constraintsByMatchingAttribute:NSLayoutAttributeLeft toAttribute:NSLayoutAttributeLeft withDistance:distance];
+}
+
+- (NSArray*)lyt_constraintsByDistributingCenterXWithDistance:(CGFloat)distance
+{
+    return [self lyt_constraintsByMatchingAttribute:NSLayoutAttributeCenterX toAttribute:NSLayoutAttributeCenterX withDistance:distance];
+}
+
+- (NSArray*)lyt_constraintsByDistributingRightWithDistance:(CGFloat)distance
+{
+    return [self lyt_constraintsByMatchingAttribute:NSLayoutAttributeRight toAttribute:NSLayoutAttributeRight withDistance:distance];
 }
 
 @end

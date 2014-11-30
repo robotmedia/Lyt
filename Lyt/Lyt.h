@@ -29,7 +29,7 @@
 
 @interface LYTView (Lyt)
 
-// Alignment
+#pragma mark Alignment
 
 - (NSLayoutConstraint*)lyt_alignTopToParent;
 
@@ -121,7 +121,7 @@
 
 - (NSArray*)lyt_constraintsByAligningToView:(LYTView*)view margin:(CGFloat)margin;
 
-// Centering
+#pragma mark Centering
 
 - (NSLayoutConstraint*)lyt_centerXInParent;
 
@@ -171,7 +171,7 @@
 
 - (NSArray*)lyt_constraintsByCenteringWithView:(LYTView*)view offset:(CGFloat)offset;
 
-// Placement
+#pragma mark Placement
 
 - (NSLayoutConstraint*)lyt_placeAboveView:(LYTView*)view;
 
@@ -205,7 +205,7 @@
 
 - (NSLayoutConstraint*)lyt_constraintByPlacingLeftOfView:(LYTView*)view margin:(CGFloat)margin;
 
-// Position and sizing
+#pragma mark Position and sizing
 
 - (NSLayoutConstraint*)lyt_setX:(CGFloat)x;
 
@@ -257,31 +257,11 @@
 
 @interface NSArray (Lyt)
 
-#pragma mark Distribute Spacing
+#pragma mark Distribution
 
 - (NSArray*)lyt_distributeXWithSpacing:(CGFloat)spacing;
 
 - (NSArray*)lyt_distributeYWithSpacing:(CGFloat)spacing;
-
-- (NSArray*)lyt_constraintsByDistributingXWithSpacing:(CGFloat)spacing;
-
-- (NSArray*)lyt_constraintsByDistributingYWithSpacing:(CGFloat)spacing;
-
-#pragma mark Distribute X
-
-- (NSArray*)lyt_distributeLeftWithDistance:(CGFloat)distance;
-
-- (NSArray*)lyt_distributeCenterXWithDistance:(CGFloat)distance;
-
-- (NSArray*)lyt_distributeRightWithDistance:(CGFloat)distance;
-
-- (NSArray*)lyt_constraintsByDistributingLeftWithDistance:(CGFloat)distance;
-
-- (NSArray*)lyt_constraintsByDistributingCenterXWithDistance:(CGFloat)distance;
-
-- (NSArray*)lyt_constraintsByDistributingRightWithDistance:(CGFloat)distance;
-
-#pragma mark Distribute Y
 
 - (NSArray*)lyt_distributeTopWithDistance:(CGFloat)distance;
 
@@ -289,11 +269,27 @@
 
 - (NSArray*)lyt_distributeBottomWithDistance:(CGFloat)distance;
 
+- (NSArray*)lyt_distributeLeftWithDistance:(CGFloat)distance;
+
+- (NSArray*)lyt_distributeCenterXWithDistance:(CGFloat)distance;
+
+- (NSArray*)lyt_distributeRightWithDistance:(CGFloat)distance;
+
+- (NSArray*)lyt_constraintsByDistributingXWithSpacing:(CGFloat)spacing;
+
+- (NSArray*)lyt_constraintsByDistributingYWithSpacing:(CGFloat)spacing;
+
 - (NSArray*)lyt_constraintsByDistributingTopWithDistance:(CGFloat)distance;
 
 - (NSArray*)lyt_constraintsByDistributingCenterYWithDistance:(CGFloat)distance;
 
 - (NSArray*)lyt_constraintsByDistributingBottomWithDistance:(CGFloat)distance;
+
+- (NSArray*)lyt_constraintsByDistributingLeftWithDistance:(CGFloat)distance;
+
+- (NSArray*)lyt_constraintsByDistributingCenterXWithDistance:(CGFloat)distance;
+
+- (NSArray*)lyt_constraintsByDistributingRightWithDistance:(CGFloat)distance;
 
 @end
 
