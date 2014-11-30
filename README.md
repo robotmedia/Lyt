@@ -2,7 +2,7 @@ Lyt
 ===
 [![Version](https://cocoapod-badges.herokuapp.com/v/Lyt/badge.png)](http://cocoadocs.org/docsets/Lyt) [![Platform](https://cocoapod-badges.herokuapp.com/p/Lyt/badge.png)](http://cocoadocs.org/docsets/Lyt) [![Build Status](https://travis-ci.org/robotmedia/Lyt.png)](https://travis-ci.org/robotmedia/Lyt)
 
-A UIView and NSView category to make autolayout (more) readable and less verbose. For iOS and OS X.
+UIView, NSView and NSArray categories to make autolayout (more) readable and less verbose. For iOS and OS X.
 
 ###Better semantics with less code
 
@@ -25,15 +25,15 @@ NSLayoutConstraint *centerYConstraint = [NSLayoutConstraint constraintWithItem:v
 Or this:
 
 ```objective-c
-[view lyt_alignSidesToParentWithMargin:10];
+[@[userField, passwordField, repeatPasswordField] lyt_distributeYWithSpacing:10];
 ```
 
 Instead of:
 
 ```objective-c
-NSDictionary *views = NSDictionaryOfVariableBindings(view);
-NSDictionary *metrics = @{@"margin" : @(10)};
-NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-margin-[view]-margin-|" options:kNilOptions metrics:metrics views:views];
+NSDictionary *views = NSDictionaryOfVariableBindings(userField, passwordField, repeatPasswordField);
+NSDictionary *metrics = @{@"spacing" : @(10)};
+NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:[userField]-spacing-[passwordField]-spacing-[repeatPasswordField]" options:kNilOptions metrics:metrics views:views];
 [view.superview addConstraints:constraints];
 ```
 
@@ -43,11 +43,12 @@ Type `lyt_` and then the layout action you want (e.g., `center`) to see what's a
 
 ![Code completion screenshot](Assets/autocomplete.png)
 
-Lyt offers dozens of methods. Current families are:
+Lyt offers hundreds of convenience methods. Current families are:
 
 * `lyt_align*`
 * `lyt_center*`
 * `lyt_place*`
+* `lyt_distribute*`
 * `lyt_set*`
 * `lyt_match*`
 
