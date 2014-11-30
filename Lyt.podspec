@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name = 'Lyt'
-  s.version = '0.3'
+  s.version = '0.4'
   s.license = 'Apache 2.0'
-  s.summary = 'A UIView and NSView category to make autolayout (more) readable and less verbose'
+  s.summary = 'UIView, NSView and NSArray categories to make autolayout (more) readable and less verbose'
   s.homepage = 'https://github.com/robotmedia/Lyt'
   s.author = 'Hermes Pique'
   s.social_media_url = 'https://twitter.com/robotmedia'
