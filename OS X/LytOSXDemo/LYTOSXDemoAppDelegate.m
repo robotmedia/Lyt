@@ -27,59 +27,66 @@ static CGFloat const Separator = 8;
 
 @implementation LYTOSXDemoAppDelegate {
     NSTextField *_titleLabel;
+    NSTextField *_subtitleLabel;
     NSTextField *_bodyLabel;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    _titleLabel = [self.class labelWithText:NSLocalizedString(@"Introducing Lyt", @"")];
-    _titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.window.contentView addSubview:_titleLabel];
-    
-    _bodyLabel = [self.class labelWithText:NSLocalizedString(@"A UIView category to make autolayout (more) readable and less verbose.", @"")];
-    _bodyLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.window.contentView addSubview:_bodyLabel];
-    
+    _titleLabel = [self addLabelWithText:NSLocalizedString(@"Introducing Lyt", @"")];
+    _subtitleLabel = [self addLabelWithText:NSLocalizedString(@"A UIView category to make autolayout (more) readable and less verbose.", @"")];
+    _bodyLabel = [self addLabelWithText:NSLocalizedString(@"Lyt offers dozens of methods. Current families are:\nlyt_align*\nlyt_center*\nlyt_place*\nlyt_set*\nlyt_match*\nlyt_distribute*", @"")];
+
     [self layoutWithLyt];
     
-    // [self layoutWithVisualFormat];
+    [self layoutWithVisualFormat];
 }
 
 - (void)layoutWithLyt
 {
     [_titleLabel lyt_alignTopToParentWithMargin:TopMargin];
     [_titleLabel lyt_centerXInParent];
-    
+    [_subtitleLabel lyt_alignSidesToParentWithMargin:SideMargin];
     [_bodyLabel lyt_alignSidesToParentWithMargin:SideMargin];
-    [_bodyLabel lyt_placeBelowView:_titleLabel margin:Separator];
+    
+    [@[_titleLabel, _subtitleLabel, _bodyLabel] lyt_distributeYWithSpacing:Separator];
 }
 
 - (void)layoutWithVisualFormat
 {
-    NSDictionary *views = NSDictionaryOfVariableBindings(_titleLabel, _bodyLabel);
+    NSDictionary *views = NSDictionaryOfVariableBindings(_titleLabel, _subtitleLabel, _bodyLabel);
     NSDictionary *metrics = @{@"TopMargin" : @(TopMargin), @"SideMargin" : @(SideMargin), @"Separator" : @(Separator)};
     
-    NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-TopMargin-[_titleLabel]-Separator-[_bodyLabel]"
+    NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-TopMargin-[_titleLabel]-Separator-[_subtitleLabel]-Separator-[_bodyLabel]"
                                                                            options:NSLayoutFormatAlignAllCenterX
                                                                            metrics:metrics
                                                                              views:views];
     [self.window.contentView addConstraints:verticalConstraints];
     
-    NSArray *horizontalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-SideMargin-[_bodyLabel]-SideMargin-|"
-                                                                             options:kNilOptions
-                                                                             metrics:metrics
-                                                                               views:views];
+    NSArray *horizontalConstraints =
+    [@[
+       [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-SideMargin-[_subtitleLabel]-SideMargin-|"
+                                               options:kNilOptions
+                                               metrics:metrics
+                                                 views:views],
+       [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-SideMargin-[_bodyLabel]-SideMargin-|"
+                                               options:kNilOptions
+                                               metrics:metrics
+                                                 views:views],
+       ] valueForKeyPath: @"@unionOfArrays.self"];
     [self.window.contentView addConstraints:horizontalConstraints];
 }
 
 #pragma mark Utils
 
-+ (NSTextField*)labelWithText:(NSString*)text
+- (NSTextField*)addLabelWithText:(NSString*)text
 {
     NSTextField *label = [NSTextField new];
+    label.translatesAutoresizingMaskIntoConstraints = NO;
     [label setBezeled:NO];
     [label setEditable:NO];
     [label setStringValue:text];
+    [self.window.contentView addSubview:label];
     return label;
 }
 

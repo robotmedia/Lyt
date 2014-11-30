@@ -27,6 +27,7 @@ static CGFloat const Separator = 8;
 
 @implementation LYTViewController {
     UILabel *_titleLabel;
+    UILabel *_subtitleLabel;
     UILabel *_bodyLabel;
 }
 
@@ -34,18 +35,9 @@ static CGFloat const Separator = 8;
 {
     [super viewDidLoad];
     
-    _titleLabel = [UILabel new];
-    _titleLabel.text = NSLocalizedString(@"Introducing Lyt", @"");
-    _titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    _titleLabel.backgroundColor = [UIColor redColor];
-    [self.view addSubview:_titleLabel];
-    
-    _bodyLabel = [UILabel new];
-    _bodyLabel.text = NSLocalizedString(@"A UIView category to make autolayout (more) readable and less verbose.", @"");
-    _bodyLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    _bodyLabel.backgroundColor = [UIColor yellowColor];
-    _bodyLabel.numberOfLines = 0;
-    [self.view addSubview:_bodyLabel];
+    _titleLabel = [self addLabelWithText:NSLocalizedString(@"Introducing Lyt", @"") color:[UIColor redColor]];
+    _subtitleLabel = [self addLabelWithText:NSLocalizedString(@"A UIView category to make autolayout (more) readable and less verbose.", @"") color:[UIColor yellowColor]];
+    _bodyLabel = [self addLabelWithText:NSLocalizedString(@"Lyt offers dozens of methods. Current families are:\nlyt_align*\nlyt_center*\nlyt_place*\nlyt_set*\nlyt_match*\nlyt_distribute*", @"") color:[UIColor greenColor]];
     
     [self layoutWithLyt];
 
@@ -56,27 +48,48 @@ static CGFloat const Separator = 8;
 {
     [_titleLabel lyt_alignTopToParentWithMargin:TopMargin];
     [_titleLabel lyt_centerXInParent];
-    
+    [_subtitleLabel lyt_alignSidesToParentWithMargin:SideMargin];
     [_bodyLabel lyt_alignSidesToParentWithMargin:SideMargin];
-    [_bodyLabel lyt_placeBelowView:_titleLabel margin:Separator];
+
+    [@[_titleLabel, _subtitleLabel, _bodyLabel] lyt_distributeYWithSpacing:Separator];
 }
 
 - (void)layoutWithVisualFormat
 {
-    NSDictionary *views = NSDictionaryOfVariableBindings(_titleLabel, _bodyLabel);
+    NSDictionary *views = NSDictionaryOfVariableBindings(_titleLabel, _subtitleLabel, _bodyLabel);
     NSDictionary *metrics = @{@"TopMargin" : @(TopMargin), @"SideMargin" : @(SideMargin), @"Separator" : @(Separator)};
     
-    NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-TopMargin-[_titleLabel]-Separator-[_bodyLabel]"
+    NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-TopMargin-[_titleLabel]-Separator-[_subtitleLabel]-Separator-[_bodyLabel]"
                                                                            options:NSLayoutFormatAlignAllCenterX
                                                                            metrics:metrics
                                                                              views:views];
     [self.view addConstraints:verticalConstraints];
     
-    NSArray *horizontalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-SideMargin-[_bodyLabel]-SideMargin-|"
-                                                                             options:kNilOptions
-                                                                             metrics:metrics
-                                                                               views:views];
+    NSArray *horizontalConstraints =
+    [@[
+       [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-SideMargin-[_subtitleLabel]-SideMargin-|"
+                                               options:kNilOptions
+                                               metrics:metrics
+                                                 views:views],
+       [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-SideMargin-[_bodyLabel]-SideMargin-|"
+                                               options:kNilOptions
+                                               metrics:metrics
+                                                 views:views],
+       ] valueForKeyPath: @"@unionOfArrays.self"];
     [self.view addConstraints:horizontalConstraints];
+}
+
+#pragma mark Utils
+
+- (UILabel*)addLabelWithText:(NSString*)text color:(UIColor*)color
+{
+    UILabel *label = [UILabel new];
+    label.text = text;
+    label.translatesAutoresizingMaskIntoConstraints = NO;
+    label.backgroundColor = color;
+    label.numberOfLines = 0;
+    [self.view addSubview:label];
+    return label;
 }
 
 @end
