@@ -29,7 +29,7 @@
 
 @interface NSArray (LytUtils)
 
-- (NSArray *)lyt_map:(id (^)(LYTView *view))block;
+- (NSArray *)lyt_flattenMap:(id (^)(LYTView *view))block;
 
 @end
 
@@ -165,31 +165,31 @@
     XCTAssertEqualObjects(result, grandparent, @"");
 }
 
-#pragma mark map
+#pragma mark flattenMap
 
-- (void)testMap_Empty
+- (void)testFlattenMap_Empty
 {
-    NSArray *result = [@[] lyt_map:^id(LYTView *view) { return nil; }];
+    NSArray *result = [@[] lyt_flattenMap:^id(LYTView *view) { return nil; }];
     
     XCTAssertEqualObjects(result, @[], @"");
 }
 
-- (void)testMap_AssertNotAView
+- (void)testFlattenMap_AssertNotAView
 {
-    XCTAssertThrows([@[@YES] lyt_map:^id(LYTView *view) { return nil; }], @"");
+    XCTAssertThrows([@[@YES] lyt_flattenMap:^id(LYTView *view) { return nil; }], @"");
 }
 
-- (void)testMap_Value
+- (void)testFlattenMap_Value
 {
-    NSArray *result = [@[[LYTView new], [LYTView new]] lyt_map:^id(LYTView *view) { return @YES; }];
+    NSArray *result = [@[[LYTView new], [LYTView new]] lyt_flattenMap:^id(LYTView *view) { return @YES; }];
     NSArray *expectedResut =  @[@YES, @YES];
 
     XCTAssertEqualObjects(result, expectedResut, @"");
 }
 
-- (void)testMap_Array
+- (void)testFlattenMap_Array
 {
-    NSArray *result = [@[[LYTView new], [LYTView new]] lyt_map:^id(LYTView *view) { return @[@YES, @NO]; }];
+    NSArray *result = [@[[LYTView new], [LYTView new]] lyt_flattenMap:^id(LYTView *view) { return @[@YES, @NO]; }];
     NSArray *expectedResut =  @[@YES, @NO, @YES, @NO];
     XCTAssertEqualObjects(result, expectedResut, @"");
 }

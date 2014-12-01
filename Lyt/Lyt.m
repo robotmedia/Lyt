@@ -735,7 +735,7 @@
     return constraints;
 }
 
-- (NSArray *)lyt_map:(id (^)(LYTView *view))block
+- (NSArray *)lyt_flattenMap:(id (^)(LYTView *view))block
 {
     NSParameterAssert(block != nil);
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:self.count];
@@ -860,548 +860,548 @@
 
 - (NSArray*)lyt_alignTopToParent
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_alignTopToParent]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_alignTopToParent]; }];
 }
 
 - (NSArray*)lyt_alignTopToParentWithMargin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_alignTopToParentWithMargin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_alignTopToParentWithMargin:margin]; }];
 }
 
 - (NSArray*)lyt_alignTopToView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_alignTopToView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_alignTopToView:view]; }];
 }
 
 - (NSArray*)lyt_alignTopToView:(LYTView*)view margin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_alignTopToView:view margin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_alignTopToView:view margin:margin]; }];
 }
 
 - (NSArray*)lyt_alignRightToParent
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_alignRightToParent]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_alignRightToParent]; }];
 }
 
 - (NSArray*)lyt_alignRightToParentWithMargin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_alignRightToParentWithMargin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_alignRightToParentWithMargin:margin]; }];
 }
 
 - (NSArray*)lyt_alignRightToView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_alignRightToView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_alignRightToView:view]; }];
 }
 
 - (NSArray*)lyt_alignRightToView:(LYTView*)view margin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_alignRightToView:view margin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_alignRightToView:view margin:margin]; }];
 }
 
 - (NSArray*)lyt_alignBottomToParent
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_alignBottomToParent]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_alignBottomToParent]; }];
 }
 
 - (NSArray*)lyt_alignBottomToParentWithMargin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_alignBottomToParentWithMargin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_alignBottomToParentWithMargin:margin]; }];
 }
 
 - (NSArray*)lyt_alignBottomToView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_alignBottomToView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_alignBottomToView:view]; }];
 }
 
 - (NSArray*)lyt_alignBottomToView:(LYTView*)view margin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_alignBottomToView:view margin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_alignBottomToView:view margin:margin]; }];
 }
 
 - (NSArray*)lyt_alignLeftToParent
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_alignLeftToParent]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_alignLeftToParent]; }];
 }
 
 - (NSArray*)lyt_alignLeftToParentWithMargin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_alignLeftToParentWithMargin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_alignLeftToParentWithMargin:margin]; }];
 }
 
 - (NSArray*)lyt_alignLeftToView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_alignLeftToView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_alignLeftToView:view]; }];
 }
 
 - (NSArray*)lyt_alignLeftToView:(LYTView*)view margin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_alignLeftToView:view margin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_alignLeftToView:view margin:margin]; }];
 }
 
 - (NSArray*)lyt_alignSidesToParent
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_alignSidesToParent]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_alignSidesToParent]; }];
 }
 
 - (NSArray*)lyt_alignSidesToParentWithMargin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_alignSidesToParentWithMargin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_alignSidesToParentWithMargin:margin]; }];
 }
 
 - (NSArray*)lyt_alignSidesToView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_alignSidesToView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_alignSidesToView:view]; }];
 }
 
 - (NSArray*)lyt_alignSidesToView:(LYTView*)view margin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_alignSidesToView:view margin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_alignSidesToView:view margin:margin]; }];
 }
 
 - (NSArray*)lyt_alignToParent
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_alignToParent]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_alignToParent]; }];
 }
 
 - (NSArray*)lyt_alignToParentWithMargin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_alignToParentWithMargin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_alignToParentWithMargin:margin]; }];
 }
 
 - (NSArray*)lyt_alignToView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_alignToView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_alignToView:view]; }];
 }
 
 - (NSArray*)lyt_alignToView:(LYTView*)view margin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_alignToView:view margin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_alignToView:view margin:margin]; }];
 }
 
 - (NSArray*)lyt_constraintByAligningTopToParent
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintByAligningTopToParent]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByAligningTopToParent]; }];
 }
 
 - (NSArray*)lyt_constraintByAligningTopToParentWithMargin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintByAligningTopToParentWithMargin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByAligningTopToParentWithMargin:margin]; }];
 }
 
 - (NSArray*)lyt_constraintByAligningTopToView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningTopToView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningTopToView:view]; }];
 }
 
 - (NSArray*)lyt_constraintByAligningTopToView:(LYTView*)view margin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningTopToView:view margin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningTopToView:view margin:margin]; }];
 }
 
 - (NSArray*)lyt_constraintByAligningRightToParent
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintByAligningRightToParent]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByAligningRightToParent]; }];
 }
 
 - (NSArray*)lyt_constraintByAligningRightToParentWithMargin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningRightToParentWithMargin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningRightToParentWithMargin:margin]; }];
 }
 
 - (NSArray*)lyt_constraintByAligningRightToView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningRightToView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningRightToView:view]; }];
 }
 
 - (NSArray*)lyt_constraintByAligningRightToView:(LYTView*)view margin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningRightToView:view margin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningRightToView:view margin:margin]; }];
 }
 
 - (NSArray*)lyt_constraintByAligningBottomToParent
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintByAligningBottomToParent]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByAligningBottomToParent]; }];
 }
 
 - (NSArray*)lyt_constraintByAligningBottomToParentWithMargin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintByAligningBottomToParentWithMargin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByAligningBottomToParentWithMargin:margin]; }];
 }
 
 - (NSArray*)lyt_constraintByAligningBottomToView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningBottomToView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningBottomToView:view]; }];
 }
 
 - (NSArray*)lyt_constraintByAligningBottomToView:(LYTView*)view margin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningBottomToView:view margin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningBottomToView:view margin:margin]; }];
 }
 
 - (NSArray*)lyt_constraintByAligningLeftToParent
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintByAligningLeftToParent]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByAligningLeftToParent]; }];
 }
 
 - (NSArray*)lyt_constraintByAligningLeftToParentWithMargin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintByAligningLeftToParentWithMargin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByAligningLeftToParentWithMargin:margin]; }];
 }
 
 - (NSArray*)lyt_constraintByAligningLeftToView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningLeftToView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningLeftToView:view]; }];
 }
 
 - (NSArray*)lyt_constraintByAligningLeftToView:(LYTView*)view margin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningLeftToView:view margin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningLeftToView:view margin:margin]; }];
 }
 
 - (NSArray*)lyt_constraintsByAligningSidesToParentWithMargin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintsByAligningSidesToParentWithMargin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintsByAligningSidesToParentWithMargin:margin]; }];
 }
 
 - (NSArray*)lyt_constraintsByAligningSidesToView:(LYTView*)view margin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintsByAligningSidesToView:view margin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintsByAligningSidesToView:view margin:margin]; }];
 }
 
 - (NSArray*)lyt_constraintsByAligningToParent
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintsByAligningToParent]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintsByAligningToParent]; }];
 }
 
 - (NSArray*)lyt_constraintsByAligningToParentWithMargin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintsByAligningToParentWithMargin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintsByAligningToParentWithMargin:margin]; }];
 }
 
 - (NSArray*)lyt_constraintsByAligningToView:(LYTView*)view margin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintsByAligningToView:view margin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintsByAligningToView:view margin:margin]; }];
 }
 
 #pragma mark Centering
 
 - (NSArray*)lyt_centerXInParent
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_centerXInParent]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_centerXInParent]; }];
 }
 
 - (NSArray*)lyt_centerXInParentWithOffset:(CGFloat)offset
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_centerXInParentWithOffset:offset]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_centerXInParentWithOffset:offset]; }];
 }
 
 - (NSArray*)lyt_centerXWithView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_centerXWithView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_centerXWithView:view]; }];
 }
 
 - (NSArray*)lyt_centerXWithView:(LYTView*)view offset:(CGFloat)offset
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_centerXWithView:view offset:offset]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_centerXWithView:view offset:offset]; }];
 }
 
 - (NSArray*)lyt_centerYInParent
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_centerYInParent]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_centerYInParent]; }];
 }
 
 - (NSArray*)lyt_centerYInParentWithOffset:(CGFloat)offset
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_centerYInParentWithOffset:offset]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_centerYInParentWithOffset:offset]; }];
 }
 
 - (NSArray*)lyt_centerYWithView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_centerYWithView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_centerYWithView:view]; }];
 }
 
 - (NSArray*)lyt_centerYWithView:(LYTView*)view offset:(CGFloat)offset
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_centerYWithView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_centerYWithView:view]; }];
 }
 
 - (NSArray*)lyt_centerInParent
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_centerInParent]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_centerInParent]; }];
 }
 
 - (NSArray*)lyt_centerInParentWithOffset:(CGFloat)offset
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_centerInParentWithOffset:offset]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_centerInParentWithOffset:offset]; }];
 }
 
 - (NSArray*)lyt_centerWithView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_centerWithView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_centerWithView:view]; }];
 }
 
 - (NSArray*)lyt_centerWithView:(LYTView*)view offset:(CGFloat)offset
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_centerWithView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_centerWithView:view]; }];
 }
 
 - (NSArray*)lyt_constraintByCenteringXInParent
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintByCenteringXInParent]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByCenteringXInParent]; }];
 }
 
 - (NSArray*)lyt_constraintByCenteringXInParentWithOffset:(CGFloat)offset
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintByCenteringXInParentWithOffset:offset]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByCenteringXInParentWithOffset:offset]; }];
 }
 
 - (NSArray*)lyt_constraintByCenteringXWithView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByCenteringXWithView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByCenteringXWithView:view]; }];
 }
 
 - (NSArray*)lyt_constraintByCenteringXWithView:(LYTView*)view offset:(CGFloat)offset
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByCenteringXWithView:view offset:offset]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByCenteringXWithView:view offset:offset]; }];
 }
 
 - (NSArray*)lyt_constraintByCenteringYInParent
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintByCenteringYInParent]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByCenteringYInParent]; }];
 }
 
 - (NSArray*)lyt_constraintByCenteringYInParentWithOffset:(CGFloat)offset
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintByCenteringYInParentWithOffset:offset]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByCenteringYInParentWithOffset:offset]; }];
 }
 
 - (NSArray*)lyt_constraintByCenteringYWithView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByCenteringYWithView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByCenteringYWithView:view]; }];
 }
 
 - (NSArray*)lyt_constraintByCenteringYWithView:(LYTView*)view offset:(CGFloat)offset
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByCenteringYWithView:view offset:offset]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByCenteringYWithView:view offset:offset]; }];
 }
 
 - (NSArray*)lyt_constraintsByCenteringInParent
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintsByCenteringInParent]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintsByCenteringInParent]; }];
 }
 
 - (NSArray*)lyt_constraintsByCenteringInParentWithOffset:(CGFloat)offset
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintsByCenteringInParentWithOffset:offset]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintsByCenteringInParentWithOffset:offset]; }];
 }
 
 - (NSArray*)lyt_constraintsByCenteringWithView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintsByCenteringWithView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintsByCenteringWithView:view]; }];
 }
 
 - (NSArray*)lyt_constraintsByCenteringWithView:(LYTView*)view offset:(CGFloat)offset
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintsByCenteringWithView:view offset:offset]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintsByCenteringWithView:view offset:offset]; }];
 }
 
 #pragma mark Placement
 
 - (NSArray*)lyt_placeAboveView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_placeAboveView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_placeAboveView:view]; }];
 }
 
 - (NSArray*)lyt_placeAboveView:(LYTView*)view margin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_placeAboveView:view margin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_placeAboveView:view margin:margin]; }];
 }
 
 - (NSArray*)lyt_placeRightOfView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_placeRightOfView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_placeRightOfView:view]; }];
 }
 
 - (NSArray*)lyt_placeRightOfView:(LYTView*)view margin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_placeRightOfView:view margin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_placeRightOfView:view margin:margin]; }];
 }
 
 - (NSArray*)lyt_placeBelowView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_placeBelowView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_placeBelowView:view]; }];
 }
 
 - (NSArray*)lyt_placeBelowView:(LYTView*)view margin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_placeBelowView:view margin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_placeBelowView:view margin:margin]; }];
 }
 
 - (NSArray*)lyt_placeLeftOfView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_placeLeftOfView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_placeLeftOfView:view]; }];
 }
 
 - (NSArray*)lyt_placeLeftOfView:(LYTView*)view margin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_placeLeftOfView:view margin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_placeLeftOfView:view margin:margin]; }];
 }
 
 - (NSArray*)lyt_constraintByPlacingAboveView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingAboveView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingAboveView:view]; }];
 }
 
 - (NSArray*)lyt_constraintByPlacingAboveView:(LYTView*)view margin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingAboveView:view margin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingAboveView:view margin:margin]; }];
 }
 
 - (NSArray*)lyt_constraintByPlacingRightOfView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingRightOfView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingRightOfView:view]; }];
 }
 
 - (NSArray*)lyt_constraintByPlacingRightOfView:(LYTView*)view margin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingRightOfView:view margin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingRightOfView:view margin:margin]; }];
 }
 
 - (NSArray*)lyt_constraintByPlacingBelowView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingBelowView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingBelowView:view]; }];
 }
 
 - (NSArray*)lyt_constraintByPlacingBelowView:(LYTView*)view margin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingBelowView:view margin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingBelowView:view margin:margin]; }];
 }
 
 - (NSArray*)lyt_constraintByPlacingLeftOfView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingLeftOfView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingLeftOfView:view]; }];
 }
 
 - (NSArray*)lyt_constraintByPlacingLeftOfView:(LYTView*)view margin:(CGFloat)margin
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingLeftOfView:view margin:margin]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingLeftOfView:view margin:margin]; }];
 }
 
 #pragma mark Position and Sizing
 
 - (NSArray*)lyt_setX:(CGFloat)x
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_setX:x]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_setX:x]; }];
 }
 
 - (NSArray*)lyt_setY:(CGFloat)y
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_setY:y]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_setY:y]; }];
 }
 
 - (NSArray*)lyt_setOrigin:(CGPoint)origin
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_setOrigin:origin]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_setOrigin:origin]; }];
 }
 
 - (NSArray*)lyt_setWidth:(CGFloat)width
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_setWidth:width]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_setWidth:width]; }];
 }
 
 - (NSArray*)lyt_setHeight:(CGFloat)height
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_setHeight:height]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_setHeight:height]; }];
 }
 
 - (NSArray*)lyt_setSize:(CGSize)size
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_setSize:size]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_setSize:size]; }];
 }
 
 - (NSArray*)lyt_setFrame:(CGRect)frame
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_setFrame:frame]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_setFrame:frame]; }];
 }
 
 - (NSArray*)lyt_matchWidthToView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_matchWidthToView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_matchWidthToView:view]; }];
 }
 
 - (NSArray*)lyt_matchHeightToView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_matchHeightToView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_matchHeightToView:view]; }];
 }
 
 - (NSArray*)lyt_matchWidthToView:(LYTView*)view multiplier:(CGFloat)multiplier
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_matchHeightToView:view multiplier:multiplier]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_matchHeightToView:view multiplier:multiplier]; }];
 }
 
 - (NSArray*)lyt_matchHeightToView:(LYTView*)view multiplier:(CGFloat)multiplier
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_matchHeightToView:view multiplier:multiplier]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_matchHeightToView:view multiplier:multiplier]; }];
 }
 
 - (NSArray*)lyt_constraintBySettingX:(CGFloat)x
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintBySettingX:x]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintBySettingX:x]; }];
 }
 
 - (NSArray*)lyt_constraintBySettingY:(CGFloat)y
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintBySettingY:y]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintBySettingY:y]; }];
 }
 
 - (NSArray*)lyt_constraintsBySettingOrigin:(CGPoint)origin
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintsBySettingOrigin:origin]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintsBySettingOrigin:origin]; }];
 }
 
 - (NSArray*)lyt_constraintBySettingWidth:(CGFloat)width
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintBySettingWidth:width]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintBySettingWidth:width]; }];
 }
 
 - (NSArray*)lyt_constraintBySettingHeight:(CGFloat)height
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintBySettingHeight:height]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintBySettingHeight:height]; }];
 }
 
 - (NSArray*)lyt_constraintsBySettingSize:(CGSize)size
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintsBySettingSize:size]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintsBySettingSize:size]; }];
 }
 
 - (NSArray*)lyt_constraintsBySettingFrame:(CGRect)frame
 {
-    return [self lyt_map:^id(LYTView *view) { return [view lyt_constraintsBySettingFrame:frame]; }];
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintsBySettingFrame:frame]; }];
 }
 
 - (NSArray*)lyt_constraintByMatchingWidthToView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByMatchingWidthToView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByMatchingWidthToView:view]; }];
 }
 
 - (NSArray*)lyt_constraintByMatchingHeightToView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByMatchingHeightToView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByMatchingHeightToView:view]; }];
 }
 
 - (NSArray*)lyt_constraintByMatchingWidthToView:(LYTView*)view multiplier:(CGFloat)multiplier
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByMatchingWidthToView:view multiplier:multiplier]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByMatchingWidthToView:view multiplier:multiplier]; }];
 }
 
 - (NSArray*)lyt_constraintByMatchingHeightToView:(LYTView*)view multiplier:(CGFloat)multiplier
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintByMatchingHeightToView:view multiplier:multiplier]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByMatchingHeightToView:view multiplier:multiplier]; }];
 }
 
 - (NSArray*)lyt_constraintsByMatchingSizeToView:(LYTView*)view
 {
-    return [self lyt_map:^id(LYTView *currentView) { return [currentView lyt_constraintsByMatchingSizeToView:view]; }];
+    return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintsByMatchingSizeToView:view]; }];
 }
 
 @end
