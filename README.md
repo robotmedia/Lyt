@@ -75,7 +75,7 @@ _labelLeftConstraint = [_label lyt_constraintByAligningLeftToParent];
 Using [CocoaPods](http://cocoapods.org/):
 
 ```ruby
-pod 'Lyt', '~> 0.3'
+pod 'Lyt', '~> 0.4'
 ```
 
 Or add the files from the [Lyt](https://github.com/robotmedia/Lyt/tree/master/Lyt) directory if you're doing it manually.
