@@ -176,7 +176,9 @@
 
 - (void)testFlattenMap_AssertNotAView
 {
+#if DEBUG
     XCTAssertThrows([@[@YES] lyt_flattenMap:^id(LYTView *view) { return nil; }], @"");
+#endif
 }
 
 - (void)testFlattenMap_Value
