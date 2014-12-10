@@ -486,36 +486,132 @@
 
 #pragma mark Distribution
 
+/**
+ Adds constraints to horizontally distribute the views in the array so that the spacing between them equals the given value.
+ @discussion In order for the layout to be unambiguous one of the views (typically the first) must have other constraints that define its X origin.
+ @param spacing The spacing length.
+ @returns An array of constraints that horizontally distribute the views in the array so that the spacing between them equals the given value.
+ */
 - (NSArray*)lyt_distributeXWithSpacing:(CGFloat)spacing;
 
+/**
+ Adds constraints to vertically distribute the views in the array so that the spacing between them equals the given value.
+ @discussion In order for the layout to be unambiguous one of the views (typically the first) must have other constraints that define its Y origin.
+ @param spacing The spacing length.
+ @returns An array of constraints that vertically distribute the views in the array so that the spacing between them equals the given value.
+ */
 - (NSArray*)lyt_distributeYWithSpacing:(CGFloat)spacing;
 
+/**
+ Adds constraints to vertically distribute the views in the array so that the distance between their top edges equals the given value.
+ @discussion In order for the layout to be unambiguous one of the views (typically the first) must have other constraints that define its Y origin.
+ @param distance The distance length.
+ @returns An array of constraints that vertically distribute the views in the array so that the distance between their top edges equals the given value.
+ */
 - (NSArray*)lyt_distributeTopWithDistance:(CGFloat)distance;
 
+/**
+ Adds constraints to vertically distribute the views in the array so that the vertical distance between their centers equals the given value.
+ @discussion In order for the layout to be unambiguous one of the views (typically the first) must have other constraints that define its Y origin.
+ @param distance The distance length.
+ @returns An array of constraints that vertically distribute the views in the array so that the vertical distance between their centers equals the given value.
+ */
 - (NSArray*)lyt_distributeCenterYWithDistance:(CGFloat)distance;
 
+/**
+ Adds constraints to vertically distribute the views in the array so that the distance between their bottom edges equals the given value.
+ @discussion In order for the layout to be unambiguous one of the views (typically the first) must have other constraints that define its Y origin.
+ @param distance The distance length.
+ @returns An array of constraints that vertically distribute the views in the array so that the distance between their bottom edges equals the given value.
+ */
 - (NSArray*)lyt_distributeBottomWithDistance:(CGFloat)distance;
 
+/**
+ Adds constraints to horizontally distribute the views in the array so that the distance between their left edges equals the given value.
+ @discussion In order for the layout to be unambiguous one of the views (typically the first) must have other constraints that define its X origin.
+ @param distance The distance length.
+ @returns An array of constraints that horizontally distribute the views in the array so that the distance between their left edges equals the given value.
+ */
 - (NSArray*)lyt_distributeLeftWithDistance:(CGFloat)distance;
 
+/**
+ Adds constraints to horizontally distribute the views in the array so that the horizontal distance between their centers equals the given value.
+ @discussion In order for the layout to be unambiguous one of the views (typically the first) must have other constraints that define its X origin.
+ @param distance The distance length.
+ @returns An array of constraints that horizontally distribute the views in the array so that the horizontal distance between their centers equals the given value.
+ */
 - (NSArray*)lyt_distributeCenterXWithDistance:(CGFloat)distance;
 
+/**
+ Adds constraints to horizontally distribute the views in the array so that the distance between their right edges equals the given value.
+ @discussion In order for the layout to be unambiguous one of the views (typically the first) must have other constraints that define its X origin.
+ @param distance The distance length.
+ @returns An array of constraints that horizontally distribute the views in the array so that the distance between their right edges equals the given value.
+ */
 - (NSArray*)lyt_distributeRightWithDistance:(CGFloat)distance;
 
+/**
+ Returns constraints to horizontally distribute the views in the array so that the spacing between them equals the given value.
+ @discussion In order for the layout to be unambiguous one of the views (typically the first) must have other constraints that define its X origin.
+ @param spacing The spacing length.
+ @returns An array of constraints that horizontally distribute the views in the array so that the spacing between them equals the given value.
+ */
 - (NSArray*)lyt_constraintsByDistributingXWithSpacing:(CGFloat)spacing;
 
+/**
+ Returns constraints to vertically distribute the views in the array so that the spacing between them equals the given value.
+ @discussion In order for the layout to be unambiguous one of the views (typically the first) must have other constraints that define its Y origin.
+ @param spacing The spacing length.
+ @returns An array of constraints that vertically distribute the views in the array so that the spacing between them equals the given value.
+ */
 - (NSArray*)lyt_constraintsByDistributingYWithSpacing:(CGFloat)spacing;
 
+/**
+ Returns constraints to vertically distribute the views in the array so that the distance between their top edges equals the given value.
+ @discussion In order for the layout to be unambiguous one of the views (typically the first) must have other constraints that define its Y origin.
+ @param distance The distance length.
+ @returns An array of constraints that vertically distribute the views in the array so that the distance between their top edges equals the given value.
+ */
 - (NSArray*)lyt_constraintsByDistributingTopWithDistance:(CGFloat)distance;
 
+/**
+ Returns constraints to vertically distribute the views in the array so that the vertical distance between their centers equals the given value.
+ @discussion In order for the layout to be unambiguous one of the views (typically the first) must have other constraints that define its Y origin.
+ @param distance The distance length.
+ @returns An array of constraints that vertically distribute the views in the array so that the vertical distance between their centers equals the given value.
+ */
 - (NSArray*)lyt_constraintsByDistributingCenterYWithDistance:(CGFloat)distance;
 
+/**
+ Returns constraints to vertically distribute the views in the array so that the distance between their bottom edges equals the given value.
+ @discussion In order for the layout to be unambiguous one of the views (typically the first) must have other constraints that define its Y origin.
+ @param distance The distance length.
+ @returns An array of constraints that vertically distribute the views in the array so that the distance between their bottom edges equals the given value.
+ */
 - (NSArray*)lyt_constraintsByDistributingBottomWithDistance:(CGFloat)distance;
 
+/**
+ Returns constraints to horizontally distribute the views in the array so that the distance between their left edges equals the given value.
+ @discussion In order for the layout to be unambiguous one of the views (typically the first) must have other constraints that define its X origin.
+ @param distance The distance length.
+ @returns An array of constraints that horizontally distribute the views in the array so that the distance between their left edges equals the given value.
+ */
 - (NSArray*)lyt_constraintsByDistributingLeftWithDistance:(CGFloat)distance;
 
+/**
+ Returns constraints to horizontally distribute the views in the array so that the horizontal distance between their centers equals the given value.
+ @discussion In order for the layout to be unambiguous one of the views (typically the first) must have other constraints that define its X origin.
+ @param distance The distance length.
+ @returns An array of constraints that horizontally distribute the views in the array so that the horizontal distance between their centers equals the given value.
+ */
 - (NSArray*)lyt_constraintsByDistributingCenterXWithDistance:(CGFloat)distance;
 
+/**
+ Returns constraints to horizontally distribute the views in the array so that the distance between their right edges equals the given value.
+ @discussion In order for the layout to be unambiguous one of the views (typically the first) must have other constraints that define its X origin.
+ @param distance The distance length.
+ @returns An array of constraints that horizontally distribute the views in the array so that the distance between their right edges equals the given value.
+ */
 - (NSArray*)lyt_constraintsByDistributingRightWithDistance:(CGFloat)distance;
 
 #pragma mark Alignment
