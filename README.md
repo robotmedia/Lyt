@@ -33,7 +33,7 @@ Instead of:
 ```objective-c
 NSDictionary *views = NSDictionaryOfVariableBindings(userField, passwordField, repeatPasswordField);
 NSDictionary *metrics = @{@"spacing" : @(10)};
-NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:[userField]-spacing-[passwordField]-spacing-[repeatPasswordField]" options:kNilOptions metrics:metrics views:views];
+NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[userField]-spacing-[passwordField]-spacing-[repeatPasswordField]" options:kNilOptions metrics:metrics views:views];
 [view.superview addConstraints:constraints];
 ```
 
