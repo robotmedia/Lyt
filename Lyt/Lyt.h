@@ -31,94 +31,321 @@
 
 #pragma mark Alignment
 
+/**
+ Adds a constraint that aligns the top edge of the view with the top edge of the parent view.
+ @return A constraint that aligns the top edge of the view with the top edge of the parent view.
+ */
 - (NSLayoutConstraint*)lyt_alignTopToParent;
 
+/**
+ Adds a constraint that aligns the top edge of the view with the given inner margin from the top edge of the parent view.
+ @param margin The inner margin length.
+ @return A constraint that aligns the top edge of the view with the given inner margin from the top edge of the parent view.
+ */
 - (NSLayoutConstraint*)lyt_alignTopToParentWithMargin:(CGFloat)margin;
 
+/**
+ Adds a constraint that aligns the top edge of the view with the top edge of the given view.
+ @param view The reference view.
+ @return A constraint that aligns the top edge of the view with the top edge of the given view.
+ */
 - (NSLayoutConstraint*)lyt_alignTopToView:(LYTView*)view;
 
+/**
+ Adds a constraint that aligns the top edge of the view with the given inner margin from the top edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return A constraint that aligns the top edge of the view with the given inner margin from the top edge of the given view.
+ */
 - (NSLayoutConstraint*)lyt_alignTopToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Adds a constraint that aligns the right edge of the view with the right edge of the parent view.
+ @return A constraint that aligns the right edge of the view with the right edge of the parent view.
+ */
 - (NSLayoutConstraint*)lyt_alignRightToParent;
 
+/**
+ Adds a constraint that aligns the right edge of the view with the given inner margin from the right edge of the parent view.
+ @param margin The inner margin length.
+ @return A constraint that aligns the right edge of the view with the given inner margin from the right edge of the parent view.
+ */
 - (NSLayoutConstraint*)lyt_alignRightToParentWithMargin:(CGFloat)margin;
 
+/**
+ Adds a constraint that aligns the right edge of the view with the right edge of the given view.
+ @param view The reference view.
+ @return A constraint that aligns the right edge of the view with the right edge of the given view.
+ */
 - (NSLayoutConstraint*)lyt_alignRightToView:(LYTView*)view;
 
+/**
+ Adds a constraint that aligns the right edge of the view with the given inner margin from right top edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return A constraint that aligns the right edge of the view with the given inner margin from the right edge of the given view.
+ */
 - (NSLayoutConstraint*)lyt_alignRightToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Adds a constraint that aligns the bottom edge of the view with the bottom edge of the parent view.
+ @return A constraint that aligns the bottom edge of the view with the bottom edge of the parent view.
+ */
 - (NSLayoutConstraint*)lyt_alignBottomToParent;
 
+/**
+ Adds a constraint that aligns the bottom edge of the view with the given inner margin from the bottom edge of the parent view.
+ @param margin The inner margin length.
+ @return A constraint that aligns the bottom edge of the view with the given inner margin from the bottom edge of the parent view.
+ */
 - (NSLayoutConstraint*)lyt_alignBottomToParentWithMargin:(CGFloat)margin;
 
+/**
+ Adds a constraint that aligns the bottom edge of the view with the bottom edge of the given view.
+ @param view The reference view.
+ @return A constraint that aligns the bottom edge of the view with the bottom edge of the given view.
+ */
 - (NSLayoutConstraint*)lyt_alignBottomToView:(LYTView*)view;
 
+/**
+ Adds a constraint that aligns the bottom edge of the view with the given inner margin from bottom top edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return A constraint that aligns the bottom edge of the view with the given inner margin from the bottom edge of the given view.
+ */
 - (NSLayoutConstraint*)lyt_alignBottomToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Adds a constraint that aligns the left edge of the view with the left edge of the parent view.
+ @return A constraint that aligns the left edge of the view with the left edge of the parent view.
+ */
 - (NSLayoutConstraint*)lyt_alignLeftToParent;
 
+/**
+ Adds a constraint that aligns the left edge of the view with the given inner margin from the left edge of the parent view.
+ @param margin The inner margin length.
+ @return A constraint that aligns the left edge of the view with the given inner margin from the left edge of the parent view.
+ */
 - (NSLayoutConstraint*)lyt_alignLeftToParentWithMargin:(CGFloat)margin;
 
+/**
+ Adds a constraint that aligns the left edge of the view with the left edge of the given view.
+ @param view The reference view.
+ @return A constraint that aligns the left edge of the view with the left edge of the given view.
+ */
 - (NSLayoutConstraint*)lyt_alignLeftToView:(LYTView*)view;
 
+/**
+ Adds a constraint that aligns the left edge of the view with the given inner margin from left top edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return A constraint that aligns the left edge of the view with the given inner margin from the left edge of the given view.
+ */
 - (NSLayoutConstraint*)lyt_alignLeftToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Adds constraints that align the sides of the view with the sides of the parent view.
+ @return An array of constraints that align the sides of the view with the sides of the parent view.
+ */
 - (NSArray*)lyt_alignSidesToParent;
 
+/**
+ Adds constraints that align the sides of the view with the given inner margin from the sides of the parent view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the sides of the view with the given inner margin from the sides of the parent view.
+ */
 - (NSArray*)lyt_alignSidesToParentWithMargin:(CGFloat)margin;
 
+/**
+ Adds constraints that align the sides of the view with the sides of the given view.
+ @param view The reference view.
+ @return An array of constraints that align the sides of the view with the sides of the given view.
+ */
 - (NSArray*)lyt_alignSidesToView:(LYTView*)view;
 
+/**
+ Adds constraints that align the sides of the view with the given inner margin from the sides of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the sides of the view with the given inner margin from the sides of the given view.
+ */
 - (NSArray*)lyt_alignSidesToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Adds constraints that align the edges of the view with the edges of the parent view.
+ @return An array of constraints that align the edges of the view with the edges of the parent view.
+ */
 - (NSArray*)lyt_alignToParent;
 
+/**
+ Adds constraints that align the edges of the view with the given inner margin from the edges of the parent view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the edges of the view with the given inner margin from the edges of the parent view.
+ */
 - (NSArray*)lyt_alignToParentWithMargin:(CGFloat)margin;
 
+/**
+ Adds constraints that align the edges of the view with the given inner margin from the edges of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the edges of the view with the given inner margin from the edges of the given view.
+ */
 - (NSArray*)lyt_alignToView:(LYTView*)view;
 
+/**
+ Adds constraints that align the edges of the view with the given inner margin from the edges of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the edges of the view with the given inner margin from the edges of the given view.
+ */
 - (NSArray*)lyt_alignToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Returns a constraint that aligns the top edge of the view with the top edge of the parent view.
+ @return A constraint that aligns the top edge of the view with the top edge of the parent view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByAligningTopToParent;
 
+/**
+ Returns a constraint that aligns the top edge of the view with the given inner margin from the top edge of the parent view.
+ @param margin The inner margin length.
+ @return A constraint that aligns the top edge of the view with the given inner margin from the top edge of the parent view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByAligningTopToParentWithMargin:(CGFloat)margin;
 
+/**
+ Returns a constraint that aligns the top edge of the view with the top edge of the given view.
+ @param view The reference view.
+ @return A constraint that aligns the top edge of the view with the top edge of the given view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByAligningTopToView:(LYTView*)view;
 
+/**
+ Returns a constraint that aligns the top edge of the view with the given inner margin from the top edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return A constraint that aligns the top edge of the view with the given inner margin from the top edge of the given view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByAligningTopToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Returns a constraint that aligns the right edge of the view with the right edge of the parent view.
+ @return A constraint that aligns the right edge of the view with the right edge of the parent view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByAligningRightToParent;
 
+/**
+ Returns a constraint that aligns the right edge of the view with the given inner margin from the right edge of the parent view.
+ @param margin The inner margin length.
+ @return A constraint that aligns the right edge of the view with the given inner margin from the right edge of the parent view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByAligningRightToParentWithMargin:(CGFloat)margin;
 
+/**
+ Returns a constraint that aligns the right edge of the view with the right edge of the given view.
+ @param view The reference view.
+ @return A constraint that aligns the right edge of the view with the right edge of the given view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByAligningRightToView:(LYTView*)view;
 
+/**
+ Returns a constraint that aligns the right edge of the view with the given inner margin from right top edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return A constraint that aligns the right edge of the view with the given inner margin from the right edge of the given view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByAligningRightToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Returns a constraint that aligns the bottom edge of the view with the bottom edge of the parent view.
+ @return A constraint that aligns the bottom edge of the view with the bottom edge of the parent view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByAligningBottomToParent;
 
+/**
+ Returns a constraint that aligns the bottom edge of the view with the given inner margin from the bottom edge of the parent view.
+ @param margin The inner margin length.
+ @return A constraint that aligns the bottom edge of the view with the given inner margin from the bottom edge of the parent view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByAligningBottomToParentWithMargin:(CGFloat)margin;
 
+/**
+ Returns a constraint that aligns the bottom edge of the view with the bottom edge of the given view.
+ @param view The reference view.
+ @return A constraint that aligns the bottom edge of the view with the bottom edge of the given view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByAligningBottomToView:(LYTView*)view;
 
+/**
+ Returns a constraint that aligns the bottom edge of the view with the given inner margin from bottom top edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return A constraint that aligns the bottom edge of the view with the given inner margin from the bottom edge of the given view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByAligningBottomToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Returns a constraint that aligns the left edge of the view with the left edge of the parent view.
+ @return A constraint that aligns the left edge of the view with the left edge of the parent view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByAligningLeftToParent;
 
+/**
+ Returns a constraint that aligns the left edge of the view with the given inner margin from the left edge of the parent view.
+ @param margin The inner margin length.
+ @return A constraint that aligns the left edge of the view with the given inner margin from the left edge of the parent view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByAligningLeftToParentWithMargin:(CGFloat)margin;
 
+/**
+ Returns a constraint that aligns the left edge of the view with the left edge of the given view.
+ @param view The reference view.
+ @return A constraint that aligns the left edge of the view with the left edge of the given view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByAligningLeftToView:(LYTView*)view;
 
+/**
+ Returns a constraint that aligns the left edge of the view with the given inner margin from left top edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return A constraint that aligns the left edge of the view with the given inner margin from the left edge of the given view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByAligningLeftToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Returns constraints that align the edges of the view with the given inner margin from the edges of the parent view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the edges of the view with the given inner margin from the edges of the parent view.
+ */
 - (NSArray*)lyt_constraintsByAligningSidesToParentWithMargin:(CGFloat)margin;
 
+/**
+ Returns constraints that align the sides of the view with the given inner margin from the sides of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the sides of the view with the given inner margin from the sides of the given view.
+ */
 - (NSArray*)lyt_constraintsByAligningSidesToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Returns constraints that align the edges of the view with the edges of the parent view.
+ @return An array of constraints that align the edges of the view with the edges of the parent view.
+ */
 - (NSArray*)lyt_constraintsByAligningToParent;
 
+/**
+ Returns constraints that align the edges of the view with the given inner margin from the edges of the parent view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the edges of the view with the given inner margin from the edges of the parent view.
+ */
 - (NSArray*)lyt_constraintsByAligningToParentWithMargin:(CGFloat)margin;
 
+/**
+ Returns constraints that align the edges of the view with the given inner margin from the edges of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the edges of the view with the given inner margin from the edges of the given view.
+ */
 - (NSArray*)lyt_constraintsByAligningToView:(LYTView*)view margin:(CGFloat)margin;
 
 #pragma mark Centering
@@ -293,94 +520,324 @@
 
 #pragma mark Alignment
 
+/**
+ Adds constraints that align the top edges of the views in the array with the respective top edges of their parent views.
+ @return An array of constraints that align the top edges of the views in the array with the respective top edges of their parent views.
+ */
 - (NSArray*)lyt_alignTopToParent;
 
+/**
+ Adds constraints that align the top edges of the views in the array with the given inner margin from the respective top edges of their parent views.
+ @param margin The inner margin length.
+ @return An array of constraints that align the top edges of the views in the array with the given inner margin from the respective top edges of their parent views.
+ */
 - (NSArray*)lyt_alignTopToParentWithMargin:(CGFloat)margin;
 
+/**
+ Adds constraints that align the top edges of the views in the array with the top edge of the given view.
+ @param view The reference view.
+ @return An array of constraints that align the top edges of the views in the array with the top edge of the given view.
+ */
 - (NSArray*)lyt_alignTopToView:(LYTView*)view;
 
+/**
+ Adds constraints that align the top edges of the views in the array with the given inner margin from the top edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the top edges of the views in the array with the given inner margin from the top edge of the given view.
+ */
 - (NSArray*)lyt_alignTopToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Adds constraints that align the right edges of the views in the array with the respective right edges of their parent views.
+ @return An array of constraints that align the right edges of the views in the array with the respective right edges of their parent views.
+ */
 - (NSArray*)lyt_alignRightToParent;
 
+/**
+ Adds constraints that align the right edges of the views in the array with the given inner margin from the respective right edges of their parent views.
+ @param margin The inner margin length.
+ @return An array of constraints that align the right edges of the views in the array with the given inner margin from the respective right edges of their parent views.
+ */
 - (NSArray*)lyt_alignRightToParentWithMargin:(CGFloat)margin;
 
+/**
+ Adds constraints that align the right edges of the views in the array with the right edge of the given view.
+ @param view The reference view.
+ @return An array of constraints that align the right edges of the views in the array with the right edge of the given view.
+ */
 - (NSArray*)lyt_alignRightToView:(LYTView*)view;
 
+/**
+ Adds constraints that align the right edges of the views in the array with the given inner margin from the right edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the right edges of the views in the array with the given inner margin from the right edge of the given view.
+ */
 - (NSArray*)lyt_alignRightToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Adds constraints that align the bottom edges of the views in the array with the respective bottom edges of their parent views.
+ @return An array of constraints that align the bottom edges of the views in the array with the respective bottom edges of their parent views.
+ */
 - (NSArray*)lyt_alignBottomToParent;
 
+/**
+ Adds constraints that align the bottom edges of the views in the array with the given inner margin from the respective bottom edges of their parent views.
+ @param margin The inner margin length.
+ @return An array of constraints that align the bottom edges of the views in the array with the given inner margin from the respective bottom edges of their parent views.
+ */
 - (NSArray*)lyt_alignBottomToParentWithMargin:(CGFloat)margin;
 
+/**
+ Adds constraints that align the bottom edges of the views in the array with the bottom edge of the given view.
+ @param view The reference view.
+ @return An array of constraints that align the bottom edges of the views in the array with the bottom edge of the given view.
+ */
 - (NSArray*)lyt_alignBottomToView:(LYTView*)view;
 
+/**
+ Adds constraints that align the bottom edges of the views in the array with the given inner margin from the bottom edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the bottom edges of the views in the array with the given inner margin from the bottom edge of the given view.
+ */
 - (NSArray*)lyt_alignBottomToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Adds constraints that align the left edges of the views in the array with the respective left edges of their parent views.
+ @return An array of constraints that align the left edges of the views in the array with the respective left edges of their parent views.
+ */
 - (NSArray*)lyt_alignLeftToParent;
 
+/**
+ Adds constraints that align the left edges of the views in the array with the given inner margin from the respective left edges of their parent views.
+ @param margin The inner margin length.
+ @return An array of constraints that align the left edges of the views in the array with the given inner margin from the respective left edges of their parent views.
+ */
 - (NSArray*)lyt_alignLeftToParentWithMargin:(CGFloat)margin;
 
+/**
+ Adds constraints that align the left edges of the views in the array with the given inner margin from the left edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the left edges of the views in the array with the given inner margin from the left edge of the given view.
+ */
 - (NSArray*)lyt_alignLeftToView:(LYTView*)view;
 
+/**
+ Adds constraints that align the left edges of the views in the array with the given inner margin from the left edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the left edges of the views in the array with the given inner margin from the left edge of the given view.
+ */
 - (NSArray*)lyt_alignLeftToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Adds constraints that align the sides of the views in the array with the respective sides of their parent views.
+ @return An array of constraints that align the sides of the views in the array with the respective sides of their parent views.
+ */
 - (NSArray*)lyt_alignSidesToParent;
 
+/**
+ Adds constraints that align the sides of the views in the array with the given inner margin from the respective sides of their parent views.
+ @param margin The inner margin length.
+ @return An array of constraints that align the sides of the views in the array with the given inner margin from the respective sides of their parent views.
+ */
 - (NSArray*)lyt_alignSidesToParentWithMargin:(CGFloat)margin;
 
+/**
+ Adds constraints that align the sides of the views in the array with the given inner margin from the left edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the sides of the views in the array with the given inner margin from the left edge of the given view.
+ */
 - (NSArray*)lyt_alignSidesToView:(LYTView*)view;
 
+/**
+ Adds constraints that align the sides of the views in the array with the given inner margin from the left edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the sides of the views in the array with the given inner margin from the left edge of the given view.
+ */
 - (NSArray*)lyt_alignSidesToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Adds constraints that align the edges of the views in the array with the respective edges of their parent views.
+ @return An array of constraints that align the edges of the views in the array with the respective edges of their parent views.
+ */
 - (NSArray*)lyt_alignToParent;
 
+/**
+ Adds constraints that align the edges of the views in the array with the given inner margin from the respective edges of their parent views.
+ @param margin The inner margin length.
+ @return An array of constraints that align the edges of the views in the array with the given inner margin from the respective edges of their parent views.
+ */
 - (NSArray*)lyt_alignToParentWithMargin:(CGFloat)margin;
 
+/**
+ Adds constraints that align the edges of the views in the array with the given inner margin from the left edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the edges of the views in the array with the given inner margin from the left edge of the given view.
+ */
 - (NSArray*)lyt_alignToView:(LYTView*)view;
 
+/**
+ Adds constraints that align the edges of the views in the array with the given inner margin from the left edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the edges of the views in the array with the given inner margin from the left edge of the given view.
+ */
 - (NSArray*)lyt_alignToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Returns constraints that align the top edges of the views in the array with the respective top edges of their parent views.
+ @return An array of constraints that align the top edges of the views in the array with the respective top edges of their parent views.
+ */
 - (NSArray*)lyt_constraintByAligningTopToParent;
 
+/**
+ Returns constraints that align the top edges of the views in the array with the given inner margin from the respective top edges of their parent views.
+ @param margin The inner margin length.
+ @return An array of constraints that align the top edges of the views in the array with the given inner margin from the respective top edges of their parent views.
+ */
 - (NSArray*)lyt_constraintByAligningTopToParentWithMargin:(CGFloat)margin;
 
+/**
+ Returns constraints that align the top edges of the views in the array with the top edge of the given view.
+ @param view The reference view.
+ @return An array of constraints that align the top edges of the views in the array with the top edge of the given view.
+ */
 - (NSArray*)lyt_constraintByAligningTopToView:(LYTView*)view;
 
+/**
+ Returns constraints that align the top edges of the views in the array with the given inner margin from the top edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the top edges of the views in the array with the given inner margin from the top edge of the given view.
+ */
 - (NSArray*)lyt_constraintByAligningTopToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Returns constraints that align the right edges of the views in the array with the respective right edges of their parent views.
+ @return An array of constraints that align the right edges of the views in the array with the respective right edges of their parent views.
+ */
 - (NSArray*)lyt_constraintByAligningRightToParent;
 
+/**
+ Returns constraints that align the right edges of the views in the array with the given inner margin from the respective right edges of their parent views.
+ @param margin The inner margin length.
+ @return An array of constraints that align the right edges of the views in the array with the given inner margin from the respective right edges of their parent views.
+ */
 - (NSArray*)lyt_constraintByAligningRightToParentWithMargin:(CGFloat)margin;
 
+/**
+ Returns constraints that align the right edges of the views in the array with the right edge of the given view.
+ @param view The reference view.
+ @return An array of constraints that align the right edges of the views in the array with the right edge of the given view.
+ */
 - (NSArray*)lyt_constraintByAligningRightToView:(LYTView*)view;
 
+/**
+ Returns constraints that align the right edges of the views in the array with the given inner margin from the right edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the right edges of the views in the array with the given inner margin from the right edge of the given view.
+ */
 - (NSArray*)lyt_constraintByAligningRightToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Returns constraints that align the bottom edges of the views in the array with the respective bottom edges of their parent views.
+ @return An array of constraints that align the bottom edges of the views in the array with the respective bottom edges of their parent views.
+ */
 - (NSArray*)lyt_constraintByAligningBottomToParent;
 
+/**
+ Returns constraints that align the bottom edges of the views in the array with the given inner margin from the respective bottom edges of their parent views.
+ @param margin The inner margin length.
+ @return An array of constraints that align the bottom edges of the views in the array with the given inner margin from the respective bottom edges of their parent views.
+ */
 - (NSArray*)lyt_constraintByAligningBottomToParentWithMargin:(CGFloat)margin;
 
+/**
+ Returns constraints that align the bottom edges of the views in the array with the bottom edge of the given view.
+ @param view The reference view.
+ @return An array of constraints that align the bottom edges of the views in the array with the bottom edge of the given view.
+ */
 - (NSArray*)lyt_constraintByAligningBottomToView:(LYTView*)view;
 
+/**
+ Returns constraints that align the bottom edges of the views in the array with the given inner margin from the bottom edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the bottom edges of the views in the array with the given inner margin from the bottom edge of the given view.
+ */
 - (NSArray*)lyt_constraintByAligningBottomToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Returns constraints that align the left edges of the views in the array with the respective left edges of their parent views.
+ @return An array of constraints that align the left edges of the views in the array with the respective left edges of their parent views.
+ */
 - (NSArray*)lyt_constraintByAligningLeftToParent;
 
+/**
+ Returns constraints that align the left edges of the views in the array with the given inner margin from the respective left edges of their parent views.
+ @param margin The inner margin length.
+ @return An array of constraints that align the left edges of the views in the array with the given inner margin from the respective left edges of their parent views.
+ */
 - (NSArray*)lyt_constraintByAligningLeftToParentWithMargin:(CGFloat)margin;
 
+/**
+ Returns constraints that align the left edges of the views in the array with the given inner margin from the left edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the left edges of the views in the array with the given inner margin from the left edge of the given view.
+ */
 - (NSArray*)lyt_constraintByAligningLeftToView:(LYTView*)view;
 
+/**
+ Returns constraints that align the left edges of the views in the array with the given inner margin from the left edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the left edges of the views in the array with the given inner margin from the left edge of the given view.
+ */
 - (NSArray*)lyt_constraintByAligningLeftToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Returns constraints that align the sides of the views in the array with the given inner margin from the respective sides of their parent views.
+ @param margin The inner margin length.
+ @return An array of constraints that align the sides of the views in the array with the given inner margin from the respective sides of their parent views.
+ */
 - (NSArray*)lyt_constraintsByAligningSidesToParentWithMargin:(CGFloat)margin;
 
+/**
+ Returns constraints that align the sides of the views in the array with the given inner margin from the left edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the sides of the views in the array with the given inner margin from the left edge of the given view.
+ */
 - (NSArray*)lyt_constraintsByAligningSidesToView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Returns constraints that align the edges of the views in the array with the respective edges of their parent views.
+ @return An array of constraints that align the edges of the views in the array with the respective edges of their parent views.
+ */
 - (NSArray*)lyt_constraintsByAligningToParent;
 
+/**
+ Returns constraints that align the edges of the views in the array with the given inner margin from the respective edges of their parent views.
+ @param margin The inner margin length.
+ @return An array of constraints that align the edges of the views in the array with the given inner margin from the respective edges of their parent views.
+ */
 - (NSArray*)lyt_constraintsByAligningToParentWithMargin:(CGFloat)margin;
 
+/**
+ Returns constraints that align the edges of the views in the array with the given inner margin from the left edge of the given view.
+ @param view The reference view.
+ @param margin The inner margin length.
+ @return An array of constraints that align the edges of the views in the array with the given inner margin from the left edge of the given view.
+ */
 - (NSArray*)lyt_constraintsByAligningToView:(LYTView*)view margin:(CGFloat)margin;
 
 #pragma mark Centering
@@ -516,4 +973,3 @@
 - (NSArray*)lyt_constraintsByMatchingSizeToView:(LYTView*)view;
 
 @end
-
