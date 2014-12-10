@@ -350,52 +350,172 @@
 
 #pragma mark Centering
 
+/**
+ Adds a constraint that horizontally centers the view in the parent view.
+ @return A constraint that horizontally centers the view in the parent view.
+ */
 - (NSLayoutConstraint*)lyt_centerXInParent;
 
+/**
+ Adds a constraint that horizontally aligns the center of the view with the given offset from the center of the parent view.
+ @param offset The offset length.
+ @return A constraint that horizontally aligns the center of the view with the given offset from the center of the parent view.
+ */
 - (NSLayoutConstraint*)lyt_centerXInParentWithOffset:(CGFloat)offset;
 
+/**
+ Adds a constraint that horizontally centers the view with the given view.
+ @param view The reference view.
+ @return A constraint that horizontally centers the view with the given view.
+ */
 - (NSLayoutConstraint*)lyt_centerXWithView:(LYTView*)view;
 
+/**
+ Adds a constraint that horizontally aligns the center of the view with the given offset from the center of the given view.
+ @param view The reference view.
+ @param offset The offset length.
+ @return A constraint that horizontally aligns the center of the view with the given offset from the center of the given view.
+ */
 - (NSLayoutConstraint*)lyt_centerXWithView:(LYTView*)view offset:(CGFloat)offset;
 
+/**
+ Adds a constraint that vertically centers the view in the parent view.
+ @return A constraint that vertically centers the view in the parent view.
+ */
 - (NSLayoutConstraint*)lyt_centerYInParent;
 
+/**
+ Adds a constraint that vertically aligns the center of the view with the given offset from the center of the parent view.
+ @param offset The offset length.
+ @return A constraint that vertically aligns the center of the view with the given offset from the center of the parent view.
+ */
 - (NSLayoutConstraint*)lyt_centerYInParentWithOffset:(CGFloat)offset;
 
+/**
+ Adds a constraint that vertically centers the view with the given view.
+ @param view The reference view.
+ @return A constraint that vertically centers the view with the given view.
+ */
 - (NSLayoutConstraint*)lyt_centerYWithView:(LYTView*)view;
 
+/**
+ Adds a constraint that vertically aligns the center of the view with the given offset from the center of the given view.
+ @param view The reference view.
+ @param offset The offset length.
+ @return A constraint that vertically aligns the center of the view with the given offset from the center of the given view.
+ */
 - (NSLayoutConstraint*)lyt_centerYWithView:(LYTView*)view offset:(CGFloat)offset;
 
+/**
+ Adds constraints that center the view in the parent view.
+ @return An array of constraints that center the view in the parent view.
+ */
 - (NSArray*)lyt_centerInParent;
 
+/**
+ Adds constraints that align the center of the view with the given offset from the center of the parent view.
+ @param offset The offset length to be applied in both the X and Y axis.
+ @return An array of constraints that align the center of the view with the given offset from the center of the parent view.
+ */
 - (NSArray*)lyt_centerInParentWithOffset:(CGFloat)offset;
 
+/**
+ Adds constraints that center the view with the given view.
+ @param view The reference view.
+ @return An array of constraints that center the view with the given view.
+ */
 - (NSArray*)lyt_centerWithView:(LYTView*)view;
 
+/**
+ Adds constraints that align the center of the view with the given offset from the center of the given view.
+ @param view The reference view.
+ @param offset The offset length to be applied in both the X and Y axis.
+ @return An array of constraints that align the center of the view with the given offset from the center of the given view.
+ */
 - (NSArray*)lyt_centerWithView:(LYTView*)view offset:(CGFloat)offset;
 
+/**
+ Returns a constraint that horizontally centers the view in the parent view.
+ @return A constraint that horizontally centers the view in the parent view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByCenteringXInParent;
 
+/**
+ Returns a constraint that horizontally aligns the center of the view with the given offset from the center of the parent view.
+ @param offset The offset length.
+ @return A constraint that horizontally aligns the center of the view with the given offset from the center of the parent view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByCenteringXInParentWithOffset:(CGFloat)offset;
 
+/**
+ Returns a constraint that horizontally centers the view with the given view.
+ @param view The reference view.
+ @return A constraint that horizontally centers the view with the given view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByCenteringXWithView:(LYTView*)view;
 
+/**
+ Returns a constraint that horizontally aligns the center of the view with the given offset from the center of the given view.
+ @param view The reference view.
+ @param offset The offset length.
+ @return A constraint that horizontally aligns the center of the view with the given offset from the center of the given view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByCenteringXWithView:(LYTView*)view offset:(CGFloat)offset;
 
+/**
+ Returns a constraint that vertically centers the view in the parent view.
+ @return A constraint that vertically centers the view in the parent view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByCenteringYInParent;
 
+/**
+ Returns a constraint that vertically aligns the center of the view with the given offset from the center of the parent view.
+ @param offset The offset length.
+ @return A constraint that vertically aligns the center of the view with the given offset from the center of the parent view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByCenteringYInParentWithOffset:(CGFloat)offset;
 
+/**
+ Returns a constraint that vertically centers the view with the given view.
+ @param view The reference view.
+ @return A constraint that vertically centers the view with the given view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByCenteringYWithView:(LYTView*)view;
 
+/**
+ Returns a constraint that vertically aligns the center of the view with the given offset from the center of the given view.
+ @param view The reference view.
+ @param offset The offset length.
+ @return A constraint that vertically aligns the center of the view with the given offset from the center of the given view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByCenteringYWithView:(LYTView*)view offset:(CGFloat)offset;
 
+/**
+ Returns constraints that center the view in the parent view.
+ @return An array of constraints that center the view in the parent view.
+ */
 - (NSArray*)lyt_constraintsByCenteringInParent;
 
+/**
+ Returns constraints that align the center of the view with the given offset from the center of the parent view.
+ @param offset The offset length to be applied in both the X and Y axis.
+ @return An array of constraints that align the center of the view with the given offset from the center of the parent view.
+ */
 - (NSArray*)lyt_constraintsByCenteringInParentWithOffset:(CGFloat)offset;
 
+/**
+ Returns constraints that center the view with the given view.
+ @param view The reference view.
+ @return An array of constraints that center the view with the given view.
+ */
 - (NSArray*)lyt_constraintsByCenteringWithView:(LYTView*)view;
 
+/**
+ Returns constraints that align the center of the view with the given offset from the center of the given view.
+ @param view The reference view.
+ @param offset The offset length to be applied in both the X and Y axis.
+ @return An array of constraints that align the center of the view with the given offset from the center of the given view.
+ */
 - (NSArray*)lyt_constraintsByCenteringWithView:(LYTView*)view offset:(CGFloat)offset;
 
 #pragma mark Placement
@@ -938,52 +1058,172 @@
 
 #pragma mark Centering
 
+/**
+ Adds constraints that horizontally center the views in the array in their respective parent views.
+ @return An array of constraints that horizontally center the views in the array in their respective parent views.
+ */
 - (NSArray*)lyt_centerXInParent;
 
+/**
+ Adds constraints that horizontally align the center of the views in the array with the given offset from the center of their respective parent views.
+ @param offset The offset length.
+ @return An array of constraints that horizontally align the center of the views in the array with the given offset from the center of their respective parent views.
+ */
 - (NSArray*)lyt_centerXInParentWithOffset:(CGFloat)offset;
 
+/**
+ Adds constraints that horizontally center the views in the array with the given view.
+ @param view The reference view.
+ @return An array of constraints that horizontally center the views in the array with the given view.
+ */
 - (NSArray*)lyt_centerXWithView:(LYTView*)view;
 
+/**
+ Adds constraints that horizontally align the center of the views in the array with the given offset from the center of the given view.
+ @param view The reference view.
+ @param offset The offset length.
+ @return An array of constraints that horizontally align the center of the views in the array with the given offset from the center of the given view.
+ */
 - (NSArray*)lyt_centerXWithView:(LYTView*)view offset:(CGFloat)offset;
 
+/**
+ Adds constraints that vertically center the views in the array in their respective parent views.
+ @return An array of constraints that vertically center the views in the array in their respective parent views.
+ */
 - (NSArray*)lyt_centerYInParent;
 
+/**
+ Adds constraints that vertically align the center of the views in the array with the given offset from the center of their respective parent views.
+ @param offset The offset length.
+ @return An array of constraints that vertically align the center of the views in the array with the given offset from the center of their respective parent views.
+ */
 - (NSArray*)lyt_centerYInParentWithOffset:(CGFloat)offset;
 
+/**
+ Adds constraints that vertically center the views in the array with the given view.
+ @param view The reference view.
+ @return An array of constraints that vertically center the views in the array with the given view.
+ */
 - (NSArray*)lyt_centerYWithView:(LYTView*)view;
 
+/**
+ Adds constraints that vertically align the center of the views in the array with the given offset from the center of the given view.
+ @param view The reference view.
+ @param offset The offset length.
+ @return An array of constraints that vertically align the center of the views in the array with the given offset from the center of the given view.
+ */
 - (NSArray*)lyt_centerYWithView:(LYTView*)view offset:(CGFloat)offset;
 
+/**
+ Adds constraints that center the views in the array in their respective parent views.
+ @return An array of constraints that center the views in the array in their respective parent views.
+ */
 - (NSArray*)lyt_centerInParent;
 
+/**
+ Adds constraints that align the center of the views in the array with the given offset from the center of their respective parent views.
+ @param offset The offset length to be applied in both the X and Y axis.
+ @return An array of constraints that align the center of the views in the array with the given offset from the center of their respective parent views.
+ */
 - (NSArray*)lyt_centerInParentWithOffset:(CGFloat)offset;
 
+/**
+ Adds constraints that center the views in the array with the given view.
+ @param view The reference view.
+ @return An array of constraints that center the views in the array with the given view.
+ */
 - (NSArray*)lyt_centerWithView:(LYTView*)view;
 
+/**
+ Adds constraints that align the center of the views in the array with the given offset from the center of the given view.
+ @param view The reference view.
+ @param offset The offset length.
+ @return An array of constraints that align the center of the views in the array with the given offset from the center of the given view.
+ */
 - (NSArray*)lyt_centerWithView:(LYTView*)view offset:(CGFloat)offset;
 
+/**
+ Returns a constraint that horizontally centers the view in the parent view.
+ @return A constraint that horizontally centers the view in the parent view.
+ */
 - (NSArray*)lyt_constraintByCenteringXInParent;
 
+/**
+ Returns a constraint that horizontally aligns the center of the view with the given offset from the center of the parent view.
+ @param offset The offset length.
+ @return A constraint that horizontally aligns the center of the view with the given offset from the center of the parent view.
+ */
 - (NSArray*)lyt_constraintByCenteringXInParentWithOffset:(CGFloat)offset;
 
+/**
+ Returns a constraint that horizontally centers the view with the given view.
+ @param view The reference view.
+ @return A constraint that horizontally centers the view with the given view.
+ */
 - (NSArray*)lyt_constraintByCenteringXWithView:(LYTView*)view;
 
+/**
+ Returns a constraint that horizontally aligns the center of the view with the given offset from the center of the given view.
+ @param view The reference view.
+ @param offset The offset length.
+ @return A constraint that horizontally aligns the center of the view with the given offset from the center of the given view.
+ */
 - (NSArray*)lyt_constraintByCenteringXWithView:(LYTView*)view offset:(CGFloat)offset;
 
+/**
+ Returns a constraint that vertically centers the view in the parent view.
+ @return A constraint that vertically centers the view in the parent view.
+ */
 - (NSArray*)lyt_constraintByCenteringYInParent;
 
+/**
+ Returns a constraint that vertically aligns the center of the view with the given offset from the center of the parent view.
+ @param offset The offset length.
+ @return A constraint that vertically aligns the center of the view with the given offset from the center of the parent view.
+ */
 - (NSArray*)lyt_constraintByCenteringYInParentWithOffset:(CGFloat)offset;
 
+/**
+ Returns a constraint that vertically centers the view with the given view.
+ @param view The reference view.
+ @return A constraint that vertically centers the view with the given view.
+ */
 - (NSArray*)lyt_constraintByCenteringYWithView:(LYTView*)view;
 
+/**
+ Returns a constraint that vertically aligns the center of the view with the given offset from the center of the given view.
+ @param view The reference view.
+ @param offset The offset length.
+ @return A constraint that vertically aligns the center of the view with the given offset from the center of the given view.
+ */
 - (NSArray*)lyt_constraintByCenteringYWithView:(LYTView*)view offset:(CGFloat)offset;
 
+/**
+ Returns constraints that center the view in the parent view.
+ @return An array of constraints that center the view in the parent view.
+ */
 - (NSArray*)lyt_constraintsByCenteringInParent;
 
+/**
+ Returns constraints that align the center of the view with the given offset from the center of the parent view.
+ @param offset The offset length to be applied in both the X and Y axis.
+ @return An array of constraints that align the center of the view with the given offset from the center of the parent view.
+ */
 - (NSArray*)lyt_constraintsByCenteringInParentWithOffset:(CGFloat)offset;
 
+/**
+ Returns constraints that center the view with the given view.
+ @param view The reference view.
+ @return An array of constraints that center the view with the given view.
+ */
 - (NSArray*)lyt_constraintsByCenteringWithView:(LYTView*)view;
 
+/**
+ Returns constraints that align the center of the view with the given offset from the center of the given view.
+ @param view The reference view.
+ @param offset The offset length to be applied in both the X and Y axis.
+ @return An array of constraints that align the center of the view with the given offset from the center of the given view.
+ */
 - (NSArray*)lyt_constraintsByCenteringWithView:(LYTView*)view offset:(CGFloat)offset;
 
 #pragma mark Placement
