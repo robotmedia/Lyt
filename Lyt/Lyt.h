@@ -520,36 +520,124 @@
 
 #pragma mark Placement
 
+/**
+ Adds a constraint that places the view above the given view.
+ @param view The reference view.
+ @return A constraint that places the view above the given view.
+ */
 - (NSLayoutConstraint*)lyt_placeAboveView:(LYTView*)view;
 
+/**
+ Adds a constraint that places the view above the given view with the given distance.
+ @param view The reference view.
+ @param margin The distance between views.
+ @return A constraint that places the view above the given view with the given distance.
+ */
 - (NSLayoutConstraint*)lyt_placeAboveView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Adds a constraint that places the view right of the given view.
+ @param view The reference view.
+ @return A constraint that places the view right of the given view.
+ */
 - (NSLayoutConstraint*)lyt_placeRightOfView:(LYTView*)view;
 
+/**
+ Adds a constraint that places the view right of the given view with the given distance.
+ @param view The reference view.
+ @param margin The distance between views.
+ @return A constraint that places the view right of the given view with the given distance.
+ */
 - (NSLayoutConstraint*)lyt_placeRightOfView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Adds a constraint that places the view below the given view.
+ @param view The reference view.
+ @return A constraint that places the view below the given view.
+ */
 - (NSLayoutConstraint*)lyt_placeBelowView:(LYTView*)view;
 
+/**
+ Adds a constraint that places the view below the given view with the given distance.
+ @param view The reference view.
+ @param margin The distance between views.
+ @return A constraint that places the view below the given view with the given distance.
+ */
 - (NSLayoutConstraint*)lyt_placeBelowView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Adds a constraint that places the view left of the given view.
+ @param view The reference view.
+ @return A constraint that places the view left of the given view.
+ */
 - (NSLayoutConstraint*)lyt_placeLeftOfView:(LYTView*)view;
 
+/**
+ Adds a constraint that places the view left of the given view with the given distance.
+ @param view The reference view.
+ @param margin The distance between views.
+ @return A constraint that places the view left of the given view with the given distance.
+ */
 - (NSLayoutConstraint*)lyt_placeLeftOfView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Returns a constraint that places the view above the given view.
+ @param view The reference view.
+ @return A constraint that places the view above the given view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByPlacingAboveView:(LYTView*)view;
 
+/**
+ Returns a constraint that places the view above the given view with the given distance.
+ @param view The reference view.
+ @param margin The distance between views.
+ @return A constraint that places the view above the given view with the given distance.
+ */
 - (NSLayoutConstraint*)lyt_constraintByPlacingAboveView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Returns a constraint that places the view right of the given view.
+ @param view The reference view.
+ @return A constraint that places the view right of the given view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByPlacingRightOfView:(LYTView*)view;
 
+/**
+ Returns a constraint that places the view right of the given view with the given distance.
+ @param view The reference view.
+ @param margin The distance between views.
+ @return A constraint that places the view right of the given view with the given distance.
+ */
 - (NSLayoutConstraint*)lyt_constraintByPlacingRightOfView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Returns a constraint that places the view below the given view.
+ @param view The reference view.
+ @return A constraint that places the view below the given view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByPlacingBelowView:(LYTView*)view;
 
+/**
+ Returns a constraint that places the view below the given view with the given distance.
+ @param view The reference view.
+ @param margin The distance between views.
+ @return A constraint that places the view below the given view with the given distance.
+ */
 - (NSLayoutConstraint*)lyt_constraintByPlacingBelowView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Returns a constraint that places the view left of the given view.
+ @param view The reference view.
+ @return A constraint that places the view left of the given view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByPlacingLeftOfView:(LYTView*)view;
 
+/**
+ Returns a constraint that places the view left of the given view with the given distance.
+ @param view The reference view.
+ @param margin The distance between views.
+ @return A constraint that places the view left of the given view with the given distance.
+ */
 - (NSLayoutConstraint*)lyt_constraintByPlacingLeftOfView:(LYTView*)view margin:(CGFloat)margin;
 
 #pragma mark Position and sizing
@@ -1228,36 +1316,124 @@
 
 #pragma mark Placement
 
+/**
+ Adds constraints that place the views of the array above the given view.
+ @param view The reference view.
+ @return An array of constraints that place the views of the array above the given view.
+ */
 - (NSArray*)lyt_placeAboveView:(LYTView*)view;
 
+/**
+ Adds constraints that place the views of the array above the given view with the given distance.
+ @param view The reference view.
+ @param margin The distance between views.
+ @return An array of constraints that place the views of the array above the given view with the given distance.
+ */
 - (NSArray*)lyt_placeAboveView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Adds constraints that place the views of the array right of the given view.
+ @param view The reference view.
+ @return An array of constraints that place the views of the array right of the given view.
+ */
 - (NSArray*)lyt_placeRightOfView:(LYTView*)view;
 
+/**
+ Adds constraints that place the views of the array right of the given view with the given distance.
+ @param view The reference view.
+ @param margin The distance between views.
+ @return An array of constraintsthat  place the views of the array right of the given view with the given distance.
+ */
 - (NSArray*)lyt_placeRightOfView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Adds constraints that place the views of the array below the given view.
+ @param view The reference view.
+ @return An array of constraints that place the views of the array below the given view.
+ */
 - (NSArray*)lyt_placeBelowView:(LYTView*)view;
 
+/**
+ Adds constraints that place the views of the array below the given view with the given distance.
+ @param view The reference view.
+ @param margin The distance between views.
+ @return An array of constraints that place the views of the array below the given view with the given distance.
+ */
 - (NSArray*)lyt_placeBelowView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Adds constraints that place the views of the array left of the given view.
+ @param view The reference view.
+ @return An array of constraints that place the views of the array right of the given view.
+ */
 - (NSArray*)lyt_placeLeftOfView:(LYTView*)view;
 
+/**
+ Adds constraints that place the views of the array left of the given view with the given distance.
+ @param view The reference view.
+ @param margin The distance between views.
+ @return An array of constraintsthat  place the views of the array left of the given view with the given distance.
+ */
 - (NSArray*)lyt_placeLeftOfView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Returns constraints that place the views of the array above the given view.
+ @param view The reference view.
+ @return An array of constraints that place the views of the array above the given view.
+ */
 - (NSArray*)lyt_constraintByPlacingAboveView:(LYTView*)view;
 
+/**
+ Returns constraints that place the views of the array above the given view with the given distance.
+ @param view The reference view.
+ @param margin The distance between views.
+ @return An array of constraints that place the views of the array above the given view with the given distance.
+ */
 - (NSArray*)lyt_constraintByPlacingAboveView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Returns constraints that place the views of the array right of the given view.
+ @param view The reference view.
+ @return An array of constraints that place the views of the array right of the given view.
+ */
 - (NSArray*)lyt_constraintByPlacingRightOfView:(LYTView*)view;
 
+/**
+ Returns constraints that place the views of the array right of the given view with the given distance.
+ @param view The reference view.
+ @param margin The distance between views.
+ @return An array of constraintsthat  place the views of the array right of the given view with the given distance.
+ */
 - (NSArray*)lyt_constraintByPlacingRightOfView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Returns constraints that place the views of the array below the given view.
+ @param view The reference view.
+ @return An array of constraints that place the views of the array below the given view.
+ */
 - (NSArray*)lyt_constraintByPlacingBelowView:(LYTView*)view;
 
+/**
+ Returns constraints that place the views of the array below the given view with the given distance.
+ @param view The reference view.
+ @param margin The distance between views.
+ @return An array of constraints that place the views of the array below the given view with the given distance.
+ */
 - (NSArray*)lyt_constraintByPlacingBelowView:(LYTView*)view margin:(CGFloat)margin;
 
+/**
+ Returns constraints that place the views of the array left of the given view.
+ @param view The reference view.
+ @return An array of constraints that place the views of the array right of the given view.
+ */
 - (NSArray*)lyt_constraintByPlacingLeftOfView:(LYTView*)view;
 
+/**
+ Returns constraints that place the views of the array left of the given view with the given distance.
+ @param view The reference view.
+ @param margin The distance between views.
+ @return An array of constraintsthat  place the views of the array left of the given view with the given distance.
+ */
 - (NSArray*)lyt_constraintByPlacingLeftOfView:(LYTView*)view margin:(CGFloat)margin;
 
 #pragma mark Position and Sizing
