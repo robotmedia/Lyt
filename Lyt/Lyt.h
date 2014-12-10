@@ -642,50 +642,169 @@
 
 #pragma mark Position and sizing
 
+/**
+ Adds a constraint that sets the x origin of the view with the given value.
+ @param x The x origin.
+ @return A constraint that sets the x origin of the view with the given value.
+ */
 - (NSLayoutConstraint*)lyt_setX:(CGFloat)x;
 
+/**
+ Adds a constraint that sets the y origin of the view with the given value.
+ @param y The y origin.
+ @return A constraint that sets the y origin of the view with the given value.
+ */
 - (NSLayoutConstraint*)lyt_setY:(CGFloat)y;
 
+/**
+ Adds constraints that set the origin of the view with the given value.
+ @param origin The origin.
+ @return An array of constraints that set the origin of the view with the given value.
+ */
 - (NSArray*)lyt_setOrigin:(CGPoint)origin;
 
+/**
+ Adds a constraint that sets the width of the view with the given value.
+ @param width The width.
+ @return A constraint that sets the width of the view with the given value.
+ */
 - (NSLayoutConstraint*)lyt_setWidth:(CGFloat)width;
 
+/**
+ Adds a constraint that sets the height of the view with the given value.
+ @param height The height.
+ @return A constraint that sets the height of the view with the given value.
+ */
 - (NSLayoutConstraint*)lyt_setHeight:(CGFloat)height;
 
+/**
+ Adds constraints that set the size of the view with the given value.
+ @param size The size.
+ @return An array of constraints that set the size of the view with the given value.
+ */
 - (NSArray*)lyt_setSize:(CGSize)size;
 
+/**
+ Adds constraints that set the frame of the view with the given value.
+ @param frame The frame.
+ @return An array of constraints that sets the frame of the view with the given value.
+ */
 - (NSArray*)lyt_setFrame:(CGRect)frame;
 
+/**
+ Adds a constraint that matches the width of the view to the width of the given view.
+ @param view The reference view.
+ @return A constraint that matches the width of the view to the width of the given view.
+ */
 - (NSLayoutConstraint*)lyt_matchWidthToView:(LYTView*)view;
 
+/**
+ Adds a constraint that matches the height of the view to the height of the given view.
+ @param view The reference view.
+ @return A constraint that matches the height of the view to the height of the given view.
+ */
 - (NSLayoutConstraint*)lyt_matchHeightToView:(LYTView*)view;
 
+/**
+ Adds a constraint that matches the width of the view to a multiple of the width of the given view.
+ @param view The reference view.
+ @param mutiplier The width multiplier.
+ @return A constraint that matches the width of the view to a multiple of the width of the given view.
+ */
 - (NSLayoutConstraint*)lyt_matchWidthToView:(LYTView*)view multiplier:(CGFloat)multiplier;;
 
+/**
+ Adds a constraint that matches the height of the view to a multiple of the height of the given view.
+ @param view The reference view.
+ @param mutiplier The height multiplier.
+ @return A constraint that matches the height of the view to a multiple of the height of the given view.
+ */
 - (NSLayoutConstraint*)lyt_matchHeightToView:(LYTView*)view multiplier:(CGFloat)multiplier;
 
+/**
+ Returns a constraint that sets the x origin of the view with the given value.
+ @param x The x origin.
+ @return A constraint that sets the x origin of the view with the given value.
+ */
 - (NSLayoutConstraint*)lyt_constraintBySettingX:(CGFloat)x;
 
+/**
+ Returns a constraint that sets the y origin of the view with the given value.
+ @param y The y origin.
+ @return A constraint that sets the y origin of the view with the given value.
+ */
 - (NSLayoutConstraint*)lyt_constraintBySettingY:(CGFloat)y;
 
+/**
+ Returns constraints that set the origin of the view with the given value.
+ @param origin The origin.
+ @return An array of constraints that set the origin of the view with the given value.
+ */
 - (NSArray*)lyt_constraintsBySettingOrigin:(CGPoint)origin;
 
+/**
+ Returns a constraint that sets the width of the view with the given value.
+ @param width The width.
+ @return A constraint that sets the width of the view with the given value.
+ */
 - (NSLayoutConstraint*)lyt_constraintBySettingWidth:(CGFloat)width;
 
+/**
+ Returns a constraint that sets the height of the view with the given value.
+ @param height The height.
+ @return A constraint that sets the height of the view with the given value.
+ */
 - (NSLayoutConstraint*)lyt_constraintBySettingHeight:(CGFloat)height;
 
+/**
+ Returns constraints that set the size of the view with the given value.
+ @param size The size.
+ @return A array of constraints that set the size of the view with the given value.
+ */
 - (NSArray*)lyt_constraintsBySettingSize:(CGSize)size;
 
+/**
+ Returns constraints that set the frame of the view with the given value.
+ @param frame The frame.
+ @return An array of constraints that set the frame of the view with the given value.
+ */
 - (NSArray*)lyt_constraintsBySettingFrame:(CGRect)frame;
 
+/**
+ Returns a constraint that matches the width of the view to the width of the given view.
+ @param view The reference view.
+ @return A constraint that matches the width of the view to the width of the given view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByMatchingWidthToView:(LYTView*)view;
 
+/**
+ Returns a constraint that matches the height of the view to the height of the given view.
+ @param view The reference view.
+ @return A constraint that matches the height of the view to the height of the given view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByMatchingHeightToView:(LYTView*)view;
 
+/**
+ Returns a constraint that matches the width of the view to a multiple of the width of the given view.
+ @param view The reference view.
+ @param mutiplier The width multiplier.
+ @return A constraint that matches the width of the view to a multiple of the width of the given view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByMatchingWidthToView:(LYTView*)view multiplier:(CGFloat)multiplier;
 
+/**
+ Returns a constraint that matches the height of the view to a multiple of the height of the given view.
+ @param view The reference view.
+ @param mutiplier The height multiplier.
+ @return A constraint that matches the height of the view to a multiple of the height of the given view.
+ */
 - (NSLayoutConstraint*)lyt_constraintByMatchingHeightToView:(LYTView*)view multiplier:(CGFloat)multiplier;
 
+/**
+ Returns constraints that match the size of the view to the size of the given view.
+ @param view The reference view.
+ @return An array of constraints that match the size of the view to the size of the given view.
+ */
 - (NSArray*)lyt_constraintsByMatchingSizeToView:(LYTView*)view;
 
 @end
@@ -1438,50 +1557,169 @@
 
 #pragma mark Position and Sizing
 
+/**
+ Adds constraints that set the x origin of the views in the array with the given value.
+ @param x The x origin.
+ @return An array of constraints that set the x origin of the views in the array with the given value.
+ */
 - (NSArray*)lyt_setX:(CGFloat)x;
 
+/**
+ Adds constraints that set the y origin of the views in the array with the given value.
+ @param y The y origin.
+ @return An array of constraints that set the y origin of the views in the array with the given value.
+ */
 - (NSArray*)lyt_setY:(CGFloat)y;
 
+/**
+ Adds constraints that set the origin of the views in the array with the given value.
+ @param origin The origin.
+ @return An array of constraints that set the origin of the views in the array with the given value.
+ */
 - (NSArray*)lyt_setOrigin:(CGPoint)origin;
 
+/**
+ Adds constraints that set the width of the views in the array with the given value.
+ @param width The width.
+ @return An array of constraints that set the width of the views in the array with the given value.
+ */
 - (NSArray*)lyt_setWidth:(CGFloat)width;
 
+/**
+ Adds constraints that set the height of the views in the array with the given value.
+ @param height The height.
+ @return An array of constraints that set the height of the views in the array with the given value.
+ */
 - (NSArray*)lyt_setHeight:(CGFloat)height;
 
+/**
+ Adds constraints that set the size of the views in the array with the given value.
+ @param size The size.
+ @return An array of constraints that set the size of the views in the array with the given value.
+ */
 - (NSArray*)lyt_setSize:(CGSize)size;
 
+/**
+ Adds constraints that set the frame of the views in the array with the given value.
+ @param frame The frame.
+ @return An array of constraints that set the frame of the views in the array with the given value.
+ */
 - (NSArray*)lyt_setFrame:(CGRect)frame;
 
+/**
+ Adds constraints that match the width of the views in the array to the width of the given view.
+ @param view The reference view.
+ @return An array of constraints that match the width of the views in the array to the width of the given view.
+ */
 - (NSArray*)lyt_matchWidthToView:(LYTView*)view;
 
+/**
+ Adds constraints that match the height of the views in the array to the height of the given view.
+ @param view The reference view.
+ @return An array of constraints that match the height of the views in the array to the height of the given view.
+ */
 - (NSArray*)lyt_matchHeightToView:(LYTView*)view;
 
+/**
+ Adds constraints that match the width of the views in the array to a multiple of the width of the given view.
+ @param view The reference view.
+ @param mutiplier The width multiplier.
+ @return An array of constraints that match the width of the views in the array to a multiple of the width of the given view.
+ */
 - (NSArray*)lyt_matchWidthToView:(LYTView*)view multiplier:(CGFloat)multiplier;;
 
+/**
+ Adds constraints that match the height of the views in the array to a multiple of the height of the given view.
+ @param view The reference view.
+ @param mutiplier The height multiplier.
+ @return An array of constraints that match the height of the views in the array to a multiple of the height of the given view.
+ */
 - (NSArray*)lyt_matchHeightToView:(LYTView*)view multiplier:(CGFloat)multiplier;
 
+/**
+ Returns constraints that set the x origin of the views in the array with the given value.
+ @param x The x origin.
+ @return An array of constraints that set the x origin of the views in the array with the given value.
+ */
 - (NSArray*)lyt_constraintBySettingX:(CGFloat)x;
 
+/**
+ Returns constraints that set the y origin of the views in the array with the given value.
+ @param y The y origin.
+ @return An array of constraints that set the y origin of the views in the array with the given value.
+ */
 - (NSArray*)lyt_constraintBySettingY:(CGFloat)y;
 
+/**
+ Returns constraints that set the origin of the views in the array with the given value.
+ @param origin The origin.
+ @return An array of constraints that set the origin of the views in the array with the given value.
+ */
 - (NSArray*)lyt_constraintsBySettingOrigin:(CGPoint)origin;
 
+/**
+ Returns constraints that set the width of the views in the array with the given value.
+ @param width The width.
+ @return An array of constraints that set the width of the views in the array with the given value.
+ */
 - (NSArray*)lyt_constraintBySettingWidth:(CGFloat)width;
 
+/**
+ Returns constraints that set the height of the views in the array with the given value.
+ @param height The height.
+ @return An array of constraints that set the height of the views in the array with the given value.
+ */
 - (NSArray*)lyt_constraintBySettingHeight:(CGFloat)height;
 
+/**
+ Returns constraints that set the size of the views in the array with the given value.
+ @param size The size.
+ @return An array of constraints that set the size of the views in the array with the given value.
+ */
 - (NSArray*)lyt_constraintsBySettingSize:(CGSize)size;
 
+/**
+ Returns constraints that set the frame of the views in the array with the given value.
+ @param frame The frame.
+ @return An array of constraints that set the frame of the views in the array with the given value.
+ */
 - (NSArray*)lyt_constraintsBySettingFrame:(CGRect)frame;
 
+/**
+ Returns constraints that match the width of the views in the array to the width of the given view.
+ @param view The reference view.
+ @return An array of constraints that match the width of the views in the array to the width of the given view.
+ */
 - (NSArray*)lyt_constraintByMatchingWidthToView:(LYTView*)view;
 
+/**
+ Returns constraints that match the height of the views in the array to the height of the given view.
+ @param view The reference view.
+ @return An array of constraints that match the height of the views in the array to the height of the given view.
+ */
 - (NSArray*)lyt_constraintByMatchingHeightToView:(LYTView*)view;
 
+/**
+ Returns constraints that match the width of the views in the array to a multiple of the width of the given view.
+ @param view The reference view.
+ @param mutiplier The width multiplier.
+ @return An array of constraints that match the width of the views in the array to a multiple of the width of the given view.
+ */
 - (NSArray*)lyt_constraintByMatchingWidthToView:(LYTView*)view multiplier:(CGFloat)multiplier;
 
+/**
+ Returns constraints that match the height of the views in the array to a multiple of the height of the given view.
+ @param view The reference view.
+ @param mutiplier The height multiplier.
+ @return An array of constraints that match the height of the views in the array to a multiple of the height of the given view.
+ */
 - (NSArray*)lyt_constraintByMatchingHeightToView:(LYTView*)view multiplier:(CGFloat)multiplier;
 
+/**
+ Returns constraints that match the size of the views in the array to the size of the given view.
+ @param view The reference view.
+ @return An array of constraints that match the size of the views in the array to the size of the given view.
+ */
 - (NSArray*)lyt_constraintsByMatchingSizeToView:(LYTView*)view;
 
 @end
