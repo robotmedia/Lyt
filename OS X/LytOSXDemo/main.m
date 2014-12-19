@@ -2,7 +2,7 @@
 //  main.m
 //  LytOSXDemo
 //
-//  Created by Hermés Piqué on 17/05/14.
+//  Created by Hermes Pique on 17/05/14.
 //  Copyright (c) 2014 Robot Media. All rights reserved.
 //
 

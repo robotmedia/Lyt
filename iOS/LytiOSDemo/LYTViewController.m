@@ -2,7 +2,7 @@
 //  LYTViewController.m
 //  Lyt
 //
-//  Created by Hermés Piqué on 26/03/14.
+//  Created by Hermes Pique on 26/03/14.
 //  Copyright (c) 2014 Robot Media. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
