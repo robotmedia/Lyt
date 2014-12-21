@@ -2,7 +2,7 @@ Lyt
 ===
 [![Version](https://cocoapod-badges.herokuapp.com/v/Lyt/badge.png)](http://cocoadocs.org/docsets/Lyt) [![Platform](https://cocoapod-badges.herokuapp.com/p/Lyt/badge.png)](http://cocoadocs.org/docsets/Lyt) [![Build Status](https://travis-ci.org/robotmedia/Lyt.png)](https://travis-ci.org/robotmedia/Lyt)
 
-UIView, NSView and NSArray categories to make autolayout (more) readable and less verbose. For iOS and OS X.
+UIView, NSView, UIViewController and NSArray categories to make autolayout (more) readable and less verbose. For iOS and OS X.
 
 ###Better semantics with less code
 
@@ -62,12 +62,21 @@ NSLayoutConstraint *leftConstraint = [view lyt_alignLeftToParent];
 leftConstraint.constant = 10; 
 ```
 
-Additionally, each method has an equivalent that doesn't add the constraint to the view hierarchy, which is particularly useful for dynamic autolayouts. For example:
+Additionally, each method has an equivalent that doesn't add the constraint to the view hierarchy, which is particularly useful for dynamic autolayouts or setting priorities (as priorities must be set before adding constraints to the view hierarchy). For example:
 
 ```objective-c
 _labelLeftConstraint = [_label lyt_constraintByAligningLeftToParent];
+_labelLeftConstraint.priority = UILayoutPriorityDefaultLow;
 // Later...
 [self.view addConstraint:_labelLeftConstraint]; 
+```
+
+###Layout guides
+
+Lyt offers a UIViewController category to leverage layout guides (iOS only). For example:
+
+```objective-c
+[viewController lyt_alignTopGuideAndView:titleView];
 ```
 
 ##Installation
@@ -75,7 +84,7 @@ _labelLeftConstraint = [_label lyt_constraintByAligningLeftToParent];
 Using [CocoaPods](http://cocoapods.org/):
 
 ```ruby
-pod 'Lyt', '~> 0.5'
+pod 'Lyt', '~> 0.6'
 ```
 
 Or add the files from the [Lyt](https://github.com/robotmedia/Lyt/tree/master/Lyt) directory if you're doing it manually.
