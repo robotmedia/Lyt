@@ -21,7 +21,7 @@
 #import "LYTOSXDemoAppDelegate.h"
 #import "Lyt.h"
 
-static CGFloat const TopMargin = 44;
+static CGFloat const TopMargin = 24;
 static CGFloat const SideMargin = 12;
 static CGFloat const Separator = 8;
 

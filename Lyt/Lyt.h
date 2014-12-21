@@ -893,6 +893,74 @@
 
 @end
 
+#if TARGET_OS_IPHONE
+
+@interface UIViewController (Lyt)
+
+/**
+ Adds a constraint that aligns the top edge of the view with the top layout guide.
+ @param view The view to align with the top layout guide.
+ @return A constraint that aligns the top edge of the view with the top layout guide.
+ */
+- (NSLayoutConstraint *)lyt_alignTopGuideAndView:(UIView*)view;
+
+/**
+ Adds a constraint that aligns the top edge of the view with the given margin below the top layout guide.
+ @param view The view to align with the top layout guide.
+ @param margin The distance below the top layout guide.
+ @return A constraint that aligns the top edge of the view with the top layout guide.
+ */
+- (NSLayoutConstraint *)lyt_alignTopGuideAndView:(UIView*)view margin:(CGFloat)margin;
+
+/**
+ Adds a constraint that aligns the bottom edge of the view with the bottom layout guide.
+ @param view The view to align with the bottom layout guide.
+ @return A constraint that aligns the bottom edge of the view with the bottom layout guide.
+ */
+- (NSLayoutConstraint *)lyt_alignBottomGuideAndView:(UIView*)view;
+
+/**
+ Adds a constraint that aligns the bottom edge of the view with the given margin above the bottom layout guide.
+ @param view The view to align with the bottom layout guide.
+ @param margin The distance above the bottom layout guide.
+ @return A constraint that aligns the bottom edge of the view with the bottom layout guide.
+ */
+- (NSLayoutConstraint *)lyt_alignBottomGuideAndView:(UIView*)view margin:(CGFloat)margin;
+
+/**
+ Returns a constraint that aligns the top edge of the view with the top layout guide.
+ @param view The view to align with the top layout guide.
+ @return A constraint that aligns the top edge of the view with the top layout guide.
+ */
+- (NSLayoutConstraint *)lyt_constraintByAligningTopGuideAndView:(UIView*)view;
+
+/**
+ Returns a constraint that aligns the top edge of the view with the given margin below the top layout guide.
+ @param view The view to align with the top layout guide.
+ @param margin The distance below the top layout guide.
+ @return A constraint that aligns the top edge of the view with the top layout guide.
+ */
+- (NSLayoutConstraint *)lyt_constraintByAligningTopGuideAndView:(UIView*)view margin:(CGFloat)margin;
+
+/**
+ Returns a constraint that aligns the bottom edge of the view with the bottom layout guide.
+ @param view The view to align with the bottom layout guide.
+ @return A constraint that aligns the bottom edge of the view with the bottom layout guide.
+ */
+- (NSLayoutConstraint *)lyt_constraintByAligningBottomGuideAndView:(UIView*)view;
+
+/**
+ Returns a constraint that aligns the bottom edge of the view with the given margin above the bottom layout guide.
+ @param view The view to align with the bottom layout guide.
+ @param margin The distance above the bottom layout guide.
+ @return A constraint that aligns the bottom edge of the view with the bottom layout guide.
+ */
+- (NSLayoutConstraint *)lyt_constraintByAligningBottomGuideAndView:(UIView*)view margin:(CGFloat)margin;
+
+@end
+
+#endif
+
 @interface NSArray (Lyt)
 
 #pragma mark Distribution

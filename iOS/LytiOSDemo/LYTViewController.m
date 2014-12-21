@@ -21,7 +21,7 @@
 #import "LYTViewController.h"
 #import "Lyt.h"
 
-static CGFloat const TopMargin = 44;
+static CGFloat const TopMargin = 12;
 static CGFloat const SideMargin = 12;
 static CGFloat const Separator = 8;
 
@@ -36,29 +36,36 @@ static CGFloat const Separator = 8;
     [super viewDidLoad];
     
     _titleLabel = [self addLabelWithText:NSLocalizedString(@"Introducing Lyt", @"") color:[UIColor redColor]];
-    _subtitleLabel = [self addLabelWithText:NSLocalizedString(@"A UIView and NSArray category to make autolayout (more) readable and less verbose.", @"") color:[UIColor yellowColor]];
+    _subtitleLabel = [self addLabelWithText:NSLocalizedString(@"UIView, UIViewController and NSArray categories to make autolayout (more) readable and less verbose.", @"") color:[UIColor yellowColor]];
     _bodyLabel = [self addLabelWithText:NSLocalizedString(@"Lyt offers hundreds of methods. Current families are:\nlyt_align*\nlyt_center*\nlyt_distribute*\nlyt_match*\nlyt_place*\nlyt_set*", @"") color:[UIColor greenColor]];
     
     [self layoutWithLyt];
-
     // [self layoutWithVisualFormat];
 }
 
+
 - (void)layoutWithLyt
 {
-    [_titleLabel lyt_alignTopToParentWithMargin:TopMargin];
+    [self lyt_alignTopGuideAndView:_titleLabel margin:TopMargin];
     [@[_titleLabel, _subtitleLabel, _bodyLabel] lyt_distributeYWithSpacing:Separator];
 
     [_titleLabel lyt_centerXInParent];
     [@[_bodyLabel, _subtitleLabel] lyt_alignSidesToParentWithMargin:SideMargin];
 }
 
+- (void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    NSLog(@"%f", self.topLayoutGuide.length);
+}
+
 - (void)layoutWithVisualFormat
 {
-    NSDictionary *views = NSDictionaryOfVariableBindings(_titleLabel, _subtitleLabel, _bodyLabel);
+    id topGuide = self.topLayoutGuide;
+    NSDictionary *views = NSDictionaryOfVariableBindings(topGuide, _titleLabel, _subtitleLabel, _bodyLabel);
     NSDictionary *metrics = @{@"TopMargin" : @(TopMargin), @"SideMargin" : @(SideMargin), @"Separator" : @(Separator)};
     
-    NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-TopMargin-[_titleLabel]-Separator-[_subtitleLabel]-Separator-[_bodyLabel]"
+    NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[topGuide]-TopMargin-[_titleLabel]-Separator-[_subtitleLabel]-Separator-[_bodyLabel]"
                                                                            options:NSLayoutFormatAlignAllCenterX
                                                                            metrics:metrics
                                                                              views:views];

@@ -765,6 +765,58 @@
 
 @end
 
+#if TARGET_OS_IPHONE
+
+@implementation UIViewController (Lyt)
+
+- (NSLayoutConstraint *)lyt_alignTopGuideAndView:(UIView*)view
+{
+    return [self lyt_alignTopGuideAndView:view margin:0];
+}
+
+- (NSLayoutConstraint *)lyt_alignTopGuideAndView:(UIView*)view margin:(CGFloat)margin
+{
+    NSLayoutConstraint *constraint = [self lyt_constraintByAligningTopGuideAndView:view margin:margin];
+    [self.view lyt_addConstraint:constraint toAncestorSharedWithView:view];
+    return constraint;
+}
+
+- (NSLayoutConstraint *)lyt_alignBottomGuideAndView:(UIView*)view
+{
+    return [self lyt_alignBottomGuideAndView:view margin:0];
+}
+
+- (NSLayoutConstraint *)lyt_alignBottomGuideAndView:(UIView*)view margin:(CGFloat)margin
+{
+    NSLayoutConstraint *constraint = [self lyt_constraintByAligningBottomGuideAndView:view margin:margin];
+    [self.view lyt_addConstraint:constraint toAncestorSharedWithView:view];
+    return constraint;
+}
+
+- (NSLayoutConstraint *)lyt_constraintByAligningTopGuideAndView:(UIView*)view
+{
+    return [self lyt_constraintByAligningTopGuideAndView:view margin:0];
+}
+
+- (NSLayoutConstraint *)lyt_constraintByAligningTopGuideAndView:(UIView*)view margin:(CGFloat)margin
+{
+    return [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.topLayoutGuide attribute:NSLayoutAttributeBaseline multiplier:1 constant:margin];
+}
+
+- (NSLayoutConstraint *)lyt_constraintByAligningBottomGuideAndView:(UIView*)view
+{
+    return [self lyt_constraintByAligningBottomGuideAndView:view margin:0];
+}
+
+- (NSLayoutConstraint *)lyt_constraintByAligningBottomGuideAndView:(UIView*)view margin:(CGFloat)margin
+{
+    return [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.bottomLayoutGuide attribute:NSLayoutAttributeBaseline multiplier:1 constant:-margin];
+}
+
+@end
+
+#endif
+
 @implementation NSArray (LytUtils)
 
 - (void)lyt_addConstraints:(NSArray*)constraints
