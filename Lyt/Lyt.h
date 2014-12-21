@@ -671,6 +671,20 @@
 - (NSLayoutConstraint*)lyt_setWidth:(CGFloat)width;
 
 /**
+ Adds a constraint that sets the maximum width of the view with the given value.
+ @param width The maximum width.
+ @return A constraint that sets the maximum width of the view with the given value.
+ */
+- (NSLayoutConstraint*)lyt_setMaxWidth:(CGFloat)width;
+
+/**
+ Adds a constraint that sets the minimum width of the view with the given value.
+ @param width The minimum width.
+ @return A constraint that sets the minimum width of the view with the given value.
+ */
+- (NSLayoutConstraint*)lyt_setMinWidth:(CGFloat)width;
+
+/**
  Adds a constraint that sets the height of the view with the given value.
  @param height The height.
  @return A constraint that sets the height of the view with the given value.
@@ -678,11 +692,39 @@
 - (NSLayoutConstraint*)lyt_setHeight:(CGFloat)height;
 
 /**
+ Adds a constraint that sets the maximum height of the view with the given value.
+ @param height The maximum height.
+ @return A constraint that sets the maximum height of the view with the given value.
+ */
+- (NSLayoutConstraint*)lyt_setMaxHeight:(CGFloat)height;
+
+/**
+ Adds a constraint that sets the minimum height of the view with the given value.
+ @param height The minimum height.
+ @return A constraint that sets the minimum height of the view with the given value.
+ */
+- (NSLayoutConstraint*)lyt_setMinHeight:(CGFloat)height;
+
+/**
  Adds constraints that set the size of the view with the given value.
  @param size The size.
  @return An array of constraints that set the size of the view with the given value.
  */
 - (NSArray*)lyt_setSize:(CGSize)size;
+
+/**
+ Adds constraints that set the maximum size of the view with the given value.
+ @param size The maximum size.
+ @return An array of constraints that set the maximum size of the view with the given value.
+ */
+- (NSArray*)lyt_setMaxSize:(CGSize)size;
+
+/**
+ Adds constraints that set the minimum size of the view with the given value.
+ @param size The minimum size.
+ @return An array of constraints that set the minimum size of the view with the given value.
+ */
+- (NSArray*)lyt_setMinSize:(CGSize)size;
 
 /**
  Adds constraints that set the frame of the view with the given value.
@@ -750,6 +792,20 @@
 - (NSLayoutConstraint*)lyt_constraintBySettingWidth:(CGFloat)width;
 
 /**
+ Returns a constraint that sets the maximum width of the view with the given value.
+ @param width The maximum width.
+ @return A constraint that sets the maximum width of the view with the given value.
+ */
+- (NSLayoutConstraint*)lyt_constraintBySettingMaxWidth:(CGFloat)width;
+
+/**
+ Returns a constraint that sets the minimum width of the view with the given value.
+ @param width The minimum width.
+ @return A constraint that sets the minimum width of the view with the given value.
+ */
+- (NSLayoutConstraint*)lyt_constraintBySettingMinWidth:(CGFloat)width;
+
+/**
  Returns a constraint that sets the height of the view with the given value.
  @param height The height.
  @return A constraint that sets the height of the view with the given value.
@@ -757,11 +813,39 @@
 - (NSLayoutConstraint*)lyt_constraintBySettingHeight:(CGFloat)height;
 
 /**
+ Returns a constraint that sets the maximum height of the view with the given value.
+ @param height The maximum height.
+ @return A constraint that sets the maximum height of the view with the given value.
+ */
+- (NSLayoutConstraint*)lyt_constraintBySettingMaxHeight:(CGFloat)height;
+
+/**
+ Returns a constraint that sets the minimum height of the view with the given value.
+ @param height The minimum height.
+ @return A constraint that sets the minimum height of the view with the given value.
+ */
+- (NSLayoutConstraint*)lyt_constraintBySettingMinHeight:(CGFloat)height;
+
+/**
  Returns constraints that set the size of the view with the given value.
  @param size The size.
  @return A array of constraints that set the size of the view with the given value.
  */
 - (NSArray*)lyt_constraintsBySettingSize:(CGSize)size;
+
+/**
+ Returns constraints that set the maximum size of the view with the given value.
+ @param size The maximum size.
+ @return A array of constraints that set the maximum size of the view with the given value.
+ */
+- (NSArray*)lyt_constraintsBySettingMaxSize:(CGSize)size;
+
+/**
+ Returns constraints that set the minimum size of the view with the given value.
+ @param size The minimum size.
+ @return A array of constraints that set the minimum size of the view with the given value.
+ */
+- (NSArray*)lyt_constraintsBySettingMinSize:(CGSize)size;
 
 /**
  Returns constraints that set the frame of the view with the given value.
@@ -1586,6 +1670,20 @@
 - (NSArray*)lyt_setWidth:(CGFloat)width;
 
 /**
+ Adds constraints that set the maximum width of the views in the array with the given value.
+ @param width The maximum width.
+ @return An array of constraints that set the maximum of the views in the array with the given value.
+ */
+- (NSArray*)lyt_setMaxWidth:(CGFloat)width;
+
+/**
+ Adds constraints that set the minimum width of the views in the array with the given value.
+ @param width The minimum width.
+ @return An array of constraints that set the minimum of the views in the array with the given value.
+ */
+- (NSArray*)lyt_setMinWidth:(CGFloat)width;
+
+/**
  Adds constraints that set the height of the views in the array with the given value.
  @param height The height.
  @return An array of constraints that set the height of the views in the array with the given value.
@@ -1593,11 +1691,39 @@
 - (NSArray*)lyt_setHeight:(CGFloat)height;
 
 /**
+ Adds constraints that set the maximum height of the views in the array with the given value.
+ @param height The maximum height.
+ @return An array of constraints that set the maximum height of the views in the array with the given value.
+ */
+- (NSArray*)lyt_setMaxHeight:(CGFloat)height;
+
+/**
+ Adds constraints that set the minimum height of the views in the array with the given value.
+ @param height The minimum height.
+ @return An array of constraints that set the minimum height of the views in the array with the given value.
+ */
+- (NSArray*)lyt_setMinHeight:(CGFloat)height;
+
+/**
  Adds constraints that set the size of the views in the array with the given value.
  @param size The size.
  @return An array of constraints that set the size of the views in the array with the given value.
  */
 - (NSArray*)lyt_setSize:(CGSize)size;
+
+/**
+ Adds constraints that set the maximum size of the views in the array with the given value.
+ @param size The maximum size.
+ @return An array of constraints that set the maximum size of the views in the array with the given value.
+ */
+- (NSArray*)lyt_setMaxSize:(CGSize)size;
+
+/**
+ Adds constraints that set the minimum size of the views in the array with the given value.
+ @param size The minimum size.
+ @return An array of constraints that set the minimum size of the views in the array with the given value.
+ */
+- (NSArray*)lyt_setMinSize:(CGSize)size;
 
 /**
  Adds constraints that set the frame of the views in the array with the given value.
@@ -1665,6 +1791,20 @@
 - (NSArray*)lyt_constraintBySettingWidth:(CGFloat)width;
 
 /**
+ Returns constraints that set the maximum width of the views in the array with the given value.
+ @param width The maximum width.
+ @return An array of constraints that set the maximum width of the views in the array with the given value.
+ */
+- (NSArray*)lyt_constraintBySettingMaxWidth:(CGFloat)width;
+
+/**
+ Returns constraints that set the minimum width of the views in the array with the given value.
+ @param width The minimum width.
+ @return An array of constraints that set the minimum width of the views in the array with the given value.
+ */
+- (NSArray*)lyt_constraintBySettingMinWidth:(CGFloat)width;
+
+/**
  Returns constraints that set the height of the views in the array with the given value.
  @param height The height.
  @return An array of constraints that set the height of the views in the array with the given value.
@@ -1672,11 +1812,39 @@
 - (NSArray*)lyt_constraintBySettingHeight:(CGFloat)height;
 
 /**
+ Returns constraints that set the maximum height of the views in the array with the given value.
+ @param height The maximum height.
+ @return An array of constraints that set the maximum height of the views in the array with the given value.
+ */
+- (NSArray*)lyt_constraintBySettingMaxHeight:(CGFloat)height;
+
+/**
+ Returns constraints that set the minimum height of the views in the array with the given value.
+ @param height The minimum height.
+ @return An array of constraints that set the minimum height of the views in the array with the given value.
+ */
+- (NSArray*)lyt_constraintBySettingMinHeight:(CGFloat)height;
+
+/**
  Returns constraints that set the size of the views in the array with the given value.
  @param size The size.
  @return An array of constraints that set the size of the views in the array with the given value.
  */
 - (NSArray*)lyt_constraintsBySettingSize:(CGSize)size;
+
+/**
+ Returns constraints that set the maximum size of the views in the array with the given value.
+ @param size The maximum size.
+ @return An array of constraints that set the  maximum size of the views in the array with the given value.
+ */
+- (NSArray*)lyt_constraintsBySettingMaxSize:(CGSize)size;
+
+/**
+ Returns constraints that set the minimum size of the views in the array with the given value.
+ @param size The minimum size.
+ @return An array of constraints that set the  minimum size of the views in the array with the given value.
+ */
+- (NSArray*)lyt_constraintsBySettingMinSize:(CGSize)size;
 
 /**
  Returns constraints that set the frame of the views in the array with the given value.

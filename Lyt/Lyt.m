@@ -566,6 +566,20 @@
     return constraint;
 }
 
+- (NSLayoutConstraint*)lyt_setMaxWidth:(CGFloat)width
+{
+    NSLayoutConstraint *constraint = [self lyt_constraintBySettingMaxWidth:width];
+    [self addConstraint:constraint];
+    return constraint;
+}
+
+- (NSLayoutConstraint*)lyt_setMinWidth:(CGFloat)width
+{
+    NSLayoutConstraint *constraint = [self lyt_constraintBySettingMinWidth:width];
+    [self addConstraint:constraint];
+    return constraint;
+}
+
 - (NSLayoutConstraint*)lyt_setHeight:(CGFloat)height
 {
     NSLayoutConstraint *constraint = [self lyt_constraintBySettingHeight:height];
@@ -573,9 +587,37 @@
     return constraint;
 }
 
+- (NSLayoutConstraint*)lyt_setMaxHeight:(CGFloat)height
+{
+    NSLayoutConstraint *constraint = [self lyt_constraintBySettingMaxHeight:height];
+    [self addConstraint:constraint];
+    return constraint;
+}
+
+- (NSLayoutConstraint*)lyt_setMinHeight:(CGFloat)height
+{
+    NSLayoutConstraint *constraint = [self lyt_constraintBySettingMinHeight:height];
+    [self addConstraint:constraint];
+    return constraint;
+}
+
 - (NSArray*)lyt_setSize:(CGSize)size
 {
     NSArray *constraints = [self lyt_constraintsBySettingSize:size];
+    [self addConstraints:constraints];
+    return constraints;
+}
+
+- (NSArray*)lyt_setMaxSize:(CGSize)size
+{
+    NSArray *constraints = [self lyt_constraintsBySettingMaxSize:size];
+    [self addConstraints:constraints];
+    return constraints;
+}
+
+- (NSArray*)lyt_setMinSize:(CGSize)size
+{
+    NSArray *constraints = [self lyt_constraintsBySettingMinSize:size];
     [self addConstraints:constraints];
     return constraints;
 }
@@ -639,15 +681,49 @@
     return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:width];
 }
 
+- (NSLayoutConstraint*)lyt_constraintBySettingMaxWidth:(CGFloat)width
+{
+    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationLessThanOrEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:width];
+}
+
+- (NSLayoutConstraint*)lyt_constraintBySettingMinWidth:(CGFloat)width
+{
+    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:width];
+}
+
 - (NSLayoutConstraint*)lyt_constraintBySettingHeight:(CGFloat)height
 {
     return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:height];
+}
+
+- (NSLayoutConstraint*)lyt_constraintBySettingMaxHeight:(CGFloat)height
+{
+    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationLessThanOrEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:height];
+}
+
+- (NSLayoutConstraint*)lyt_constraintBySettingMinHeight:(CGFloat)height
+{
+    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:height];
 }
 
 - (NSArray*)lyt_constraintsBySettingSize:(CGSize)size
 {
     NSLayoutConstraint *widthConstraint = [self lyt_constraintBySettingWidth:size.width];
     NSLayoutConstraint *heightConstraint = [self lyt_constraintBySettingHeight:size.height];
+    return @[widthConstraint, heightConstraint];
+}
+
+- (NSArray*)lyt_constraintsBySettingMaxSize:(CGSize)size
+{
+    NSLayoutConstraint *widthConstraint = [self lyt_constraintBySettingMaxWidth:size.width];
+    NSLayoutConstraint *heightConstraint = [self lyt_constraintBySettingMaxHeight:size.height];
+    return @[widthConstraint, heightConstraint];
+}
+
+- (NSArray*)lyt_constraintsBySettingMinSize:(CGSize)size
+{
+    NSLayoutConstraint *widthConstraint = [self lyt_constraintBySettingMinWidth:size.width];
+    NSLayoutConstraint *heightConstraint = [self lyt_constraintBySettingMinHeight:size.height];
     return @[widthConstraint, heightConstraint];
 }
 
@@ -1309,14 +1385,44 @@
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_setWidth:width]; }];
 }
 
+- (NSArray*)lyt_setMaxWidth:(CGFloat)width
+{
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_setMaxWidth:width]; }];
+}
+
+- (NSArray*)lyt_setMinWidth:(CGFloat)width
+{
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_setMinWidth:width]; }];
+}
+
 - (NSArray*)lyt_setHeight:(CGFloat)height
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_setHeight:height]; }];
 }
 
+- (NSArray*)lyt_setMaxHeight:(CGFloat)height
+{
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_setMaxHeight:height]; }];
+}
+
+- (NSArray*)lyt_setMinHeight:(CGFloat)height
+{
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_setMinHeight:height]; }];
+}
+
 - (NSArray*)lyt_setSize:(CGSize)size
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_setSize:size]; }];
+}
+
+- (NSArray*)lyt_setMaxSize:(CGSize)size
+{
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_setMaxSize:size]; }];
+}
+
+- (NSArray*)lyt_setMinSize:(CGSize)size
+{
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_setMinSize:size]; }];
 }
 
 - (NSArray*)lyt_setFrame:(CGRect)frame
@@ -1364,14 +1470,44 @@
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintBySettingWidth:width]; }];
 }
 
+- (NSArray*)lyt_constraintBySettingMaxWidth:(CGFloat)width
+{
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintBySettingMaxWidth:width]; }];
+}
+
+- (NSArray*)lyt_constraintBySettingMinWidth:(CGFloat)width
+{
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintBySettingMinWidth:width]; }];
+}
+
 - (NSArray*)lyt_constraintBySettingHeight:(CGFloat)height
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintBySettingHeight:height]; }];
 }
 
+- (NSArray*)lyt_constraintBySettingMaxHeight:(CGFloat)height
+{
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintBySettingMaxHeight:height]; }];
+}
+
+- (NSArray*)lyt_constraintBySettingMinHeight:(CGFloat)height
+{
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintBySettingMinHeight:height]; }];
+}
+
 - (NSArray*)lyt_constraintsBySettingSize:(CGSize)size
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintsBySettingSize:size]; }];
+}
+
+- (NSArray*)lyt_constraintsBySettingMaxSize:(CGSize)size
+{
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintsBySettingMaxSize:size]; }];
+}
+
+- (NSArray*)lyt_constraintsBySettingMinSize:(CGSize)size
+{
+    return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintsBySettingMinSize:size]; }];
 }
 
 - (NSArray*)lyt_constraintsBySettingFrame:(CGRect)frame
