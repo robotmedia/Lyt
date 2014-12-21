@@ -43,7 +43,6 @@ static CGFloat const Separator = 8;
     // [self layoutWithVisualFormat];
 }
 
-
 - (void)layoutWithLyt
 {
     [self lyt_alignTopGuideAndView:_titleLabel margin:TopMargin];
