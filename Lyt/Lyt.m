@@ -1054,82 +1054,82 @@
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_alignToView:view margin:margin]; }];
 }
 
-- (NSArray*)lyt_constraintByAligningTopToParent
+- (NSArray*)lyt_constraintsByAligningTopToParent
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByAligningTopToParent]; }];
 }
 
-- (NSArray*)lyt_constraintByAligningTopToParentWithMargin:(CGFloat)margin
+- (NSArray*)lyt_constraintsByAligningTopToParentWithMargin:(CGFloat)margin
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByAligningTopToParentWithMargin:margin]; }];
 }
 
-- (NSArray*)lyt_constraintByAligningTopToView:(LYTView*)view
+- (NSArray*)lyt_constraintsByAligningTopToView:(LYTView*)view
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningTopToView:view]; }];
 }
 
-- (NSArray*)lyt_constraintByAligningTopToView:(LYTView*)view margin:(CGFloat)margin
+- (NSArray*)lyt_constraintsByAligningTopToView:(LYTView*)view margin:(CGFloat)margin
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningTopToView:view margin:margin]; }];
 }
 
-- (NSArray*)lyt_constraintByAligningRightToParent
+- (NSArray*)lyt_constraintsByAligningRightToParent
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByAligningRightToParent]; }];
 }
 
-- (NSArray*)lyt_constraintByAligningRightToParentWithMargin:(CGFloat)margin
+- (NSArray*)lyt_constraintsByAligningRightToParentWithMargin:(CGFloat)margin
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningRightToParentWithMargin:margin]; }];
 }
 
-- (NSArray*)lyt_constraintByAligningRightToView:(LYTView*)view
+- (NSArray*)lyt_constraintsByAligningRightToView:(LYTView*)view
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningRightToView:view]; }];
 }
 
-- (NSArray*)lyt_constraintByAligningRightToView:(LYTView*)view margin:(CGFloat)margin
+- (NSArray*)lyt_constraintsByAligningRightToView:(LYTView*)view margin:(CGFloat)margin
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningRightToView:view margin:margin]; }];
 }
 
-- (NSArray*)lyt_constraintByAligningBottomToParent
+- (NSArray*)lyt_constraintsByAligningBottomToParent
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByAligningBottomToParent]; }];
 }
 
-- (NSArray*)lyt_constraintByAligningBottomToParentWithMargin:(CGFloat)margin
+- (NSArray*)lyt_constraintsByAligningBottomToParentWithMargin:(CGFloat)margin
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByAligningBottomToParentWithMargin:margin]; }];
 }
 
-- (NSArray*)lyt_constraintByAligningBottomToView:(LYTView*)view
+- (NSArray*)lyt_constraintsByAligningBottomToView:(LYTView*)view
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningBottomToView:view]; }];
 }
 
-- (NSArray*)lyt_constraintByAligningBottomToView:(LYTView*)view margin:(CGFloat)margin
+- (NSArray*)lyt_constraintsByAligningBottomToView:(LYTView*)view margin:(CGFloat)margin
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningBottomToView:view margin:margin]; }];
 }
 
-- (NSArray*)lyt_constraintByAligningLeftToParent
+- (NSArray*)lyt_constraintsByAligningLeftToParent
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByAligningLeftToParent]; }];
 }
 
-- (NSArray*)lyt_constraintByAligningLeftToParentWithMargin:(CGFloat)margin
+- (NSArray*)lyt_constraintsByAligningLeftToParentWithMargin:(CGFloat)margin
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByAligningLeftToParentWithMargin:margin]; }];
 }
 
-- (NSArray*)lyt_constraintByAligningLeftToView:(LYTView*)view
+- (NSArray*)lyt_constraintsByAligningLeftToView:(LYTView*)view
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningLeftToView:view]; }];
 }
 
-- (NSArray*)lyt_constraintByAligningLeftToView:(LYTView*)view margin:(CGFloat)margin
+- (NSArray*)lyt_constraintsByAligningLeftToView:(LYTView*)view margin:(CGFloat)margin
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByAligningLeftToView:view margin:margin]; }];
 }
@@ -1221,42 +1221,42 @@
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_centerWithView:view]; }];
 }
 
-- (NSArray*)lyt_constraintByCenteringXInParent
+- (NSArray*)lyt_constraintsByCenteringXInParent
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByCenteringXInParent]; }];
 }
 
-- (NSArray*)lyt_constraintByCenteringXInParentWithOffset:(CGFloat)offset
+- (NSArray*)lyt_constraintsByCenteringXInParentWithOffset:(CGFloat)offset
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByCenteringXInParentWithOffset:offset]; }];
 }
 
-- (NSArray*)lyt_constraintByCenteringXWithView:(LYTView*)view
+- (NSArray*)lyt_constraintsByCenteringXWithView:(LYTView*)view
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByCenteringXWithView:view]; }];
 }
 
-- (NSArray*)lyt_constraintByCenteringXWithView:(LYTView*)view offset:(CGFloat)offset
+- (NSArray*)lyt_constraintsByCenteringXWithView:(LYTView*)view offset:(CGFloat)offset
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByCenteringXWithView:view offset:offset]; }];
 }
 
-- (NSArray*)lyt_constraintByCenteringYInParent
+- (NSArray*)lyt_constraintsByCenteringYInParent
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByCenteringYInParent]; }];
 }
 
-- (NSArray*)lyt_constraintByCenteringYInParentWithOffset:(CGFloat)offset
+- (NSArray*)lyt_constraintsByCenteringYInParentWithOffset:(CGFloat)offset
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintByCenteringYInParentWithOffset:offset]; }];
 }
 
-- (NSArray*)lyt_constraintByCenteringYWithView:(LYTView*)view
+- (NSArray*)lyt_constraintsByCenteringYWithView:(LYTView*)view
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByCenteringYWithView:view]; }];
 }
 
-- (NSArray*)lyt_constraintByCenteringYWithView:(LYTView*)view offset:(CGFloat)offset
+- (NSArray*)lyt_constraintsByCenteringYWithView:(LYTView*)view offset:(CGFloat)offset
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByCenteringYWithView:view offset:offset]; }];
 }
@@ -1323,42 +1323,42 @@
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_placeLeftOfView:view margin:margin]; }];
 }
 
-- (NSArray*)lyt_constraintByPlacingAboveView:(LYTView*)view
+- (NSArray*)lyt_constraintsByPlacingAboveView:(LYTView*)view
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingAboveView:view]; }];
 }
 
-- (NSArray*)lyt_constraintByPlacingAboveView:(LYTView*)view margin:(CGFloat)margin
+- (NSArray*)lyt_constraintsByPlacingAboveView:(LYTView*)view margin:(CGFloat)margin
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingAboveView:view margin:margin]; }];
 }
 
-- (NSArray*)lyt_constraintByPlacingRightOfView:(LYTView*)view
+- (NSArray*)lyt_constraintsByPlacingRightOfView:(LYTView*)view
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingRightOfView:view]; }];
 }
 
-- (NSArray*)lyt_constraintByPlacingRightOfView:(LYTView*)view margin:(CGFloat)margin
+- (NSArray*)lyt_constraintsByPlacingRightOfView:(LYTView*)view margin:(CGFloat)margin
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingRightOfView:view margin:margin]; }];
 }
 
-- (NSArray*)lyt_constraintByPlacingBelowView:(LYTView*)view
+- (NSArray*)lyt_constraintsByPlacingBelowView:(LYTView*)view
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingBelowView:view]; }];
 }
 
-- (NSArray*)lyt_constraintByPlacingBelowView:(LYTView*)view margin:(CGFloat)margin
+- (NSArray*)lyt_constraintsByPlacingBelowView:(LYTView*)view margin:(CGFloat)margin
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingBelowView:view margin:margin]; }];
 }
 
-- (NSArray*)lyt_constraintByPlacingLeftOfView:(LYTView*)view
+- (NSArray*)lyt_constraintsByPlacingLeftOfView:(LYTView*)view
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingLeftOfView:view]; }];
 }
 
-- (NSArray*)lyt_constraintByPlacingLeftOfView:(LYTView*)view margin:(CGFloat)margin
+- (NSArray*)lyt_constraintsByPlacingLeftOfView:(LYTView*)view margin:(CGFloat)margin
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByPlacingLeftOfView:view margin:margin]; }];
 }
@@ -1450,12 +1450,12 @@
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_matchHeightToView:view multiplier:multiplier]; }];
 }
 
-- (NSArray*)lyt_constraintBySettingX:(CGFloat)x
+- (NSArray*)lyt_constraintsBySettingX:(CGFloat)x
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintBySettingX:x]; }];
 }
 
-- (NSArray*)lyt_constraintBySettingY:(CGFloat)y
+- (NSArray*)lyt_constraintsBySettingY:(CGFloat)y
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintBySettingY:y]; }];
 }
@@ -1465,32 +1465,32 @@
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintsBySettingOrigin:origin]; }];
 }
 
-- (NSArray*)lyt_constraintBySettingWidth:(CGFloat)width
+- (NSArray*)lyt_constraintsBySettingWidth:(CGFloat)width
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintBySettingWidth:width]; }];
 }
 
-- (NSArray*)lyt_constraintBySettingMaxWidth:(CGFloat)width
+- (NSArray*)lyt_constraintsBySettingMaxWidth:(CGFloat)width
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintBySettingMaxWidth:width]; }];
 }
 
-- (NSArray*)lyt_constraintBySettingMinWidth:(CGFloat)width
+- (NSArray*)lyt_constraintsBySettingMinWidth:(CGFloat)width
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintBySettingMinWidth:width]; }];
 }
 
-- (NSArray*)lyt_constraintBySettingHeight:(CGFloat)height
+- (NSArray*)lyt_constraintsBySettingHeight:(CGFloat)height
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintBySettingHeight:height]; }];
 }
 
-- (NSArray*)lyt_constraintBySettingMaxHeight:(CGFloat)height
+- (NSArray*)lyt_constraintsBySettingMaxHeight:(CGFloat)height
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintBySettingMaxHeight:height]; }];
 }
 
-- (NSArray*)lyt_constraintBySettingMinHeight:(CGFloat)height
+- (NSArray*)lyt_constraintsBySettingMinHeight:(CGFloat)height
 {
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintBySettingMinHeight:height]; }];
 }
@@ -1515,22 +1515,22 @@
     return [self lyt_flattenMap:^id(LYTView *view) { return [view lyt_constraintsBySettingFrame:frame]; }];
 }
 
-- (NSArray*)lyt_constraintByMatchingWidthToView:(LYTView*)view
+- (NSArray*)lyt_constraintsByMatchingWidthToView:(LYTView*)view
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByMatchingWidthToView:view]; }];
 }
 
-- (NSArray*)lyt_constraintByMatchingHeightToView:(LYTView*)view
+- (NSArray*)lyt_constraintsByMatchingHeightToView:(LYTView*)view
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByMatchingHeightToView:view]; }];
 }
 
-- (NSArray*)lyt_constraintByMatchingWidthToView:(LYTView*)view multiplier:(CGFloat)multiplier
+- (NSArray*)lyt_constraintsByMatchingWidthToView:(LYTView*)view multiplier:(CGFloat)multiplier
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByMatchingWidthToView:view multiplier:multiplier]; }];
 }
 
-- (NSArray*)lyt_constraintByMatchingHeightToView:(LYTView*)view multiplier:(CGFloat)multiplier
+- (NSArray*)lyt_constraintsByMatchingHeightToView:(LYTView*)view multiplier:(CGFloat)multiplier
 {
     return [self lyt_flattenMap:^id(LYTView *currentView) { return [currentView lyt_constraintByMatchingHeightToView:view multiplier:multiplier]; }];
 }

@@ -1202,21 +1202,21 @@
  Returns constraints that align the top edges of the views in the array with the respective top edges of their parent views.
  @return An array of constraints that align the top edges of the views in the array with the respective top edges of their parent views.
  */
-- (NSArray*)lyt_constraintByAligningTopToParent;
+- (NSArray*)lyt_constraintsByAligningTopToParent;
 
 /**
  Returns constraints that align the top edges of the views in the array with the given inner margin from the respective top edges of their parent views.
  @param margin The inner margin length.
  @return An array of constraints that align the top edges of the views in the array with the given inner margin from the respective top edges of their parent views.
  */
-- (NSArray*)lyt_constraintByAligningTopToParentWithMargin:(CGFloat)margin;
+- (NSArray*)lyt_constraintsByAligningTopToParentWithMargin:(CGFloat)margin;
 
 /**
  Returns constraints that align the top edges of the views in the array with the top edge of the given view.
  @param view The reference view.
  @return An array of constraints that align the top edges of the views in the array with the top edge of the given view.
  */
-- (NSArray*)lyt_constraintByAligningTopToView:(LYTView*)view;
+- (NSArray*)lyt_constraintsByAligningTopToView:(LYTView*)view;
 
 /**
  Returns constraints that align the top edges of the views in the array with the given inner margin from the top edge of the given view.
@@ -1224,27 +1224,27 @@
  @param margin The inner margin length.
  @return An array of constraints that align the top edges of the views in the array with the given inner margin from the top edge of the given view.
  */
-- (NSArray*)lyt_constraintByAligningTopToView:(LYTView*)view margin:(CGFloat)margin;
+- (NSArray*)lyt_constraintsByAligningTopToView:(LYTView*)view margin:(CGFloat)margin;
 
 /**
  Returns constraints that align the right edges of the views in the array with the respective right edges of their parent views.
  @return An array of constraints that align the right edges of the views in the array with the respective right edges of their parent views.
  */
-- (NSArray*)lyt_constraintByAligningRightToParent;
+- (NSArray*)lyt_constraintsByAligningRightToParent;
 
 /**
  Returns constraints that align the right edges of the views in the array with the given inner margin from the respective right edges of their parent views.
  @param margin The inner margin length.
  @return An array of constraints that align the right edges of the views in the array with the given inner margin from the respective right edges of their parent views.
  */
-- (NSArray*)lyt_constraintByAligningRightToParentWithMargin:(CGFloat)margin;
+- (NSArray*)lyt_constraintsByAligningRightToParentWithMargin:(CGFloat)margin;
 
 /**
  Returns constraints that align the right edges of the views in the array with the right edge of the given view.
  @param view The reference view.
  @return An array of constraints that align the right edges of the views in the array with the right edge of the given view.
  */
-- (NSArray*)lyt_constraintByAligningRightToView:(LYTView*)view;
+- (NSArray*)lyt_constraintsByAligningRightToView:(LYTView*)view;
 
 /**
  Returns constraints that align the right edges of the views in the array with the given inner margin from the right edge of the given view.
@@ -1252,27 +1252,27 @@
  @param margin The inner margin length.
  @return An array of constraints that align the right edges of the views in the array with the given inner margin from the right edge of the given view.
  */
-- (NSArray*)lyt_constraintByAligningRightToView:(LYTView*)view margin:(CGFloat)margin;
+- (NSArray*)lyt_constraintsByAligningRightToView:(LYTView*)view margin:(CGFloat)margin;
 
 /**
  Returns constraints that align the bottom edges of the views in the array with the respective bottom edges of their parent views.
  @return An array of constraints that align the bottom edges of the views in the array with the respective bottom edges of their parent views.
  */
-- (NSArray*)lyt_constraintByAligningBottomToParent;
+- (NSArray*)lyt_constraintsByAligningBottomToParent;
 
 /**
  Returns constraints that align the bottom edges of the views in the array with the given inner margin from the respective bottom edges of their parent views.
  @param margin The inner margin length.
  @return An array of constraints that align the bottom edges of the views in the array with the given inner margin from the respective bottom edges of their parent views.
  */
-- (NSArray*)lyt_constraintByAligningBottomToParentWithMargin:(CGFloat)margin;
+- (NSArray*)lyt_constraintsByAligningBottomToParentWithMargin:(CGFloat)margin;
 
 /**
  Returns constraints that align the bottom edges of the views in the array with the bottom edge of the given view.
  @param view The reference view.
  @return An array of constraints that align the bottom edges of the views in the array with the bottom edge of the given view.
  */
-- (NSArray*)lyt_constraintByAligningBottomToView:(LYTView*)view;
+- (NSArray*)lyt_constraintsByAligningBottomToView:(LYTView*)view;
 
 /**
  Returns constraints that align the bottom edges of the views in the array with the given inner margin from the bottom edge of the given view.
@@ -1280,20 +1280,20 @@
  @param margin The inner margin length.
  @return An array of constraints that align the bottom edges of the views in the array with the given inner margin from the bottom edge of the given view.
  */
-- (NSArray*)lyt_constraintByAligningBottomToView:(LYTView*)view margin:(CGFloat)margin;
+- (NSArray*)lyt_constraintsByAligningBottomToView:(LYTView*)view margin:(CGFloat)margin;
 
 /**
  Returns constraints that align the left edges of the views in the array with the respective left edges of their parent views.
  @return An array of constraints that align the left edges of the views in the array with the respective left edges of their parent views.
  */
-- (NSArray*)lyt_constraintByAligningLeftToParent;
+- (NSArray*)lyt_constraintsByAligningLeftToParent;
 
 /**
  Returns constraints that align the left edges of the views in the array with the given inner margin from the respective left edges of their parent views.
  @param margin The inner margin length.
  @return An array of constraints that align the left edges of the views in the array with the given inner margin from the respective left edges of their parent views.
  */
-- (NSArray*)lyt_constraintByAligningLeftToParentWithMargin:(CGFloat)margin;
+- (NSArray*)lyt_constraintsByAligningLeftToParentWithMargin:(CGFloat)margin;
 
 /**
  Returns constraints that align the left edges of the views in the array with the given inner margin from the left edge of the given view.
@@ -1301,7 +1301,7 @@
  @param margin The inner margin length.
  @return An array of constraints that align the left edges of the views in the array with the given inner margin from the left edge of the given view.
  */
-- (NSArray*)lyt_constraintByAligningLeftToView:(LYTView*)view;
+- (NSArray*)lyt_constraintsByAligningLeftToView:(LYTView*)view;
 
 /**
  Returns constraints that align the left edges of the views in the array with the given inner margin from the left edge of the given view.
@@ -1309,7 +1309,7 @@
  @param margin The inner margin length.
  @return An array of constraints that align the left edges of the views in the array with the given inner margin from the left edge of the given view.
  */
-- (NSArray*)lyt_constraintByAligningLeftToView:(LYTView*)view margin:(CGFloat)margin;
+- (NSArray*)lyt_constraintsByAligningLeftToView:(LYTView*)view margin:(CGFloat)margin;
 
 /**
  Returns constraints that align the sides of the views in the array with the given inner margin from the respective sides of their parent views.
@@ -1437,21 +1437,21 @@
  Returns a constraint that horizontally centers the view in the parent view.
  @return A constraint that horizontally centers the view in the parent view.
  */
-- (NSArray*)lyt_constraintByCenteringXInParent;
+- (NSArray*)lyt_constraintsByCenteringXInParent;
 
 /**
  Returns a constraint that horizontally aligns the center of the view with the given offset from the center of the parent view.
  @param offset The offset length.
  @return A constraint that horizontally aligns the center of the view with the given offset from the center of the parent view.
  */
-- (NSArray*)lyt_constraintByCenteringXInParentWithOffset:(CGFloat)offset;
+- (NSArray*)lyt_constraintsByCenteringXInParentWithOffset:(CGFloat)offset;
 
 /**
  Returns a constraint that horizontally centers the view with the given view.
  @param view The reference view.
  @return A constraint that horizontally centers the view with the given view.
  */
-- (NSArray*)lyt_constraintByCenteringXWithView:(LYTView*)view;
+- (NSArray*)lyt_constraintsByCenteringXWithView:(LYTView*)view;
 
 /**
  Returns a constraint that horizontally aligns the center of the view with the given offset from the center of the given view.
@@ -1459,27 +1459,27 @@
  @param offset The offset length.
  @return A constraint that horizontally aligns the center of the view with the given offset from the center of the given view.
  */
-- (NSArray*)lyt_constraintByCenteringXWithView:(LYTView*)view offset:(CGFloat)offset;
+- (NSArray*)lyt_constraintsByCenteringXWithView:(LYTView*)view offset:(CGFloat)offset;
 
 /**
  Returns a constraint that vertically centers the view in the parent view.
  @return A constraint that vertically centers the view in the parent view.
  */
-- (NSArray*)lyt_constraintByCenteringYInParent;
+- (NSArray*)lyt_constraintsByCenteringYInParent;
 
 /**
  Returns a constraint that vertically aligns the center of the view with the given offset from the center of the parent view.
  @param offset The offset length.
  @return A constraint that vertically aligns the center of the view with the given offset from the center of the parent view.
  */
-- (NSArray*)lyt_constraintByCenteringYInParentWithOffset:(CGFloat)offset;
+- (NSArray*)lyt_constraintsByCenteringYInParentWithOffset:(CGFloat)offset;
 
 /**
  Returns a constraint that vertically centers the view with the given view.
  @param view The reference view.
  @return A constraint that vertically centers the view with the given view.
  */
-- (NSArray*)lyt_constraintByCenteringYWithView:(LYTView*)view;
+- (NSArray*)lyt_constraintsByCenteringYWithView:(LYTView*)view;
 
 /**
  Returns a constraint that vertically aligns the center of the view with the given offset from the center of the given view.
@@ -1487,7 +1487,7 @@
  @param offset The offset length.
  @return A constraint that vertically aligns the center of the view with the given offset from the center of the given view.
  */
-- (NSArray*)lyt_constraintByCenteringYWithView:(LYTView*)view offset:(CGFloat)offset;
+- (NSArray*)lyt_constraintsByCenteringYWithView:(LYTView*)view offset:(CGFloat)offset;
 
 /**
  Returns constraints that center the view in the parent view.
@@ -1584,7 +1584,7 @@
  @param view The reference view.
  @return An array of constraints that place the views of the array above the given view.
  */
-- (NSArray*)lyt_constraintByPlacingAboveView:(LYTView*)view;
+- (NSArray*)lyt_constraintsByPlacingAboveView:(LYTView*)view;
 
 /**
  Returns constraints that place the views of the array above the given view with the given distance.
@@ -1592,14 +1592,14 @@
  @param margin The distance between views.
  @return An array of constraints that place the views of the array above the given view with the given distance.
  */
-- (NSArray*)lyt_constraintByPlacingAboveView:(LYTView*)view margin:(CGFloat)margin;
+- (NSArray*)lyt_constraintsByPlacingAboveView:(LYTView*)view margin:(CGFloat)margin;
 
 /**
  Returns constraints that place the views of the array right of the given view.
  @param view The reference view.
  @return An array of constraints that place the views of the array right of the given view.
  */
-- (NSArray*)lyt_constraintByPlacingRightOfView:(LYTView*)view;
+- (NSArray*)lyt_constraintsByPlacingRightOfView:(LYTView*)view;
 
 /**
  Returns constraints that place the views of the array right of the given view with the given distance.
@@ -1607,14 +1607,14 @@
  @param margin The distance between views.
  @return An array of constraintsthat  place the views of the array right of the given view with the given distance.
  */
-- (NSArray*)lyt_constraintByPlacingRightOfView:(LYTView*)view margin:(CGFloat)margin;
+- (NSArray*)lyt_constraintsByPlacingRightOfView:(LYTView*)view margin:(CGFloat)margin;
 
 /**
  Returns constraints that place the views of the array below the given view.
  @param view The reference view.
  @return An array of constraints that place the views of the array below the given view.
  */
-- (NSArray*)lyt_constraintByPlacingBelowView:(LYTView*)view;
+- (NSArray*)lyt_constraintsByPlacingBelowView:(LYTView*)view;
 
 /**
  Returns constraints that place the views of the array below the given view with the given distance.
@@ -1622,14 +1622,14 @@
  @param margin The distance between views.
  @return An array of constraints that place the views of the array below the given view with the given distance.
  */
-- (NSArray*)lyt_constraintByPlacingBelowView:(LYTView*)view margin:(CGFloat)margin;
+- (NSArray*)lyt_constraintsByPlacingBelowView:(LYTView*)view margin:(CGFloat)margin;
 
 /**
  Returns constraints that place the views of the array left of the given view.
  @param view The reference view.
  @return An array of constraints that place the views of the array right of the given view.
  */
-- (NSArray*)lyt_constraintByPlacingLeftOfView:(LYTView*)view;
+- (NSArray*)lyt_constraintsByPlacingLeftOfView:(LYTView*)view;
 
 /**
  Returns constraints that place the views of the array left of the given view with the given distance.
@@ -1637,7 +1637,7 @@
  @param margin The distance between views.
  @return An array of constraintsthat  place the views of the array left of the given view with the given distance.
  */
-- (NSArray*)lyt_constraintByPlacingLeftOfView:(LYTView*)view margin:(CGFloat)margin;
+- (NSArray*)lyt_constraintsByPlacingLeftOfView:(LYTView*)view margin:(CGFloat)margin;
 
 #pragma mark Position and Sizing
 
@@ -1767,14 +1767,14 @@
  @param x The x origin.
  @return An array of constraints that set the x origin of the views in the array with the given value.
  */
-- (NSArray*)lyt_constraintBySettingX:(CGFloat)x;
+- (NSArray*)lyt_constraintsBySettingX:(CGFloat)x;
 
 /**
  Returns constraints that set the y origin of the views in the array with the given value.
  @param y The y origin.
  @return An array of constraints that set the y origin of the views in the array with the given value.
  */
-- (NSArray*)lyt_constraintBySettingY:(CGFloat)y;
+- (NSArray*)lyt_constraintsBySettingY:(CGFloat)y;
 
 /**
  Returns constraints that set the origin of the views in the array with the given value.
@@ -1788,42 +1788,42 @@
  @param width The width.
  @return An array of constraints that set the width of the views in the array with the given value.
  */
-- (NSArray*)lyt_constraintBySettingWidth:(CGFloat)width;
+- (NSArray*)lyt_constraintsBySettingWidth:(CGFloat)width;
 
 /**
  Returns constraints that set the maximum width of the views in the array with the given value.
  @param width The maximum width.
  @return An array of constraints that set the maximum width of the views in the array with the given value.
  */
-- (NSArray*)lyt_constraintBySettingMaxWidth:(CGFloat)width;
+- (NSArray*)lyt_constraintsBySettingMaxWidth:(CGFloat)width;
 
 /**
  Returns constraints that set the minimum width of the views in the array with the given value.
  @param width The minimum width.
  @return An array of constraints that set the minimum width of the views in the array with the given value.
  */
-- (NSArray*)lyt_constraintBySettingMinWidth:(CGFloat)width;
+- (NSArray*)lyt_constraintsBySettingMinWidth:(CGFloat)width;
 
 /**
  Returns constraints that set the height of the views in the array with the given value.
  @param height The height.
  @return An array of constraints that set the height of the views in the array with the given value.
  */
-- (NSArray*)lyt_constraintBySettingHeight:(CGFloat)height;
+- (NSArray*)lyt_constraintsBySettingHeight:(CGFloat)height;
 
 /**
  Returns constraints that set the maximum height of the views in the array with the given value.
  @param height The maximum height.
  @return An array of constraints that set the maximum height of the views in the array with the given value.
  */
-- (NSArray*)lyt_constraintBySettingMaxHeight:(CGFloat)height;
+- (NSArray*)lyt_constraintsBySettingMaxHeight:(CGFloat)height;
 
 /**
  Returns constraints that set the minimum height of the views in the array with the given value.
  @param height The minimum height.
  @return An array of constraints that set the minimum height of the views in the array with the given value.
  */
-- (NSArray*)lyt_constraintBySettingMinHeight:(CGFloat)height;
+- (NSArray*)lyt_constraintsBySettingMinHeight:(CGFloat)height;
 
 /**
  Returns constraints that set the size of the views in the array with the given value.
@@ -1858,14 +1858,14 @@
  @param view The reference view.
  @return An array of constraints that match the width of the views in the array to the width of the given view.
  */
-- (NSArray*)lyt_constraintByMatchingWidthToView:(LYTView*)view;
+- (NSArray*)lyt_constraintsByMatchingWidthToView:(LYTView*)view;
 
 /**
  Returns constraints that match the height of the views in the array to the height of the given view.
  @param view The reference view.
  @return An array of constraints that match the height of the views in the array to the height of the given view.
  */
-- (NSArray*)lyt_constraintByMatchingHeightToView:(LYTView*)view;
+- (NSArray*)lyt_constraintsByMatchingHeightToView:(LYTView*)view;
 
 /**
  Returns constraints that match the width of the views in the array to a multiple of the width of the given view.
@@ -1873,7 +1873,7 @@
  @param mutiplier The width multiplier.
  @return An array of constraints that match the width of the views in the array to a multiple of the width of the given view.
  */
-- (NSArray*)lyt_constraintByMatchingWidthToView:(LYTView*)view multiplier:(CGFloat)multiplier;
+- (NSArray*)lyt_constraintsByMatchingWidthToView:(LYTView*)view multiplier:(CGFloat)multiplier;
 
 /**
  Returns constraints that match the height of the views in the array to a multiple of the height of the given view.
@@ -1881,7 +1881,7 @@
  @param mutiplier The height multiplier.
  @return An array of constraints that match the height of the views in the array to a multiple of the height of the given view.
  */
-- (NSArray*)lyt_constraintByMatchingHeightToView:(LYTView*)view multiplier:(CGFloat)multiplier;
+- (NSArray*)lyt_constraintsByMatchingHeightToView:(LYTView*)view multiplier:(CGFloat)multiplier;
 
 /**
  Returns constraints that match the size of the views in the array to the size of the given view.
