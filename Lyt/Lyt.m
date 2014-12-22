@@ -1593,3 +1593,10 @@
 }
 
 @end
+
+// See: http://stackoverflow.com/questions/27602998/silence-table-of-contents-is-empty-warning
+@interface LYTSilenceTableOfContentsIsEmptyWarning : NSObject
+@end
+
+@implementation LYTSilenceTableOfContentsIsEmptyWarning
+@end
