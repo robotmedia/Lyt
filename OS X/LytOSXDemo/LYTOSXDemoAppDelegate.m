@@ -48,7 +48,8 @@ static CGFloat const Separator = 8;
     [@[_titleLabel, _subtitleLabel, _bodyLabel] lyt_distributeYWithSpacing:Separator];
     
     [_titleLabel lyt_centerXInParent];
-    [@[_bodyLabel, _subtitleLabel] lyt_alignSidesToParentWithMargin:SideMargin];
+    [_bodyLabel lyt_alignSidesToParentWithMargin:SideMargin];
+    [_subtitleLabel lyt_alignSidesToParentWithMargin:SideMargin];
 }
 
 - (void)layoutWithVisualFormat

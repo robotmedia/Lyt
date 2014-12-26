@@ -27,12 +27,6 @@
 
 @end
 
-@interface NSArray (LytUtils)
-
-- (NSArray *)lyt_flattenMap:(id (^)(LYTView *view))block;
-
-@end
-
 @interface LytTests : XCTestCase
 
 @end
@@ -165,35 +159,74 @@
     XCTAssertEqualObjects(result, grandparent, @"");
 }
 
-#pragma mark flattenMap
+#pragma mark enumerateViewsWithBlock
 
-- (void)testFlattenMap_Empty
+- (void)testEnumerateViewsWithBlock_Empty
 {
-    NSArray *result = [@[] lyt_flattenMap:^id(LYTView *view) { return nil; }];
+    NSArray *result = [@[] lyt_enumerateViewsWithBlock:^id(LYTView *view) { return nil; }];
     
     XCTAssertEqualObjects(result, @[], @"");
 }
 
-- (void)testFlattenMap_AssertNotAView
+- (void)testEnumerateViewsWithBlock_AssertNotAView
 {
 #if DEBUG
-    XCTAssertThrows([@[@YES] lyt_flattenMap:^id(LYTView *view) { return nil; }], @"");
+    XCTAssertThrows([@[@YES] lyt_enumerateViewsWithBlock:^id(LYTView *view) { return nil; }], @"");
 #endif
 }
 
-- (void)testFlattenMap_Value
+- (void)testEnumerateViewsWithBlock_AssertInvalidBlockReturn
 {
-    NSArray *result = [@[[LYTView new], [LYTView new]] lyt_flattenMap:^id(LYTView *view) { return @YES; }];
-    NSArray *expectedResut =  @[@YES, @YES];
+#if DEBUG
+    XCTAssertThrows([@[_view] lyt_enumerateViewsWithBlock:^id(LYTView *view) { return @YES; }], @"");
+#endif
+}
+
+- (void)testEnumerateViewsWithBlock_ReturningNil
+{
+    NSArray *result = [@[_view] lyt_enumerateViewsWithBlock:^id(LYTView *view) { return nil; }];
+    
+    XCTAssertEqualObjects(result, @[], @"");
+}
+
+- (void)testEnumerateViewsWithBlock_ReturningConstraint
+{
+    __block NSLayoutConstraint *constraint = nil;
+    NSArray *result = [@[_view] lyt_enumerateViewsWithBlock:^id(LYTView *view) {
+        constraint = [view lyt_constraintBySettingX:0];
+        return constraint;
+    }];
+    NSArray *expectedResut =  @[constraint];
 
     XCTAssertEqualObjects(result, expectedResut, @"");
 }
 
-- (void)testFlattenMap_Array
+- (void)testEnumerateViewsWithBlock_ReturningArray
 {
-    NSArray *result = [@[[LYTView new], [LYTView new]] lyt_flattenMap:^id(LYTView *view) { return @[@YES, @NO]; }];
-    NSArray *expectedResut =  @[@YES, @NO, @YES, @NO];
-    XCTAssertEqualObjects(result, expectedResut, @"");
+    __block NSArray *constraintArray = nil;
+    NSArray *result = [@[_view] lyt_enumerateViewsWithBlock:^id(LYTView *view) {
+        constraintArray = [view lyt_constraintsBySettingOrigin:CGPointMake(0, 0)];
+        return constraintArray;
+    }];
+    XCTAssertEqualObjects(result, constraintArray, @"");
+}
+
+- (void)testEnumerateViewsWithBlock_MultipleViewsReturningConstraint
+{
+    NSArray *views = @[[LYTView new], [LYTView new]];
+    NSArray *result = [views lyt_enumerateViewsWithBlock:^id(LYTView *view) {
+        return [view lyt_constraintBySettingX:0];
+    }];
+    XCTAssertEqual(result.count, views.count, @"");
+}
+
+- (void)testEnumerateViewsWithBlock_MultipleViewsReturningArray
+{
+    NSArray *views = @[[LYTView new], [LYTView new]];
+    NSArray *result = [views lyt_enumerateViewsWithBlock:^id(LYTView *view) {
+        return [view lyt_constraintsBySettingOrigin:CGPointMake(0, 0)];
+    }];
+    XCTAssertEqual(result.count, views.count * 2, @"");
 }
 
 @end
