@@ -40,12 +40,14 @@
 - (void)lyt_addConstraint:(NSLayoutConstraint*)constraint toAncestorSharedWithView:(LYTView*)view
 {
     LYTView *ancestor = [self lyt_ancestorSharedWithView:view];
+    NSAssert(ancestor != nil, @"View must share an ancestor with given view");
     [ancestor addConstraint:constraint];
 }
 
 - (void)lyt_addConstraints:(NSArray*)constraints toAncestorSharedWithView:(LYTView*)view
 {
     LYTView *ancestor = [self lyt_ancestorSharedWithView:view];
+    NSAssert(ancestor != nil, @"View must share an ancestor with given view");
     [ancestor addConstraints:constraints];
 }
 

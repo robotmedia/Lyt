@@ -25,6 +25,10 @@
 
 - (LYTView*)lyt_ancestorSharedWithView:(LYTView*)view;
 
+- (void)lyt_addConstraint:(NSLayoutConstraint*)constraint toAncestorSharedWithView:(LYTView*)view;
+
+- (void)lyt_addConstraints:(NSArray*)constraints toAncestorSharedWithView:(LYTView*)view;
+
 @end
 
 @interface LytTests : XCTestCase
@@ -157,6 +161,24 @@
     LYTView *result = [_view lyt_ancestorSharedWithView:cousin];
     
     XCTAssertEqualObjects(result, grandparent, @"");
+}
+
+#pragma mark addConstraint
+
+- (void)testAddConstraint_AssertNoAncestor
+{
+    LYTView *otherView = [LYTView new];
+    NSLayoutConstraint *constraint = [_view lyt_constraintByAligningBottomToView:otherView];
+    
+    XCTAssertThrows([_view lyt_addConstraint:constraint toAncestorSharedWithView:otherView]);
+}
+
+- (void)testAddConstraints_AssertNoAncestor
+{
+    LYTView *otherView = [LYTView new];
+    NSLayoutConstraint *constraint = [_view lyt_constraintByAligningBottomToView:otherView];
+    
+    XCTAssertThrows([_view lyt_addConstraints:@[constraint] toAncestorSharedWithView:otherView]);
 }
 
 #pragma mark enumerateViewsWithBlock
