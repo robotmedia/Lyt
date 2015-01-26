@@ -195,7 +195,7 @@
 - (NSArray*)lyt_alignToView:(LYTView*)view margin:(CGFloat)margin
 {
     NSArray *constraints = [self lyt_constraintsByAligningToView:view margin:margin];
-    [self.superview addConstraints:constraints];
+    [self lyt_addConstraints:constraints toAncestorSharedWithView:view];
     return constraints;
 }
 
