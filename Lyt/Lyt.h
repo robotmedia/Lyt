@@ -108,12 +108,40 @@
 - (NSLayoutConstraint*)lyt_alignBottomToView:(LYTView*)view;
 
 /**
- Adds a constraint that aligns the bottom edge of the view with the given inner margin from bottom top edge of the given view.
+ Adds a constraint that aligns the bottom edge of the view with the given inner margin from the bottom edge of the given view.
  @param view The reference view.
  @param margin The inner margin length.
  @return A constraint that aligns the bottom edge of the view with the given inner margin from the bottom edge of the given view.
  */
 - (NSLayoutConstraint*)lyt_alignBottomToView:(LYTView*)view margin:(CGFloat)margin;
+
+/**
+ Adds a constraint that aligns the baseline the view with the baseline of the parent view.
+ @return A constraint that aligns the baseline of the view with the baseline of the parent view.
+ */
+- (NSLayoutConstraint*)lyt_alignBaselineToParent;
+
+/**
+ Adds a constraint that aligns the baseline of the view with the given offset from the baseline of the parent view.
+ @param offset The offset length.
+ @return A constraint that aligns the baseline of the view with the given offset from the baseline of the parent view.
+ */
+- (NSLayoutConstraint*)lyt_alignBaselineToParentWithOffset:(CGFloat)offset;
+
+/**
+ Adds a constraint that aligns the baseline of the view with the baseline of the given view.
+ @param view The reference view.
+ @return A constraint that aligns the baseline of the view with the baseline of the given view.
+ */
+- (NSLayoutConstraint*)lyt_alignBaselineToView:(LYTView*)view;
+
+/**
+ Adds a constraint that aligns the baseline of the view with the given offset from the baseline of the given view.
+ @param view The reference view.
+ @param offset The offset length.
+ @return A constraint that aligns the baseline of the view with the given offset from the baseline of the given view.
+ */
+- (NSLayoutConstraint*)lyt_alignBaselineToView:(LYTView*)view offset:(CGFloat)offset;
 
 /**
  Adds a constraint that aligns the left edge of the view with the left edge of the parent view.
@@ -277,12 +305,40 @@
 - (NSLayoutConstraint*)lyt_constraintByAligningBottomToView:(LYTView*)view;
 
 /**
- Returns a constraint that aligns the bottom edge of the view with the given inner margin from bottom top edge of the given view.
+ Returns a constraint that aligns the bottom edge of the view with the given inner margin from the bottom edge of the given view.
  @param view The reference view.
  @param margin The inner margin length.
  @return A constraint that aligns the bottom edge of the view with the given inner margin from the bottom edge of the given view.
  */
 - (NSLayoutConstraint*)lyt_constraintByAligningBottomToView:(LYTView*)view margin:(CGFloat)margin;
+
+/**
+ Returns a constraint that aligns the baseline of the view with the baseline of the parent view.
+ @return A constraint that aligns the baseline of the view with the baseline of the parent view.
+ */
+- (NSLayoutConstraint*)lyt_constraintByAligningBaselineToParent;
+
+/**
+ Returns a constraint that aligns the baseline of the view with the given offset from the baseline of the parent view.
+ @param offset The offset length.
+ @return A constraint that aligns the baseline of the view with the given offset from the baseline of the parent view.
+ */
+- (NSLayoutConstraint*)lyt_constraintByAligningBaselineToParentWithOffset:(CGFloat)offset;
+
+/**
+ Returns a constraint that aligns the baseline of the view with the baseline of the given view.
+ @param view The reference view.
+ @return A constraint that aligns the baseline of the view with the baseline of the given view.
+ */
+- (NSLayoutConstraint*)lyt_constraintByAligningBaselineToView:(LYTView*)view;
+
+/**
+ Returns a constraint that aligns the baseline of the view with the given offset from the baseline of the given view.
+ @param view The reference view.
+ @param offset The offset length.
+ @return A constraint that aligns the baseline of the view with the given offset from the baseline of the given view.
+ */
+- (NSLayoutConstraint*)lyt_constraintByAligningBaselineToView:(LYTView*)view offset:(CGFloat)offset;
 
 /**
  Returns a constraint that aligns the left edge of the view with the left edge of the parent view.
@@ -291,9 +347,9 @@
 - (NSLayoutConstraint*)lyt_constraintByAligningLeftToParent;
 
 /**
- Returns a constraint that aligns the left edge of the view with the given inner margin from the left edge of the parent view.
+ Returns a constraint that aligns the left edge of the view with the given offset from the left edge of the parent view.
  @param margin The inner margin length.
- @return A constraint that aligns the left edge of the view with the given inner margin from the left edge of the parent view.
+ @return A constraint that aligns the left edge of the view with the given offset from the left edge of the parent view.
  */
 - (NSLayoutConstraint*)lyt_constraintByAligningLeftToParentWithMargin:(CGFloat)margin;
 

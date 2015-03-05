@@ -129,6 +129,30 @@
     return constraint;
 }
 
+- (NSLayoutConstraint*)lyt_alignBaselineToParent
+{
+    return [self lyt_alignBaselineToParentWithOffset:0];
+}
+
+- (NSLayoutConstraint*)lyt_alignBaselineToParentWithOffset:(CGFloat)offset
+{
+    NSLayoutConstraint *constraint = [self lyt_constraintByAligningBaselineToParentWithOffset:offset];
+    [self.superview addConstraint:constraint];
+    return constraint;
+}
+
+- (NSLayoutConstraint*)lyt_alignBaselineToView:(LYTView*)view
+{
+    return [self lyt_alignBaselineToView:view offset:0];
+}
+
+- (NSLayoutConstraint*)lyt_alignBaselineToView:(LYTView*)view offset:(CGFloat)offset
+{
+    NSLayoutConstraint *constraint = [self lyt_constraintByAligningBaselineToView:view offset:offset];
+    [self lyt_addConstraint:constraint toAncestorSharedWithView:view];
+    return constraint;
+}
+
 - (NSLayoutConstraint*)lyt_alignLeftToParent
 {
     return [self lyt_alignLeftToParentWithMargin:0];
@@ -260,6 +284,27 @@
 {
     return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeBottom multiplier:1 constant:-margin];
 }
+
+- (NSLayoutConstraint*)lyt_constraintByAligningBaselineToParent
+{
+    return [self lyt_constraintByAligningBaselineToParentWithOffset:0];
+}
+
+- (NSLayoutConstraint*)lyt_constraintByAligningBaselineToParentWithOffset:(CGFloat)offset
+{
+    return [self lyt_constraintByAligningBaselineToView:self.superview offset:offset];
+}
+
+- (NSLayoutConstraint*)lyt_constraintByAligningBaselineToView:(LYTView*)view
+{
+    return [self lyt_constraintByAligningBaselineToView:view offset:0];
+}
+
+- (NSLayoutConstraint*)lyt_constraintByAligningBaselineToView:(LYTView*)view offset:(CGFloat)offset
+{
+    return [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeBaseline relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeBaseline multiplier:1 constant:offset];
+}
+
 
 - (NSLayoutConstraint*)lyt_constraintByAligningLeftToParent
 {
